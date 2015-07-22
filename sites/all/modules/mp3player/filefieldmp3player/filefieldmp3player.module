@@ -1,0 +1,81 @@
+<?php
+// $Id: filefieldmp3player.module,v 1.1.2.10 2009/07/19 16:24:04 starnox Exp $
+
+/**
+* Implementation of hook_field_formatter_info().
+*/
+function filefieldmp3player_field_formatter_info() {
+  $formatters = array();
+  $players = mp3player_players();
+  foreach($players as $player) {
+    $formatters['mp3player'] = array(
+      'label' => t('MP3 Player'),
+      'field types' => array('file'),
+      'settings' => array(
+        'player_instance' => 1,
+       ),
+    );
+  }
+  return $formatters;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function filefieldmp3player_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  //This gets the view_mode where our settings are stored
+  $display = $instance['display'][$view_mode];
+  //This gets the actual settings
+  $settings = $display['settings'];
+  //Initialize the element variable
+  // get the players
+  $options = array();
+  $players = mp3player_players();
+  foreach($players as $pid => $player) {;
+    $options[$pid] = $player['name'];
+  }
+  $element = array();
+  //Add your select box
+  $element['player_instance'] = array(
+    '#type'           => 'select',
+    '#title'          => t('Player Settings'),
+    '#description'    => 'Update player settings at ' . l('MP3 Player', 'admin/config/media/mp3player'),
+    '#default_value'  => $settings['player_instance'],
+    '#options'        => $options,
+  );
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function filefieldmp3player_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('Select a player?');
+  if(isset($settings['player_instance'])) {
+    $player = mp3player_players($settings['player_instance']);
+    $summary = 'MP3 Player: ' . l($player['name'] . ' configuration', 'admin/config/media/mp3player/' . $player['pid']);
+  }
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function filefieldmp3player_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings'];
+  $pid = 1;
+  if(isset($settings['player_instance'])) {
+    $pid = $settings['player_instance'];
+  }
+  $file = $items[0];
+  $variables = array(
+    'player' => $pid,
+    'file' => $file['uri'],
+    'title' => $file['description'],
+  );
+  $element = array();
+  $element[0]['#markup'] = theme('mp3player', $variables);
+  return $element;
+}

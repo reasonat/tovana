@@ -1,0 +1,15 @@
+name = "MP3 Player"
+description = "A module to integrate the 1pixelout player into Drupal."
+core = 7.x
+package = "Audio"
+
+dependencies[] = libraries
+
+
+
+; Information added by Drupal.org packaging script on 2014-03-12
+version = "7.x-2.x-dev"
+core = "7.x"
+project = "mp3player"
+datestamp = "1394641712"
+
