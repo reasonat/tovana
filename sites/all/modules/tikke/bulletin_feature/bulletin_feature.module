@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the bulletin feature feature.
+ */
+
+include_once 'bulletin_feature.features.inc';
