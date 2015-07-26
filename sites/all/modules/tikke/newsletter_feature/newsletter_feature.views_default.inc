@@ -133,8 +133,13 @@ function newsletter_feature_views_default_views() {
     11 => 0,
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: newsletter block */
+  $handler = $view->new_display('block', 'newsletter block', 'block');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: תאריך עלון (field_newsletter_date) */
+  $handler->display->display_options['sorts']['field_newsletter_date_value']['id'] = 'field_newsletter_date_value';
+  $handler->display->display_options['sorts']['field_newsletter_date_value']['table'] = 'field_data_field_newsletter_date';
+  $handler->display->display_options['sorts']['field_newsletter_date_value']['field'] = 'field_newsletter_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -188,6 +193,11 @@ function newsletter_feature_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: תאריך עלון (field_newsletter_date) */
+  $handler->display->display_options['sorts']['field_newsletter_date_value']['id'] = 'field_newsletter_date_value';
+  $handler->display->display_options['sorts']['field_newsletter_date_value']['table'] = 'field_data_field_newsletter_date';
+  $handler->display->display_options['sorts']['field_newsletter_date_value']['field'] = 'field_newsletter_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -434,7 +444,7 @@ function newsletter_feature_views_default_views() {
   $handler->display->display_options['filters']['field_newsletter_date_value']['field'] = 'field_newsletter_date_value';
   $handler->display->display_options['filters']['field_newsletter_date_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_newsletter_date_value']['expose']['operator_id'] = 'field_newsletter_date_value_op';
-  $handler->display->display_options['filters']['field_newsletter_date_value']['expose']['label'] = 'תאריך העלון';
+  $handler->display->display_options['filters']['field_newsletter_date_value']['expose']['label'] = 'תאריך עלון ';
   $handler->display->display_options['filters']['field_newsletter_date_value']['expose']['operator'] = 'field_newsletter_date_value_op';
   $handler->display->display_options['filters']['field_newsletter_date_value']['expose']['identifier'] = 'field_newsletter_date_value';
   $handler->display->display_options['filters']['field_newsletter_date_value']['expose']['remember_roles'] = array(
@@ -451,7 +461,7 @@ function newsletter_feature_views_default_views() {
     11 => 0,
   );
   $handler->display->display_options['filters']['field_newsletter_date_value']['granularity'] = 'month';
-  $handler->display->display_options['path'] = 'newsletter-managment';
+  $handler->display->display_options['path'] = 'admin/newsletter-managment';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'ניהול עלונים';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -471,7 +481,7 @@ function newsletter_feature_views_default_views() {
     t('להמשך קריאה >'),
     t('שם הכותב'),
     t('תאריך פירסום'),
-    t('Block'),
+    t('newsletter block'),
     t('בלוק עלונים ראשי'),
     t('עלונים להצגה בצד'),
     t('עלונים צד'),
@@ -491,7 +501,7 @@ function newsletter_feature_views_default_views() {
     t('ערוך קישור'),
     t('מפורסם'),
     t('כותרת העלון'),
-    t('תאריך העלון'),
+    t('תאריך עלון '),
   );
   $export['newsletters_view'] = $view;
 

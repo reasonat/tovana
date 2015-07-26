@@ -14,7 +14,7 @@ function bulletin_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_advertise';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-page-title';
   $export['additional_settings__active_tab_advertise'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -65,6 +65,29 @@ function bulletin_feature_strongarm() {
   $strongarm->name = 'comment_subject_field_advertise';
   $strongarm->value = 1;
   $export['comment_subject_field_advertise'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_comment__comment_node_advertise';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'author' => array(
+          'weight' => '-2',
+        ),
+        'subject' => array(
+          'weight' => '-1',
+        ),
+        'comment_notify_settings' => array(
+          'weight' => '1',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_comment__comment_node_advertise'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -149,7 +172,10 @@ function bulletin_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_advertise';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'menu-menu-manager',
+    1 => 'main-menu',
+  );
   $export['menu_options_advertise'] = $strongarm;
 
   $strongarm = new stdClass();

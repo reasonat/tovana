@@ -45,6 +45,10 @@ function recipe_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'לעמוד האחרון »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -140,7 +144,7 @@ function recipe_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: תקציר מתכונים */
+  /* Field: Content: תקציר מתכון */
   $handler->display->display_options['fields']['field_recipe_description']['id'] = 'field_recipe_description';
   $handler->display->display_options['fields']['field_recipe_description']['table'] = 'field_data_field_recipe_description';
   $handler->display->display_options['fields']['field_recipe_description']['field'] = 'field_recipe_description';
@@ -169,6 +173,7 @@ function recipe_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'מספר פריטים בעמוד';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'היסט';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
@@ -179,10 +184,58 @@ function recipe_feature_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
+    'views_bulk_operations' => 'views_bulk_operations',
+    'name' => 'name',
+    'created' => 'created',
+    'view_node' => 'view_node',
+    'delete_node' => 'view_node',
+    'edit_node' => 'view_node',
+    'status' => 'status',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'view_node' => array(
+      'align' => '',
+      'separator' => '</br>',
+      'empty_column' => 0,
+    ),
+    'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'status' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -272,6 +325,12 @@ function recipe_feature_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'תאריך פירסום';
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = 'ניהול';
+  $handler->display->display_options['fields']['view_node']['text'] = 'לגוף המתכון >';
   /* Field: Content: Delete link */
   $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
@@ -285,12 +344,18 @@ function recipe_feature_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = 'ערוך קישור';
   $handler->display->display_options['fields']['edit_node']['text'] = 'עריכה';
-  /* Field: Content: Link */
-  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = 'קישור';
-  $handler->display->display_options['fields']['view_node']['text'] = 'לגוף המתכון >';
+  /* Field: Content: Published */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'node';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  $handler->display->display_options['fields']['status']['label'] = 'מפורסם';
+  $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['status']['not'] = 0;
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['label'] = 'שפה';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -331,36 +396,6 @@ function recipe_feature_views_default_views() {
     10 => 0,
     11 => 0,
   );
-  /* Filter criterion: Content: Post date */
-  $handler->display->display_options['filters']['created']['id'] = 'created';
-  $handler->display->display_options['filters']['created']['table'] = 'node';
-  $handler->display->display_options['filters']['created']['field'] = 'created';
-  $handler->display->display_options['filters']['created']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['created']['expose']['operator_id'] = 'created_op';
-  $handler->display->display_options['filters']['created']['expose']['label'] = 'תאריך פירסום';
-  $handler->display->display_options['filters']['created']['expose']['operator'] = 'created_op';
-  $handler->display->display_options['filters']['created']['expose']['identifier'] = 'created';
-  $handler->display->display_options['filters']['created']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-    7 => 0,
-    8 => 0,
-    9 => 0,
-    10 => 0,
-    11 => 0,
-  );
-  $handler->display->display_options['filters']['created']['group_info']['label'] = 'תאריך פירסום';
-  $handler->display->display_options['filters']['created']['group_info']['identifier'] = 'created';
-  $handler->display->display_options['filters']['created']['group_info']['remember'] = FALSE;
-  $handler->display->display_options['filters']['created']['group_info']['group_items'] = array(
-    1 => array(),
-    2 => array(),
-    3 => array(),
-  );
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
@@ -384,7 +419,33 @@ function recipe_feature_views_default_views() {
     10 => 0,
     11 => 0,
   );
-  $handler->display->display_options['path'] = 'recipe-managment';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    'en' => 'en',
+    'he' => 'he',
+  );
+  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
+  $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
+  $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
+  $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
+    11 => 0,
+  );
+  $handler->display->display_options['path'] = 'admin/recipe-managment';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'ניהול מתכונים';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -407,6 +468,7 @@ function recipe_feature_views_default_views() {
     t('‹ לעמוד הקודם'),
     t('לעמוד הבא ›'),
     t('לעמוד האחרון »'),
+    t('author'),
     t('תוכן'),
     t('- Choose an operation -'),
     t('שינוי ערכים'),
@@ -415,15 +477,16 @@ function recipe_feature_views_default_views() {
     t('להמשך קריאה >'),
     t('מתכונים ראשי'),
     t('עמוד ניהול'),
-    t('author'),
     t('שם'),
     t('תאריך פירסום'),
+    t('ניהול'),
+    t('לגוף המתכון >'),
     t('מחק קישור'),
     t('מחיקה'),
     t('ערוך קישור'),
     t('עריכה'),
-    t('קישור'),
-    t('לגוף המתכון >'),
+    t('מפורסם'),
+    t('שפה'),
     t('שם הכותב'),
     t('כותרת'),
   );

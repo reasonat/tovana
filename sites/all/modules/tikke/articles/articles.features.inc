@@ -31,9 +31,9 @@ function articles_node_info() {
     'article' => array(
       'name' => t('מאמר'),
       'base' => 'node_content',
-      'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
+      'description' => t('השתמשו ב<em>מאמרים</em> עבור תכנים תלויי זמן כמו חדשות, הודעות לעיתונות או הודעות בבלוג.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('כותרת'),
       'help' => '',
     ),
   );

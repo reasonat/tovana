@@ -53,7 +53,7 @@ function newsletter_feature_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'year_and_month',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -91,7 +91,7 @@ function newsletter_feature_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_text',
+      'type' => 'date_select',
       'weight' => 43,
     ),
   );
@@ -139,7 +139,7 @@ function newsletter_feature_field_default_field_instances() {
   $field_instances['node-newsletter-field_pdf_newsletter'] = array(
     'bundle' => 'newsletter',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'העלאת קובץ העלון',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -200,6 +200,7 @@ function newsletter_feature_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Comment');
   t('pdf newsletter');
+  t('העלאת קובץ העלון');
   t('תאריך עלון');
   t('תקציר עלון');
 
