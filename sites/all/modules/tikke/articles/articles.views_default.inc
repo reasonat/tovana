@@ -23,6 +23,7 @@ function articles_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'היבט מאמרים';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -96,6 +97,24 @@ function articles_views_default_views() {
 
   /* Display: article block */
   $handler = $view->new_display('block', 'article block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'מספר פריטים בעמוד';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'היסט';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'לעמוד הבא ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'לעמוד האחרון »';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -109,6 +128,8 @@ function articles_views_default_views() {
   $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['label'] = '';
+  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
@@ -117,10 +138,6 @@ function articles_views_default_views() {
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['text'] = 'להמשך קריאה>';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
-  /* Field: Content: סוג המאמר */
-  $handler->display->display_options['fields']['field_article_type']['id'] = 'field_article_type';
-  $handler->display->display_options['fields']['field_article_type']['table'] = 'field_data_field_article_type';
-  $handler->display->display_options['fields']['field_article_type']['field'] = 'field_article_type';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -145,12 +162,124 @@ function articles_views_default_views() {
     0 => '14',
   );
   $handler->display->display_options['filters']['field_article_type_tid']['vocabulary'] = 'article_types';
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'שם הכותב';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
+    11 => 0,
+  );
   $handler->display->display_options['block_description'] = 'article block';
 
   /* Display: sutranslations */
   $handler = $view->new_display('block', 'sutranslations', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'sutranslations block';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'מספר פריטים בעמוד';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'היסט';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'לעמוד הבא ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'לעמוד האחרון »';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: תקציר */
+  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['label'] = '';
+  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = 'להמשך קריאה>';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filter criterion: Content: סוג המאמר (field_article_type) */
+  $handler->display->display_options['filters']['field_article_type_tid']['id'] = 'field_article_type_tid';
+  $handler->display->display_options['filters']['field_article_type_tid']['table'] = 'field_data_field_article_type';
+  $handler->display->display_options['filters']['field_article_type_tid']['field'] = 'field_article_type_tid';
+  $handler->display->display_options['filters']['field_article_type_tid']['value'] = array(
+    0 => '15',
+  );
+  $handler->display->display_options['filters']['field_article_type_tid']['vocabulary'] = 'article_types';
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'שם המחבר';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
+    11 => 0,
+  );
   $handler->display->display_options['block_description'] = 'sutranslations block';
 
   /* Display: עמוד ניהול המאמרים */
@@ -163,6 +292,7 @@ function articles_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'מספר פריטים בעמוד';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'היסט';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
@@ -172,29 +302,26 @@ function articles_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'views_bulk_operations' => 'views_bulk_operations',
     'title' => 'title',
-    'field_description' => 'field_description',
-    'view_node' => 'view_node',
     'field_article_type' => 'field_article_type',
     'field_article_author' => 'field_article_author',
+    'view_node' => 'view_node',
+    'delete_node' => 'view_node',
+    'edit_node' => 'view_node',
+    'created' => 'created',
+    'status' => 'status',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_description' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'view_node' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -207,6 +334,35 @@ function articles_views_default_views() {
       'empty_column' => 0,
     ),
     'field_article_author' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'view_node' => array(
+      'align' => '',
+      'separator' => '</br>',
+      'empty_column' => 0,
+    ),
+    'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'status' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -287,10 +443,21 @@ function articles_views_default_views() {
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = 'קישור למאמר';
+  $handler->display->display_options['fields']['view_node']['label'] = 'ניהול';
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['text'] = 'להמשך קריאה>';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Field: Content: Delete link */
+  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['label'] = 'מחיקה';
+  $handler->display->display_options['fields']['delete_node']['element_type'] = 'strong';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'עריכה';
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
@@ -305,17 +472,18 @@ function articles_views_default_views() {
   $handler->display->display_options['fields']['status']['label'] = 'מפורסם';
   $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Field: Content: Delete link */
-  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
-  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
-  $handler->display->display_options['fields']['delete_node']['label'] = 'מחיקה';
-  $handler->display->display_options['fields']['delete_node']['element_type'] = 'strong';
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = 'עריכה';
+  /* Field: Content translation: Translation status */
+  $handler->display->display_options['fields']['translate']['id'] = 'translate';
+  $handler->display->display_options['fields']['translate']['table'] = 'node';
+  $handler->display->display_options['fields']['translate']['field'] = 'translate';
+  $handler->display->display_options['fields']['translate']['label'] = 'מצב תירגום';
+  $handler->display->display_options['fields']['translate']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['translate']['not'] = 0;
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['label'] = 'שפה';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -373,6 +541,7 @@ function articles_views_default_views() {
     10 => 0,
     11 => 0,
   );
+  $handler->display->display_options['filters']['field_article_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_article_type_tid']['vocabulary'] = 'article_types';
   /* Filter criterion: Content: כותב המאמר (field_article_author) */
   $handler->display->display_options['filters']['field_article_author_target_id']['id'] = 'field_article_author_target_id';
@@ -396,7 +565,30 @@ function articles_views_default_views() {
     10 => 0,
     11 => 0,
   );
-  $handler->display->display_options['path'] = 'articles-managment';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = 'All';
+  $handler->display->display_options['filters']['status_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status_1']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status_1']['expose']['label'] = 'מפורסם';
+  $handler->display->display_options['filters']['status_1']['expose']['operator'] = 'status_1_op';
+  $handler->display->display_options['filters']['status_1']['expose']['identifier'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
+    11 => 0,
+  );
+  $handler->display->display_options['path'] = 'admin/articles-managment';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'ניהול מאמרים';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -422,10 +614,6 @@ function articles_views_default_views() {
     t('תקציר'),
     t('להמשך קריאה>'),
     t('article block'),
-    t('סוג המאמר'),
-    t('sutranslations'),
-    t('sutranslations block'),
-    t('עמוד ניהול המאמרים'),
     t('מספר פריטים בעמוד'),
     t('- הכל -'),
     t('היסט'),
@@ -433,16 +621,25 @@ function articles_views_default_views() {
     t('‹ לעמוד הקודם'),
     t('לעמוד הבא ›'),
     t('לעמוד האחרון »'),
+    t('author'),
+    t('שם הכותב'),
+    t('sutranslations'),
+    t('sutranslations block'),
+    t('שם המחבר'),
+    t('עמוד ניהול המאמרים'),
     t('תוכן'),
     t('- Choose an operation -'),
     t('שינוי ערכים'),
     t('מחיקה'),
     t('כותרת'),
+    t('סוג המאמר'),
     t('כותב המאמר'),
-    t('קישור למאמר'),
+    t('ניהול'),
+    t('עריכה'),
     t('תאריך פירסום'),
     t('מפורסם'),
-    t('עריכה'),
+    t('מצב תירגום'),
+    t('שפה'),
   );
   $export['main_article_view'] = $view;
 

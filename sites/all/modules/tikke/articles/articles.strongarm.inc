@@ -21,7 +21,7 @@ function articles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_article';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['comment_article'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -87,19 +87,19 @@ function articles_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '0',
+          'weight' => '6',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '9',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '8',
         ),
       ),
       'display' => array(

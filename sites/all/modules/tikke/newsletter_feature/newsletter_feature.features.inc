@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function newsletter_feature_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -30,7 +33,7 @@ function newsletter_feature_node_info() {
       'base' => 'node_content',
       'description' => t('עלון התובנה העליונה'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('כותרת'),
       'help' => '',
     ),
   );

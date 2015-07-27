@@ -41,6 +41,7 @@ function link_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'מספר פריטים בעמוד';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'היסט';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
@@ -111,7 +112,8 @@ function link_feature_views_default_views() {
   $handler->display->display_options['fields']['field_link_main']['id'] = 'field_link_main';
   $handler->display->display_options['fields']['field_link_main']['table'] = 'field_data_field_link_main';
   $handler->display->display_options['fields']['field_link_main']['field'] = 'field_link_main';
-  $handler->display->display_options['fields']['field_link_main']['label'] = 'קישור לאתר';
+  $handler->display->display_options['fields']['field_link_main']['label'] = '';
+  $handler->display->display_options['fields']['field_link_main']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link_main']['click_sort_column'] = 'url';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -161,10 +163,66 @@ function link_feature_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
+    'views_bulk_operations' => 'views_bulk_operations',
+    'created' => 'created',
+    'view_node' => 'view_node',
+    'delete_node' => 'view_node',
+    'edit_node' => 'view_node',
+    'field_link_category' => 'field_link_category',
+    'field_link_main' => 'field_link_main',
+    'status' => 'status',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'view_node' => array(
+      'align' => '',
+      'separator' => '</br>',
+      'empty_column' => 0,
+    ),
+    'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_link_category' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_link_main' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'status' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -251,6 +309,12 @@ function link_feature_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'תאריך פירסום';
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = 'ניהול';
+  $handler->display->display_options['fields']['view_node']['text'] = 'לעמוד הקישור';
   /* Field: Content: Delete link */
   $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
@@ -268,12 +332,6 @@ function link_feature_views_default_views() {
   $handler->display->display_options['fields']['field_link_category']['id'] = 'field_link_category';
   $handler->display->display_options['fields']['field_link_category']['table'] = 'field_data_field_link_category';
   $handler->display->display_options['fields']['field_link_category']['field'] = 'field_link_category';
-  /* Field: Content: Link */
-  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = 'קישור';
-  $handler->display->display_options['fields']['view_node']['text'] = 'לעמוד הקישור';
   /* Field: Content: קישור */
   $handler->display->display_options['fields']['field_link_main']['id'] = 'field_link_main';
   $handler->display->display_options['fields']['field_link_main']['table'] = 'field_data_field_link_main';
@@ -326,7 +384,30 @@ function link_feature_views_default_views() {
   );
   $handler->display->display_options['filters']['field_link_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_link_category_tid']['vocabulary'] = 'link_categories';
-  $handler->display->display_options['path'] = 'link-managment';
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'סינון לפי כותרת';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
+    11 => 0,
+  );
+  $handler->display->display_options['path'] = 'admin/link-managment';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'ניהול קישורים';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -351,21 +432,21 @@ function link_feature_views_default_views() {
     t('לעמוד האחרון »'),
     t('term from field_link_category'),
     t('קישורים'),
-    t('קישור לאתר'),
     t('קטגורית קישור'),
     t('link block'),
     t('עמוד ניהול'),
     t('- Choose an operation -'),
     t('שינוי ערכים'),
     t('תאריך פירסום'),
+    t('ניהול'),
+    t('לעמוד הקישור'),
     t('מחק קישור'),
     t('מחיקה'),
     t('ערוך קישור'),
     t('עריכה'),
-    t('קישור'),
-    t('לעמוד הקישור'),
     t('קישור לאתר חיצוני'),
     t('מפורסם'),
+    t('סינון לפי כותרת'),
   );
   $export['main_links_view'] = $view;
 

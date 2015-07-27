@@ -107,8 +107,8 @@ function podcasts_feature_views_default_views() {
   $handler->display->display_options['filters']['field_teachers_reference_target_id']['expose']['operator'] = 'field_teachers_reference_target_id_op';
   $handler->display->display_options['filters']['field_teachers_reference_target_id']['expose']['identifier'] = 'field_teachers_reference_target_id';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: רצועות השמע */
+  $handler = $view->new_display('page', 'רצועות השמע', 'page');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_teachers_reference_target_id']['id'] = 'field_teachers_reference_target_id';
@@ -643,7 +643,6 @@ function podcasts_feature_views_default_views() {
     t('להמשך קריאה >'),
     t('לעמוד התרומות >'),
     t('מורים (field_teachers_reference)'),
-    t('Page'),
     t('משתמש entity referenced from field_teachers_reference'),
     t('מורים'),
     t('אירוע'),
