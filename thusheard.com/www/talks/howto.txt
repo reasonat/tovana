@@ -1,0 +1,49 @@
+VESPA - HOW TO
+
+
+0. Content of this file ================================== 
+
+	1. Installation
+	2. Basic Configuration
+	3. Customization
+
+
+
+1. Installation ==========================================
+
+Extract all files and directories and copy them to the web directory where the MP3s are. That's it. 
+
+
+
+2. Basic Configuration =========================================
+
+Configure VESPA by editing the settings in config.php, located in the directory 'VESPA'. Open config.php in a text editor. You can change all variables available there (do not forget to upload the file if you edited it locally ;). Find detailed information there which variables will work.
+
+You can adjust the following behaviour/options:
+	* Set a the site's name which is shown in the header on every page.
+	* Set a custom theme which has to be the name of a subdirectory in 'vespa/themes'.
+	* Set a default sort order which is applied on each page as long as the user does not overrule it.
+	* VESPA tries to auto detect the user's language so that application messages are shown in the appropriate language. If that does not work it tries to detect a default language you can set in the config.php. Currently (as in version 0.8.x) the available languages are english (use 'en'), german ('de'), spanish ('es') and french ('fr'). 
+	* Set the default presentation form of a single file. You can chose between the file name, "artist - title" or the title alone.
+	* Display additional information to this file. Currently you can only decide to show the file name (which might be of use if you decided to show "artist - title".
+	* If there are text files of the same name as the mp3s they are displayed (e.g. "music.txt" is shown with "music.mp3"). If there are HTML-tags in the text file they are interpreted. However, you can configure VESPA to show this text files as raw text which results in no HTML interpretation by the browser.
+	* If there is a text file called 'index.txt' it is shown beneath the page title and above the mp3 files. Again you can decide to show these files as raw text files.
+ 
+
+
+3. Customization =========================================
+
+	3.1 Theming
+	If you want to use a custom theme you have to change the correspending setting in 'config.php'. The theme entered there is the name of a directory in 'vespa/themes', e.g. 'vespa/themes/silver'. VESPA expects a CSS named 'style.css' in the given directory. Otherwise it won't work. If you want to customize a theme I would appreciate it if you set it under a Creative Commons License and share it with other users (send me a link!). Please note that it is not fully clear yet whether VESPA will use some sort of template engine some day. However, additional themes should follow (some day).
+
+	3.2 Renaming the script file
+	You can rename 'index.php' in the root directory of VESPA to any name you want (as long as .php stays intact). However, do not rename any of the files in the directory 'vespa'.
+
+	3.3 Configure certain directories individually
+	You might want certain directories to appear in another theme, with a particular site name or another sort order than all the other directories. You can copy and paste the config.php file to this directory and edit it. VESPA will then detect the config.php and will apply the settings especially and solely for this directory.
+
+	3.4 Debug Mode
+	If you want to rewrite certain parts of VESPA the debug mode might help. It shows you a list of variables that are used and the server's phpinfo. Simply add parameter 'debug' to the script's name. E.g. index.php?debug or index.php?dir=/dirname&debug. Please note: you have to enable the debug mode in the config.php first!
+
+
+EOF

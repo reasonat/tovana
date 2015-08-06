@@ -1,0 +1,24 @@
+[03-Aug-2015 14:09:50 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_set_messege() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 3
+[03-Aug-2015 14:09:51 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_set_messege() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 3
+[03-Aug-2015 14:09:51 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_set_messege() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 3
+[03-Aug-2015 14:09:52 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_set_messege() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 3
+[03-Aug-2015 14:18:08 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 17
+[03-Aug-2015 14:18:08 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 17
+[03-Aug-2015 14:37:13 Asia/Jerusalem] PHP Fatal error:  Maximum execution time of 180 seconds exceeded in /home/tovana/public_html/sites/all/modules/devel/krumo/class.krumo.php on line 606
+[03-Aug-2015 14:37:14 Asia/Jerusalem] PHP Warning:  array_keys() expects parameter 1 to be array, null given in /home/tovana/public_html/includes/module.inc on line 774
+[03-Aug-2015 14:37:14 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/tovana/public_html/includes/bootstrap.inc on line 1735
+[03-Aug-2015 17:28:32 Asia/Jerusalem] PHP Fatal error:  Call to undefined function pa() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 17
+[04-Aug-2015 07:33:23 Asia/Jerusalem] PHP Fatal error:  Call to undefined function pa() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 35
+[04-Aug-2015 07:33:25 Asia/Jerusalem] PHP Fatal error:  Call to undefined function pa() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 35
+[04-Aug-2015 08:56:59 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 55
+[04-Aug-2015 08:57:00 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 55
+[04-Aug-2015 09:00:00 Asia/Jerusalem] PHP Fatal error:  Call to undefined function taxonomy_save_term() in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 62
+[04-Aug-2015 12:58:28 Asia/Jerusalem] PHP Fatal error:  require_once(): Failed opening required '../tovana/talks/vespa/getid3/getid3.php' (include_path='.:/usr/lib/php:/usr/local/lib/php:/usr/local/php54/lib/php') in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 32
+[04-Aug-2015 12:58:29 Asia/Jerusalem] PHP Fatal error:  require_once(): Failed opening required '../tovana/talks/vespa/getid3/getid3.php' (include_path='.:/usr/lib/php:/usr/local/lib/php:/usr/local/php54/lib/php') in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 32
+[04-Aug-2015 12:59:03 Asia/Jerusalem] PHP Fatal error:  require_once(): Failed opening required 'sites/default/files/talks/talks/vespa/getid3/getid3.php' (include_path='.:/usr/lib/php:/usr/local/lib/php:/usr/local/php54/lib/php') in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 32
+[04-Aug-2015 13:03:12 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 39330694 bytes) in /home/tovana/public_html/includes/bootstrap.inc on line 3472
+[04-Aug-2015 13:06:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '{' in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 46
+[04-Aug-2015 13:06:45 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '{' in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 46
+[04-Aug-2015 13:06:49 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '{' in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 46
+[04-Aug-2015 13:09:09 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 39364755 bytes) in /home/tovana/public_html/includes/bootstrap.inc on line 3472
+[04-Aug-2015 13:11:04 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 39067088 bytes) in /home/tovana/public_html/includes/bootstrap.inc on line 3472

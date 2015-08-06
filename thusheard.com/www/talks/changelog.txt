@@ -1,0 +1,29 @@
+=== VESPA Changelog ===
+0.8.8: 	M4A-files are added as audio file types that can be parsed; Pages are introduced (can be called via ?page=whatever and are stored in 'vespa/pages' whereas the variable is the name of the php file (e.g. vespa/pages/whatever.php); Simpliepie updated to Version 1.3; getid3 updated to version 1.9.3; jplayer updated to version 2.2.0; Link to Google Hosted Libraries for jquery updated to 1.8.2;
+0.8.7: 	Bug fix for RSS output (MIME-Type added); Bug fix for building wrong paths for audio files (how the variables are built was changed);
+0.8.6: 	JPlayer as new default player with HTML5-interface and display of the mp3 files´ cover artwork applied; integrated  enhancements to the silver theme; Calling an RSS feed was changed (attaching 'rss=audio' to URI for RSS feed) so that different content types (dates, etc.) can be called in the future; Renaming of included files; integrated first versions of upcoming features: includes simplepie for reading RSS feeds now; included a little feature to show dates/events; Bugfix: File creation date is read correctly now; Sort order by time fixed; Finnish translation added; 
+0.8.5: 	Directory 'included' created and moved debug.incs there, rss.inc.php put there as well (First version of RSS included, but due to date bug not working yet); theme is called via inc. and template.inc.php is put in theme-directory; changed silver template to HTML5 tags; created several inc.phps to put certain functionalities in it, they are now included via the template; Refactoring: changing <? into <?php; changing " into ' in HTML;  
+0.8.4: 	Language settings are applied via hard coded path now. Settings for (dis-) allowing debug mode applied. $HTTP_GET_VARS finally replaced by &_GET. Little refactoring. Italian and Estonian translation added. Adjustments to the standard theme "Silver". Discontinued niftyplayer in distribution since it was a redundant flash player and a HTML5-solution shall be in place in one of the upcoming versions. Windows security issue solved.
+0.8.3:	VESPA auto detects the browser's language settings; if no available language is detected VESPA uses the language setting from config.php. VESPA gets a simple debug mode. Directories can be configured with an inidividual config.php.
+0.8.2: 	"Niftyplayer" by tvst (http://www.varal.org/media/niftyplayer) and "Flash-MP3-Player" by neolao (http://flash-mp3-player.net) are integrated as optional players. Several themes in the distribution are abandoned in favor of having one superior theme rather than several mediocre.
+0.8.1: 	Bug fix: Text files were not displayed correctly. Bug fix: Files were not shown with the right option (file name/artist-title). Fall back implemented if no artist and/or title is available though settings say to show them.
+0.8.0:	VESPA turns into a multi-file distribution. getid3 for reading several file information is included. VESPA can apply different sort orders to files and they can be passed on as a parameter. Presentation of the file can be customized (file name, artist-title, title). Language support for application messages is included. The file name can be shown as an additional information to the file. Themes are set via directory instead of css-file. Several checks, fall backs and error messages are availabe. Adoptions to the standard themes.
+
+0.7.5: 	Site name can be set and directory name is displayed as header of main content. Custom CSS can be chosen (if file does not exist the built-in style is used). Small adjustments to the custom design.
+0.7.4:	Audio text files and index text files can be displayed either as raw text or HTML.
+0.7.3:	PHP 5.3.0 deprecated ereg_replace() so it was replaced with str_replace() [PHP6+ won't support the function].
+0.7.2:  Bug fixes to the HTML output. Vespa turned XHTML 1.0 strict valid.
+0.7.1: 	Minor bug fixes in the layout.
+0.7: 	VESPA can handle alphabetical sort order of directories and files.
+
+0.6: 	Security issue solved. VESPA displays the current directory as title.
+
+0.5: 	Security issue solved. VESPA can show the text files for a whole directory and single audio files. Layout improved. Clean up.
+
+0.4: 	VESPA can handle the "root" correctly.
+
+0.3: 	Clean up. Layout improved.
+
+0.2: 	VESPA can link to the MP3's exact location.
+
+0.1: 	VESPA can read the MP3s of the current directory, the subdirectories and has a simple layout.

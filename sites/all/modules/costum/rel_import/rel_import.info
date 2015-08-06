@@ -1,0 +1,4 @@
+name = Ariel Import
+description = module for the import from joomla part.
+package = Administration
+core = 7.x

@@ -1,0 +1,219 @@
+<?php
+
+function rel_import_menu(){
+	 $items ['playground'] = array(
+    'title' => 'Example RSS feed',
+    'page callback' => 'playground',
+    'access arguments' => array('no access'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+function playground(){
+	$files_folder = variable_get('file_public_path', conf_path() . '/files');
+	
+	$diraddr = $files_folder."/talks";
+	$absolute_dir = $diraddr;
+	
+	$output = "";
+	$dir = opendir($diraddr);
+	$dirarray = array();
+	while ($entry = readdir($dir)) {
+		if ($entry == '.'||$entry == '..') {					// VESPA doesn't want the root
+					continue;
+				}			
+				$scan_dir = $absolute_dir . '/' . $entry; 				// VESPA builds absolute path for scanning
+
+				if(is_dir($scan_dir)) array_push($dirarray,$entry);	
+			}
+
+			natcasesort($dirarray);
+			require_once($diraddr.'/vespa/getid3/getid3.php');
+			$getID3 = new getID3;
+			$extenstions = array("mp3","wav");
+			foreach ($dirarray as $entry) {	//VESPA figures out what to do with this particular directory				
+					$output .= "<li>".$entry;
+					$cur_dir = $absolute_dir . '/'.$entry;				
+					$files = scandir($cur_dir);
+					//$files = glob($cur_dir.'/*.{mp3}', GLOB_BRACE);
+					
+					foreach($files as $file){	
+						$info = new SplFileInfo($file);
+						$extension = strtolower($info->getExtension());											
+						$extension =str_replace(".","",$extension);
+						$extension = trim($extension);						
+						if(in_array($extension,$extenstions)){
+							$prefix = "http://thusheard.com/talks/";
+							$file_url_name  = $prefix.$entry."/".$file;							
+							dsm($file_url_name);
+							//  $node = new stdClass();			
+							//	$node->type = "event";		
+						}						
+					}			
+					
+					$output .= "</li>";
+					
+			}			
+	dsm($extenstions);		
+	closedir($dir);
+	return "ASda";
+}
+//import events...
+function old_events_playground(){
+	$res = db_select("export_events")
+			->fields("export_events",array())		
+			->condition("state",1)
+			->execute()->fetchAll();
+	foreach($res as $joom){		
+		$raw = unserialize($joom->rdata);		
+		$node = new stdClass();	
+		if($joom->drupal_nid){			
+			$node = node_load($joom->drupal_nid);		
+			dsm($joom->drupal_nid);
+			
+		}
+	    else {
+			$node = new stdClass();			
+			$node->type = "event";		
+			node_object_prepare($node);						
+			$node->uid = 1; 
+			$node->status = 1; //(1 or 0): published or not
+			$node->promote = 0; //(1 or 0): promoted to front page
+			$node->comment = 0; // 0 = comments disabled, 1 = read only, 2 = read/write
+		}
+		$node->title = $joom->summary;	
+				
+		$node->body[LANGUAGE_NONE][0]['value']   = $joom->description;
+		//$node->body[LANGUAGE_NONE][0]['summary'] = text_summary($body_text);
+		$node->body[LANGUAGE_NONE][0]['format']  = "full_html";
+		$node->field_dates[LANGUAGE_NONE][0]['value'] = $joom->dtstart;
+		$node->field_dates[LANGUAGE_NONE][0]['value2'] = $joom->dtend;
+		$node = node_submit($node);
+		 node_save($node);	   
+		 db_update("export_events")
+			->fields(array('drupal_nid'=>$node->nid))
+			->condition('evdet_id', $joom->evdet_id)
+			->execute();		
+	}	
+	
+	return "aa";
+}
+
+//improt articles , questions & books
+function old_playground(){		
+	$types = array(
+		36 =>"recommended_books",
+		3  => "faq",
+		50 => "faq",
+		60 => "faq",
+		38 => "article",
+		36 => "article",				
+	);
+	$type = 36;
+	$res = db_select("export")->fields("export",array())
+		//	->condition("catid",$type)
+			->execute()->fetchAll();
+	foreach($res as $joom){				
+		if(!in_array($joom->catid,array_keys($types))){						
+			continue;
+		}	
+		$node = new stdClass();	
+		if($joom->drupal_nid){
+			$node = node_load($joom->drupal_nid);
+			
+		}
+	    if(!isset($node->nid)) {
+			$node = new stdClass();					
+			node_object_prepare($node);						
+			$node->uid = 1; 
+			$node->status = 1; //(1 or 0): published or not
+			$node->promote = 0; //(1 or 0): promoted to front page
+			$node->comment = 0; // 0 = comments disabled, 1 = read only, 2 = read/write
+		}		
+		$node->type = $types[$joom->catid];
+		$node->title = $joom->title;	
+		$node->language = "he"; // Or e.g. 'en' if locale is enabled
+	
+		switch($node->type){
+			case "recommended_books":
+				$node->field_books_description[LANGUAGE_NONE][0]['value'] = $joom->introtext;
+				$node->field_books_description[LANGUAGE_NONE][0]['format'] = 'full_html';
+				$node->field_recommendation[LANGUAGE_NONE][0]['value'] = $joom->fulltext;
+				$node->field_recommendation[LANGUAGE_NONE][0]['format'] = 'full_html';
+			break;				
+			case "faq":		
+				$voc = taxonomy_vocabulary_machine_name_load("faq_type");				
+				$term = taxonomy_get_term_by_name($joom->cat_title,$voc->machine_name);				
+				if(empty($term)){	
+					$term = new stdClass();				
+					$term->vid = $voc->vid;
+					$term->name = $joom->cat_title;					                    
+                    taxonomy_term_save($term);                    
+                    $term = taxonomy_get_term_by_name($joom->cat_title,$voc->machine_name);                    
+				}
+				$term = array_shift($term);				
+				$node->field_faq_type[LANGUAGE_NONE][]['tid'] = $term->tid;
+				$node->field_answer_body[LANGUAGE_NONE][0]['value'] = $joom->fulltext;
+				$node->field_answer_body[LANGUAGE_NONE][0]['format'] = 'full_html';
+			break;	
+			case "article":
+				$voc = taxonomy_vocabulary_machine_name_load("article_types");				
+				$term = taxonomy_get_term_by_name($joom->cat_title,$voc->machine_name);				
+				if(empty($term)){	
+					$term = new stdClass();				
+					$term->vid = $voc->vid;
+					$term->name = $joom->cat_title;					                    
+                    taxonomy_term_save($term);                    
+                    $term = taxonomy_get_term_by_name($joom->cat_title,$voc->machine_name);                    
+				}
+				$term = array_shift($term);
+				$node->field_article_type[LANGUAGE_NONE][]['tid'] = $term->tid;		
+				
+				$node->field_description[LANGUAGE_NONE][0]['value'] = $joom->introtext;
+				$node->field_description[LANGUAGE_NONE][0]['format'] = 'full_html';
+				
+				$node->field_article_content[LANGUAGE_NONE][0]['value'] = $joom->fulltext;
+				$node->field_article_content[LANGUAGE_NONE][0]['format'] = 'full_html';
+			break;	
+			
+		}
+		if($joom->state !=1){
+			node_delete($node->nid);
+		}
+		else {
+			$node = node_submit($node);
+			node_save($node);	   
+			db_update("export")
+			->fields(array('drupal_nid'=>$node->nid))
+			->condition('id', $joom->id)
+			->execute();	
+		}
+	}
+	return "Ada";
+	
+	 
+	 /*
+	 $node->type = "YOUR_NODE_TYPE";
+	  
+	 
+
+	  // Term reference (taxonomy) field
+	 $node->field_product_tid[$node->language][]['tid'] = $form_state['values']['a taxonomy term id'];
+
+	  // Entity reference field
+	 $node->field_customer_nid[$node->language][] = array(
+		'target_id' => $form_state['values']['entity id'],
+		'target_type' => 'node',
+	  );
+	  // 'node' is default,
+	  // Other possible values are "user" and  "taxonomy_term" 
+*/
+	   // Prepare node for saving
+	  //node_save($node);
+	  
+	  return "asdasd";
+}
+function _fetch_term($voc , $term){
+	
+}
