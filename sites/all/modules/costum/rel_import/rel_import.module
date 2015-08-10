@@ -11,6 +11,143 @@ function rel_import_menu(){
   return $items;
 }
 function playground(){
+	return "done";
+}
+function playground_post(){
+	/*
+	$rows = db_select("node","n")->fields("n")->condition("type","post")->execute()->fetchAll();
+	foreach($rows as $row){
+		node_delete($row->nid);
+	}
+	*/
+	$res = db_select("export_blog")->fields("export_blog",array())
+		//	->condition("catid",$type)
+			->execute()->fetchAll();
+	foreach($res as $joom){
+		if($joom->published!=1){
+			//node_delete($joom->nid);
+			continue;
+		}
+		dsm($joom);
+		$voc = taxonomy_vocabulary_machine_name_load("post_categories");				
+		$term = taxonomy_get_term_by_name($joom->cat_title,$voc->machine_name);				
+		if(empty($term)){	
+			$term = new stdClass();				
+			$term->vid = $voc->vid;
+			$term->name = $joom->cat_title;					                    
+            taxonomy_term_save($term);                    
+            $term = taxonomy_get_term_by_name($joom->cat_title,$voc->machine_name);                    
+		}
+		$term = array_shift($term);
+		$node = node_load($joom->nid);
+		$node->field_post_categories[LANGUAGE_NONE][]['tid'] = $term->tid;
+		$node->uid = 1; 
+		$node->status = 1; //(1 or 0): published or not
+		$node->promote = 0; //(1 or 0): promoted to front page
+		$node->comment = 0; // 0 = comments disabled, 1 = read only, 2 = read/write
+		
+		$node->title = $joom->title;	
+				
+		$node->field_post_body[LANGUAGE_NONE][0]['value']   = $joom->content;		
+		$node->field_post_body[LANGUAGE_NONE][0]['format']  = "full_html";
+		$node->field_post_description[LANGUAGE_NONE][0]['value']   = $joom->intro;		
+		$node->field_post_description[LANGUAGE_NONE][0]['format']  = "full_html";	
+		node_save($node);	   
+		/*
+		$node = new stdClass();			
+		$node->type = "post";		
+		node_object_prepare($node);						
+		
+		
+		$node = node_submit($node);
+		 node_save($node);	   
+		 db_update("export_blog")
+			->fields(array('nid'=>$node->nid))
+			->condition('id', $joom->id)
+			->execute();	
+		*/
+	}
+	return "asd";
+}
+function user_playground(){	
+	$res = db_select("export")->fields("export",array())
+		//	->condition("catid",$type)
+			->execute()->fetchAll();
+	foreach($res as $joom){
+		if($joom->catid==45){
+			$_user = user_load($joom->drupal_nid);
+			//dsm($joom->fulltext);
+			dsm($_user);
+			$_user->field_user_general_info[LANGUAGE_NONE][0]['value'] = $joom->fulltext;
+			$_user->field_user_general_info[LANGUAGE_NONE][0]['format'] = 'full_html';
+			user_save($_user);
+			//->field_user_general_info;
+			
+			/*
+			  //This will generate a random password, you could set your own here
+			$password = user_password(8);
+			$email = $joom->id."@nomail.com";
+			$new_user = array(
+			  'name' => $joom->title,
+			  'pass' => $password, // note: do not md5 the password
+			  'mail' => $email,
+			  'status' => 1,
+			  'init' => $email,
+			  'roles' => array(
+				DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+				6 => 'מורה',
+			  ),
+			);		
+			$_user = new stdClass();	
+			foreach ($new_user as $key => $value)
+			{
+				$_user->$key = $value;
+			}
+			user_save($_user);
+			
+			db_update("export")
+			->fields(array('drupal_nid'=>$_user->uid))
+			->condition('id', $joom->id)
+			->execute();
+			*/
+			
+ 		}
+	}
+	return "asd";
+}
+function file_playground(){	
+	/*
+	$media = media_internet_get_provider("http://thusheard.com/talks/Zohar%20Lavie/ZL30%20Meditation%20Instructions%202%2023May2015.mp3");
+	try {
+		$file = $media->save();
+	  dsm($file);
+		
+	}
+	catch (Exception $e) {
+		dsm($e->getMessage());
+   
+	}
+	
+	$files = db_select('file_managed', 'fm')->fields("fm",array())
+	//->condition("url","http://thusheard.com/talks/Zohar%20Lavie/ZL30%20Meditation%20Instructions%202%2023May2015.mp3")
+	->execute()->fetchAll();
+	foreach($files as $file){
+		if($file->fid < 26)continue;
+		$file = file_load($file->fid);
+		file_delete($file);
+	}
+	
+	
+	//
+	return "aa";
+	*/
+	
+	$node = node_load(3438);
+	urldecode($node->field_podcast_url[LANGUAGE_NONE][0]['value']);
+	$file = file_load(24);
+	dsm($file);
+	return "Aa";
+	
 	$files_folder = variable_get('file_public_path', conf_path() . '/files');
 	
 	$diraddr = $files_folder."/talks";
@@ -31,31 +168,52 @@ function playground(){
 			natcasesort($dirarray);
 			require_once($diraddr.'/vespa/getid3/getid3.php');
 			$getID3 = new getID3;
-			$extenstions = array("mp3","wav");
+			$extenstions = array("mp3","wav");			
 			foreach ($dirarray as $entry) {	//VESPA figures out what to do with this particular directory				
 					$output .= "<li>".$entry;
 					$cur_dir = $absolute_dir . '/'.$entry;				
 					$files = scandir($cur_dir);
 					//$files = glob($cur_dir.'/*.{mp3}', GLOB_BRACE);
-					
-					foreach($files as $file){	
+					$i = 0;
+					foreach($files as $file){						
 						$info = new SplFileInfo($file);
 						$extension = strtolower($info->getExtension());											
 						$extension =str_replace(".","",$extension);
 						$extension = trim($extension);						
 						if(in_array($extension,$extenstions)){
+							$i++;
 							$prefix = "http://thusheard.com/talks/";
 							$file_url_name  = $prefix.$entry."/".$file;							
-							dsm($file_url_name);
-							//  $node = new stdClass();			
-							//	$node->type = "event";		
+							
+							//dsm($getID3->analyze($cur_dir."/".$file));							
+							$title = $entry." ".$i;
+							$rows = db_select("node","n")
+										->fields("n",array())
+										->condition("title",$title)
+										->execute()
+										->fetchAll();
+							$node = $rows[0];
+							$node->type = "podcast";
+							if(isset($node->field_podcast_player[LANGUAGE_NONE][0]['fid'])){
+								dsm($node->field_podcast_player);
+							}
+							else{
+								//dsm($node->nid);
+								
+							}				
+							$node->field_podcast_url[LANGUAGE_NONE][0]['value'] = urlencode($file_url_name);
+							//$media = media_internet_get_provider("http://thusheard.com/talks/Zohar%20Lavie/ZL30%20Meditation%20Instructions%202%2023May2015.mp3");
+							
+							//$file = $media->save();			
+							//$node->field_podcast_player[LANGUAGE_NONE][0]['fid'] = $file->fid;				  
+							//dsm($node->nid.":".$file->fid);
+							//node_save($node);	
+							ini_set('max_execution_time', 300);					
 						}						
-					}			
-					
+					}		
 					$output .= "</li>";
 					
-			}			
-	dsm($extenstions);		
+			}				
 	closedir($dir);
 	return "ASda";
 }

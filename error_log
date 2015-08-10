@@ -22,3 +22,26 @@
 [04-Aug-2015 13:06:49 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '{' in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 46
 [04-Aug-2015 13:09:09 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 39364755 bytes) in /home/tovana/public_html/includes/bootstrap.inc on line 3472
 [04-Aug-2015 13:11:04 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 39067088 bytes) in /home/tovana/public_html/includes/bootstrap.inc on line 3472
+[06-Aug-2015 16:35:55 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 37315332 bytes) in /home/tovana/public_html/includes/bootstrap.inc on line 3472
+[06-Aug-2015 16:39:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 234
+[06-Aug-2015 16:39:21 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 234
+[06-Aug-2015 16:39:27 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 234
+[06-Aug-2015 16:39:27 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 234
+[06-Aug-2015 16:39:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 228
+[06-Aug-2015 16:39:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 228
+[06-Aug-2015 16:39:39 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 228
+[06-Aug-2015 16:39:40 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 228
+[10-Aug-2015 06:49:53 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 15
+[10-Aug-2015 06:49:54 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 15
+[10-Aug-2015 06:49:56 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 15
+[10-Aug-2015 06:50:38 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:39 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:40 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:41 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:41 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:50 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:52 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:53 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:55 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:55 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
+[10-Aug-2015 06:50:55 Asia/Jerusalem] PHP Fatal error:  Call to a member function save() on a non-object in /home/tovana/public_html/sites/all/modules/costum/rel_import/rel_import.module on line 16
