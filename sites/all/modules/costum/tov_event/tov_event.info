@@ -1,0 +1,4 @@
+name = Tovana Events
+description = module for Handeling events
+package = Tovana
+core = 7.x
