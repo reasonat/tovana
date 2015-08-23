@@ -1,0 +1,13 @@
+name = Dusty
+description = Dusty subtheme for omega
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+stylesheets[all][] = css/dusty.normalize.css
+stylesheets[all][] = css/dusty.hacks.css
+stylesheets[all][] = css/dusty.styles.css
+stylesheets[all][] = css/dusty.no-query.css
+
+scripts[] = js/dusty.behaviors.js

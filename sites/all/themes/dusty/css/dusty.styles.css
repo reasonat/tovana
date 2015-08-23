@@ -1,0 +1,222 @@
+/*******************************************************************************
+ * hero.layout.scss
+ *
+ * Styles for the Hero layout.
+ ******************************************************************************/
+/* line 22, ../sass/variables/_grid.scss */
+.l-constrained {
+  width: 95%;
+  margin: 0 auto;
+  *zoom: 1; }
+  /* line 38, ../../../../../../../../.rvm/gems/ruby-1.9.3-p551@global/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  .l-constrained:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 28, ../sass/variables/_grid.scss */
+.l-header {
+  padding: 18px; }
+
+/* Content Area */
+/* line 33, ../sass/variables/_grid.scss */
+.l-highlighted-wrapper {
+  padding: 18px 0; }
+
+/* line 37, ../sass/variables/_grid.scss */
+.l-region--help {
+  margin-bottom: 18px; }
+
+/* line 40, ../sass/variables/_grid.scss */
+.l-main {
+  margin-top: 36px;
+  margin-bottom: 36px; }
+
+/* Sidebars */
+/* line 46, ../sass/variables/_grid.scss */
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  padding: 18px 1em; }
+
+/* Footer */
+/* line 52, ../sass/variables/_grid.scss */
+.l-footer-wrapper {
+  padding: 18px 0; }
+
+@media (min-width: 44em) {
+  /* Header */
+  /* line 60, ../sass/variables/_grid.scss */
+  .l-branding {
+    width: 23.72881%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none; }
+
+  /* line 63, ../sass/variables/_grid.scss */
+  .l-region--header {
+    width: 74.57627%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 16.94915%;
+    clear: none; }
+
+  /* Main */
+  /* line 67, ../sass/variables/_grid.scss */
+  .l-main {
+    clear: both; }
+
+  /* Sidebars */
+  /* line 74, ../sass/variables/_grid.scss */
+  .has-two-sidebars .l-content,
+  .has-one-sidebar .l-content {
+    width: 66.10169%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none; }
+  /* line 77, ../sass/variables/_grid.scss */
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second,
+  .has-one-sidebar .l-region--sidebar-first,
+  .has-one-sidebar .l-region--sidebar-second {
+    width: 32.20339%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: right; } }
+@media (min-width: 70em) {
+  /* line 88, ../sass/variables/_grid.scss */
+  .l-constrained {
+    width: 80%; }
+
+  /* Sidebars */
+  /* line 93, ../sass/variables/_grid.scss */
+  .l-content {
+    width: 74.57627%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none; }
+
+  /* line 96, ../sass/variables/_grid.scss */
+  .l-region--sidebar-first {
+    width: 23.72881%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 67.79661%;
+    clear: none;
+    clear: none; }
+
+  /* line 102, ../sass/variables/_grid.scss */
+  .has-two-sidebars .l-content {
+    width: 49.15254%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none; }
+  /* line 105, ../sass/variables/_grid.scss */
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 23.72881%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 50.84746%;
+    clear: none;
+    clear: none; }
+  /* line 110, ../sass/variables/_grid.scss */
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 23.72881%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; } }
+/* line 2, ../sass/base/_lists.scss */
+ul li {
+  list-style: none;
+  list-style-image: none; }
+
+/* line 1, ../sass/base/_media.scss */
+img, media {
+  max-width: 100%; }
+
+/* line 15, ../sass/base/_typography.scss */
+a {
+  text-decoration: none; }
+
+/**
+ * $BASE-TYPOGRAPHY
+ */
+/* line 24, ../sass/base/_typography.scss */
+html {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+/**
+ * $HEADINGS
+ */
+/* line 33, ../sass/base/_typography.scss */
+h1, .alpha,
+h2, .beta,
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
+  font-family: "Maven Pro", Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
+  /* line 44, ../sass/base/_typography.scss */
+  h1 a,
+  h1 a:visited, .alpha a,
+  .alpha a:visited,
+  h2 a,
+  h2 a:visited, .beta a,
+  .beta a:visited,
+  h3 a,
+  h3 a:visited, .gamma a,
+  .gamma a:visited,
+  h4 a,
+  h4 a:visited, .delta a,
+  .delta a:visited,
+  h5 a,
+  h5 a:visited, .epsilon a,
+  .epsilon a:visited,
+  h6 a,
+  h6 a:visited, .zeta a,
+  .zeta a:visited {
+    text-decoration: none; }
+
+/* line 54, ../sass/base/_typography.scss */
+h1, .alpha {
+  font-size: 55px;
+  font-size: 3.92857rem;
+  font-weight: 700; }
+
+/* line 58, ../sass/base/_typography.scss */
+h2, .beta {
+  font-size: 34px;
+  font-size: 2.42857rem;
+  font-weight: 700; }
+
+/* line 62, ../sass/base/_typography.scss */
+h3, .gamma {
+  font-size: 21px;
+  font-size: 1.5rem; }
+
+/* line 65, ../sass/base/_typography.scss */
+h4, .delta {
+  font-size: 18px;
+  font-size: 1.28571rem; }
+
+/* line 68, ../sass/base/_typography.scss */
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1.14286rem;
+  font-weight: 700; }
+
+/* line 72, ../sass/base/_typography.scss */
+h6, .zeta {
+  font-size: 16px;
+  font-size: 1.14286rem; }
+
+/*# sourceMappingURL=dusty.styles.css.map */
