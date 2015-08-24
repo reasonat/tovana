@@ -1,0 +1,114 @@
+/*******************************************************************************
+ * hero.layout.scss
+ *
+ * Styles for the Hero layout.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 18px;
+$horz-spacing-unit: 1em;
+
+$tab: 44em;
+$desk: 70em;
+
+$grids: 4;
+$grids: add-grid(12 at $tab);
+
+$gutters: 1/3;
+
+.l-constrained {
+  width: 95%;
+  margin: 0 auto;
+  @include pie-clearfix;
+}
+
+.l-header {
+	padding: $vert-spacing-unit;
+}
+
+/* Content Area */
+.l-highlighted-wrapper {
+  padding: $vert-spacing-unit 0;
+}
+
+.l-region--help {
+  margin-bottom: $vert-spacing-unit;
+}
+.l-main {
+  margin-top: 2 * $vert-spacing-unit;
+  margin-bottom: 2 * $vert-spacing-unit;
+}
+
+/* Sidebars */
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  padding: $vert-spacing-unit $horz-spacing-unit;
+}
+
+/* Footer */
+.l-footer-wrapper {
+  padding: $vert-spacing-unit 0;
+}
+
+// Breakpoints tab
+@include breakpoint($tab) {
+
+  /* Header */
+  .l-branding {
+    @include grid-span(3, 1);
+  }
+  .l-region--header {
+    @include grid-span(9, 3);
+  }
+  /* Main */
+  .l-main {
+  	clear: both;
+  }
+
+  /* Sidebars */
+  .has-two-sidebars,
+  .has-one-sidebar {
+    .l-content {
+      @include grid-span(8, 1);
+    }
+    .l-region--sidebar-first,
+    .l-region--sidebar-second {
+      @include grid-span(4, 9);
+      clear: right;
+    }
+  }
+}
+
+// Breakpoint Desk
+
+@include breakpoint($desk) {
+  .l-constrained {
+    width: 80%;
+  }
+
+	/* Sidebars */
+	.l-content {
+      @include grid-span(9, 1);
+    }
+    .l-region--sidebar-first {
+      @include grid-span(3, 9);
+      clear: none;
+    }
+
+  .has-two-sidebars {
+    .l-content {
+      @include grid-span(6, 1);
+    }
+    .l-region--sidebar-first,
+    .l-region--sidebar-second {
+      @include grid-span(3, 7);
+      clear: none;
+    }
+    .l-region--sidebar-second {
+      @include grid-span(3, 10);
+    }
+  }
+}
