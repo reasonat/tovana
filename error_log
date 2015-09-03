@@ -72,3 +72,5 @@ Stack trace:
 [13-Aug-2015 09:39:58 Asia/Jerusalem] PHP Fatal error:  Declaration of EntityReferenceHandler_field::getInstance() must be compatible with EntityReference_SelectionHandler::getInstance($field, $instance = NULL, $entity_type = NULL, $entity = NULL) in /home/tovana/public_html/sites/all/modules/webform_entity/plugins/entityreference/selection/EntityReferenceHandler_field.class.php on line 120
 [13-Aug-2015 10:17:27 Asia/Jerusalem] PHP Fatal error:  Call to a member function label() on a non-object in /home/tovana/public_html/sites/all/modules/entity/entity.module on line 1134
 [13-Aug-2015 10:17:31 Asia/Jerusalem] PHP Fatal error:  Call to a member function label() on a non-object in /home/tovana/public_html/sites/all/modules/entity/entity.module on line 1134
+[01-Sep-2015 07:59:25 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '?' in /home/tovana/public_html/sites/all/themes/tovana/templates/field--field_podcast_url.tpl.php on line 8
+[01-Sep-2015 07:59:28 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '?' in /home/tovana/public_html/sites/all/themes/tovana/templates/field--field_podcast_url.tpl.php on line 8
