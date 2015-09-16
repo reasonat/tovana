@@ -74,3 +74,4 @@ Stack trace:
 [13-Aug-2015 10:17:31 Asia/Jerusalem] PHP Fatal error:  Call to a member function label() on a non-object in /home/tovana/public_html/sites/all/modules/entity/entity.module on line 1134
 [01-Sep-2015 07:59:25 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '?' in /home/tovana/public_html/sites/all/themes/tovana/templates/field--field_podcast_url.tpl.php on line 8
 [01-Sep-2015 07:59:28 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '?' in /home/tovana/public_html/sites/all/themes/tovana/templates/field--field_podcast_url.tpl.php on line 8
+[09-Sep-2015 14:09:52 Asia/Jerusalem] PHP Fatal error:  Call to undefined function workflowfield_property_info_callback() in /home/tovana/public_html/sites/all/modules/entity/modules/field.info.inc on line 30

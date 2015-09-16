@@ -27,6 +27,7 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 /* line 23, ../sass/_normalize.scss */
 article,
 aside,
@@ -1699,7 +1700,102 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1439377000');
+  background-image: url('../images/progress.gif?1438589413');
+}
+
+/***********  color ****************/
+/***********  fonts ****************/
+/********** global *****************/
+/* line 29, ../sass/components/_tovana.scss */
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+/* line 33, ../sass/components/_tovana.scss */
+*:focus {
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+
+/* line 39, ../sass/components/_tovana.scss */
+a {
+  text-decoration: none;
+  color: #3c3b3b;
+}
+
+/* line 44, ../sass/components/_tovana.scss */
+body {
+  font-family: 'Open Sans Hebrew', sans-serif;
+  font-size: 17px;
+  color: #3c3b3b;
+}
+
+/**********  sidebar  ********/
+/* line 52, ../sass/components/_tovana.scss */
+.sidebar-second .region-sidebar-second {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 25% !important;
+}
+
+/* line 58, ../sass/components/_tovana.scss */
+.sidebar-second #content {
+  float: right;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 75% !important;
+}
+
+/************  header  **********/
+/* line 67, ../sass/components/_tovana.scss */
+#navigation {
+  position: relative;
+  float: right;
+  width: 80%;
+}
+
+/* line 73, ../sass/components/_tovana.scss */
+#logo {
+  float: left;
+  width: 20%;
+}
+
+/* line 78, ../sass/components/_tovana.scss */
+.header__region {
+  clear: none;
+  float: right;
+  width: 80%;
+}
+
+/* line 84, ../sass/components/_tovana.scss */
+#block-search-form {
+  float: right;
+  width: 80%;
+}
+
+/* line 89, ../sass/components/_tovana.scss */
+#block-locale-language {
+  float: right;
+  width: 80%;
+}
+/* line 92, ../sass/components/_tovana.scss */
+#block-locale-language li {
+  list-style-type: none;
+}
+/* line 94, ../sass/components/_tovana.scss */
+#block-locale-language li.active {
+  display: none;
+}
+
+/**********  main-menu  **********/
+/* line 102, ../sass/components/_tovana.scss */
+#main-menu {
+  font-size: 1.2em;
+}
+/* line 104, ../sass/components/_tovana.scss */
+#main-menu a.active, #main-menu a:hover {
+  border-top: 8px solid #62b7d3;
 }
 
 /**

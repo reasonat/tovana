@@ -1,0 +1,107 @@
+
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+  @if $media == l {
+    @media (max-width: 1195px) { @content; }
+  }
+}
+
+/***********  color ****************/
+
+$default: #3c3b3b;
+$blue: #62b7d3;
+$yellow: #cc9f44;
+
+/***********  fonts ****************/
+
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+/********** global *****************/
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+*:focus {
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
+}
+
+a{
+  text-decoration: none;
+  color: $default;
+}
+
+body{
+  font-family: 'Open Sans Hebrew', sans-serif;  
+  font-size: 17px;
+  color: $default;
+}
+
+/**********  sidebar  ********/
+
+.sidebar-second .region-sidebar-second {
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 25%!important;
+}
+
+.sidebar-second #content {
+    float: right;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 75%!important;
+}
+
+/************  header  **********/
+
+#navigation{
+  position: relative;
+  float: right;
+  width: 80%;
+}
+
+#logo{
+  float: left;
+  width: 20%;
+}
+
+.header__region{
+  clear: none;
+  float: right;
+  width: 80%;
+}
+
+#block-search-form{
+  float: right;
+  width: 80%;
+}
+
+#block-locale-language{
+  float: right;
+  width: 80%;
+  li{
+    list-style-type: none;
+    &.active{
+      display: none;
+    }
+  }
+}
+
+/**********  main-menu  **********/
+
+#main-menu{
+  font-size: 1.2em;
+  a.active, a:hover{
+    border-top: 8px solid $blue;
+  }
+}
