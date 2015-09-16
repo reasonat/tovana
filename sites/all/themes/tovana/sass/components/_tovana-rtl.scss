@@ -2,6 +2,10 @@
 
 #navigation{
   float: left;
+  li{
+    padding-left: 8.5%!important;
+    padding-right: 0!important;
+  }
 }
 
 #logo{
@@ -14,8 +18,22 @@
 
 #block-search-form{
   float: left;
+  #search-block-form{
+  	float: left;
+  }
 }
 
 #block-locale-language{
   float: left;
   }
+
+  /*********  front  ************/
+
+//slideshow
+
+#block-views-banner-presentation-block{
+      background: url("../images/slideshow-front.png") no-repeat left center #f2ead7;
+      .views-row{
+      	float: left;
+      }
+}

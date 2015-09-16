@@ -397,24 +397,43 @@ html.js .collapsed .fieldset-legend {
 #navigation {
   float: left;
 }
+/* line 5, ../sass/components/_tovana-rtl.scss */
+#navigation li {
+  padding-left: 8.5% !important;
+  padding-right: 0 !important;
+}
 
-/* line 7, ../sass/components/_tovana-rtl.scss */
+/* line 11, ../sass/components/_tovana-rtl.scss */
 #logo {
   float: right;
 }
 
-/* line 11, ../sass/components/_tovana-rtl.scss */
+/* line 15, ../sass/components/_tovana-rtl.scss */
 .header__region {
   float: left;
 }
 
-/* line 15, ../sass/components/_tovana-rtl.scss */
+/* line 19, ../sass/components/_tovana-rtl.scss */
 #block-search-form {
   float: left;
 }
+/* line 21, ../sass/components/_tovana-rtl.scss */
+#block-search-form #search-block-form {
+  float: left;
+}
 
-/* line 19, ../sass/components/_tovana-rtl.scss */
+/* line 26, ../sass/components/_tovana-rtl.scss */
 #block-locale-language {
+  float: left;
+}
+
+/*********  front  ************/
+/* line 34, ../sass/components/_tovana-rtl.scss */
+#block-views-banner-presentation-block {
+  background: url("../images/slideshow-front.png") no-repeat left center #f2ead7;
+}
+/* line 36, ../sass/components/_tovana-rtl.scss */
+#block-views-banner-presentation-block .views-row {
   float: left;
 }
 
