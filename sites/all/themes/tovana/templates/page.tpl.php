@@ -75,6 +75,7 @@
     </div>
   </header>
       <?php print render($page['content_top']); ?>
+      <?php print render($page['before_sidebars']); ?>
 
   <div id="main">
     <div id="content" class="column" role="main">

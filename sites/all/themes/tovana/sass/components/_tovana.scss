@@ -32,7 +32,30 @@ $yellow: #cc9f44;
 
 /***********  fonts ****************/
 
-@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@font-face{
+  font-family:'Oron-Bold';
+  font-style: normal;
+  src: url('../fonts/Oron-Bold.eot'); 
+  src: url('../fonts/Oron-Bold.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/Oron-Bold.woff') format('woff'), 
+    url('../fonts/Oron-Bold.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Oron-Light';
+  font-style: normal;
+  src: url('../fonts/Oron-Light.eot'); 
+  src: url('../fonts/Oron-Light.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/Oron-Light.woff') format('woff'), 
+    url('../fonts/Oron-Light.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Oron-Medium';
+  font-style: normal;
+  src: url('../fonts/Oron-Medium.eot'); 
+  src: url('../fonts/Oron-Medium.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/Oron-Medium.woff') format('woff'), 
+    url('../fonts/Oron-Medium.ttf') format('truetype');
+}
 
 /********** global *****************/
 
@@ -52,7 +75,7 @@ a{
 }
 
 body{
-  font-family: 'Open Sans Hebrew', sans-serif;  
+  font-family: 'Oron-Light', sans-serif;  
   font-size: 17px;
   color: $default;
   border-top: 17px solid $light-blue;
@@ -66,6 +89,10 @@ body{
 
 #page, .region-bottom{
   @include width;
+}
+
+#footer{
+  padding: 0;
 }
 /**********  sidebar  ********/
 
@@ -82,6 +109,18 @@ body{
     width: 75%!important;
 }
 
+.sidebar-first .region-sidebar-first {
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 25%!important;
+}
+
+.sidebar-first #content {
+    float: right;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 75%!important;
+}
 /************  header  **********/
 
 #header{
@@ -154,7 +193,7 @@ body{
 /**********  main-menu  **********/
 
 #main-menu{
-  font-size: 1.2em;
+  font-size: 1.3em;
   a{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -162,26 +201,33 @@ body{
   a.active, a:hover{
     border-top: 8px solid $blue;
   }
+  a.active{
+      font-family: 'Oron-Medium', sans-serif;  
+  }
 }
 
 /*********  front  ************/
 
+.front #page-title{
+  display: none;
+}
 //slideshow
 
 #block-views-banner-presentation-block{
       background: url("../images/slideshow-front.png") no-repeat right center #f2ead7;
       border-radius: 10px;
+      height: 178px;
       .views-row{
         width: 315px;
         float: left;
         padding: 18px;
         box-sizing:border-box;
-        font-size: 0.9em;
+        font-size: 1em;
         padding-bottom: 18px;
       }
       .views-field-title{
         font-size: 1.3em;
-        font-weight: 500;
+        font-family: 'Oron-Medium', sans-serif;  
         border-bottom: 1px dotted;
         padding-bottom: 10px;
         margin-bottom: 10px;
@@ -190,7 +236,7 @@ body{
         line-height: 1.3em;
       }
       .views-field-field-link-banner{
-        font-weight: 500;
+        font-family: 'Oron-Medium', sans-serif;  
         margin-top: 10px;
       }
 }
@@ -202,31 +248,55 @@ body{
   border-radius: 10px;
   padding: 0 20px 25px;
   font-size: 0.9em;
+  box-sizing: border-box;
+  width: 75%;
+  float: right;
   .block-title{
     font-size: 2em;
-    font-weight: 700;
+    font-family: 'Oron-Bold', sans-serif;  
     color: $dark-blue;
+    font-weight: normal;
   }
   p{
     margin: 0;
   }
 }
 
+.region-before-sidebars{
+  overflow: hidden;
+  position: relative;
+}
+
+#block-block-3{
+  left: 0;
+  height: 100%;
+  width: 25%;
+  border-radius: 10px;
+  position: absolute;
+  background: url("../images/leaf.png")no-repeat center 25% #f5ecd9;
+  a{
+    display: block;
+    font-family: "Oron-Medium",sans-serif;
+    position: absolute;
+    bottom: 20px;
+  }
+}
 //help
 
 #block-views-req-bulletin-block{
   font-size: 0.9em;
   .block-title{
     font-size: 1.3em;
-    font-weight: 500;
+    font-family: 'Oron-Medium', sans-serif;  
     padding-bottom: 5px;
     margin-bottom: 18px;
     border-bottom: 1px dotted;
-    padding-right: 10px;
+    margin-left: 40px;
   }
   .view{
-    padding-right: 10px;
+    padding-left: 40px;
     width: 130px;
+    border-left: 1px dotted;
   }
   .views-row:after{
     width: 30px;
@@ -242,6 +312,122 @@ body{
   .view-footer{
     a{
       color: $dark-blue;
+      font-family: 'Oron-Medium', sans-serif;  
+    }
+  }
+}
+
+//icons
+
+#block-views-icon-view-block{
+  text-align: center;
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+  padding: 23px 10px 17px;
+  overflow: hidden;
+  .views-row{
+    float: left;
+    width: 10%;
+    margin-right: 5%;
+  }
+  .views-row-last{
+    margin: 0!important;
+  }
+  .views-field-title{
+    font-family: 'Oron-Medium', sans-serif;  
+  }
+}
+
+//jobs
+
+#block-views-communal-bulletin-board-block{
+  margin-top: 15px;
+  .block-title{
+    font-size: 1.3em;
+    font-family: 'Oron-Medium', sans-serif;  
+    margin-bottom: 18px;
+    border-bottom: 1px dotted $default;
+    text-align: center;
+    float: left;
+    padding: 0 20px;
+    color: $blue;
+    font-weight: normal;
+  }
+  .view{
+    clear: left;
+  }
+}
+
+
+//event 
+
+#quicktabs-hompage_tabs_events{
+  .item-list{
+    border-bottom: 1px dotted;
+    padding: 0 20px 10px;
+    ul, li, a:hover{
+      background: none!important;
+      border: none!important;
+    }
+    a, a:hover{
+      font-size: 1.3em;
+      border-left: 1px dotted!important;
+      background: none;
+      font-family: 'Oron-Medium', sans-serif;  
+      font-weight: normal;
+      padding: 0;
+      line-height: 1.3em;
+      padding: 0 15px;
+    }
+    li{
+      margin: 0;
+      padding: 0;
+    }
+    li.first a{
+      padding-right: 0;
+    }
+    li.last a{
+      border:none!important;
+      padding-left: 0;
+    }
+  }
+}
+
+#block-views-events-view-block{
+  .views-field-field-date-event{
+    font-family: 'Oron-Medium', sans-serif;  
+  }
+  .views-row{
+    margin-top: 30px;
+  }
+  .view-footer{
+    margin-top: 30px;
+    a{
+      color: $dark-blue;
+      font-family: 'Oron-Medium', sans-serif;  
+    }
+  }
+}
+
+//meditzia
+
+#block-block-3{
+  p{
+    margin:0;
+  }
+}
+/***********  footer  ***********/
+
+.region-bottom{
+  padding: 0;
+  border-top: 1px dotted;
+  #block-block-2{
+    margin-top: 4px;
+    border-top: 10px solid $dark-blue;
+    text-align: center;
+    font-size: 0.8em;
+    p{
+      margin: 10px 0;
     }
   }
 }

@@ -37,3 +37,39 @@
       	float: left;
       }
 }
+
+//help
+
+#block-views-req-bulletin-block{
+  .block-title{
+    margin-right: 40px;
+    margin-left: 0;
+  }
+  .view{
+   border-right: 1px dotted;
+   border-left: none;
+   padding-right: 40px;
+   padding-left: 0;
+  }
+}
+
+//icons
+
+#block-views-icon-view-block{
+  .views-row{
+    float: right;
+    margin-right: 0%;
+    margin-left: 5%;
+  }
+}
+
+//jobs
+
+#block-views-communal-bulletin-board-block{
+  .block-title{
+    float: right;
+  }
+  .view{
+    clear: right;
+  }
+}

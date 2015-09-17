@@ -437,6 +437,35 @@ html.js .collapsed .fieldset-legend {
   float: left;
 }
 
+/* line 44, ../sass/components/_tovana-rtl.scss */
+#block-views-req-bulletin-block .block-title {
+  margin-right: 40px;
+  margin-left: 0;
+}
+/* line 48, ../sass/components/_tovana-rtl.scss */
+#block-views-req-bulletin-block .view {
+  border-right: 1px dotted;
+  border-left: none;
+  padding-right: 40px;
+  padding-left: 0;
+}
+
+/* line 59, ../sass/components/_tovana-rtl.scss */
+#block-views-icon-view-block .views-row {
+  float: right;
+  margin-right: 0%;
+  margin-left: 5%;
+}
+
+/* line 69, ../sass/components/_tovana-rtl.scss */
+#block-views-communal-bulletin-board-block .block-title {
+  float: right;
+}
+/* line 72, ../sass/components/_tovana-rtl.scss */
+#block-views-communal-bulletin-board-block .view {
+  clear: right;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
