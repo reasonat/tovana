@@ -8,8 +8,7 @@
  */
 ?>
 
-<div id="page">
-
+  <div class="header-wrapper">
   <header class="header" id="header" role="banner">
 
     <?php if ($logo): ?>
@@ -74,6 +73,10 @@
 
     </div>
   </header>
+</div>
+
+<div id="page">
+
       <?php print render($page['content_top']); ?>
       <?php print render($page['before_sidebars']); ?>
 

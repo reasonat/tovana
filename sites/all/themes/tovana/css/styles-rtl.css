@@ -465,6 +465,14 @@ html.js .collapsed .fieldset-legend {
 #block-views-communal-bulletin-board-block .view {
   clear: right;
 }
+/* line 76, ../sass/components/_tovana-rtl.scss */
+#block-views-communal-bulletin-board-block .view-footer a.he {
+  display: block;
+}
+/* line 79, ../sass/components/_tovana-rtl.scss */
+#block-views-communal-bulletin-board-block .view-footer a.en {
+  display: none;
+}
 
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
