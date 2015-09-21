@@ -443,56 +443,58 @@ html.js .collapsed .fieldset-legend {
   float: left;
 }
 
-/* line 49, ../sass/components/_tovana-rtl.scss */
+/* line 48, ../sass/components/_tovana-rtl.scss */
+#block-views-icon-view-block {
+  margin-top: 20px;
+}
+/* line 50, ../sass/components/_tovana-rtl.scss */
 #block-views-icon-view-block .views-row {
   float: right;
   margin-right: 0%;
   margin-left: 5%;
 }
 
-/* line 59, ../sass/components/_tovana-rtl.scss */
+/* line 60, ../sass/components/_tovana-rtl.scss */
 #block-views-communal-bulletin-board-block .block-title {
   float: right;
 }
-/* line 62, ../sass/components/_tovana-rtl.scss */
+/* line 63, ../sass/components/_tovana-rtl.scss */
 #block-views-communal-bulletin-board-block .view {
   clear: right;
 }
-/* line 66, ../sass/components/_tovana-rtl.scss */
+/* line 67, ../sass/components/_tovana-rtl.scss */
 #block-views-communal-bulletin-board-block .view-footer a.he {
   display: block;
 }
-/* line 69, ../sass/components/_tovana-rtl.scss */
+/* line 70, ../sass/components/_tovana-rtl.scss */
 #block-views-communal-bulletin-board-block .view-footer a.en {
   display: none;
 }
 
 /**********  sidebar  ********/
-/* line 77, ../sass/components/_tovana-rtl.scss */
+/* line 78, ../sass/components/_tovana-rtl.scss */
 .sidebar-second #content {
   float: right;
 }
 
-/* line 81, ../sass/components/_tovana-rtl.scss */
+/* line 82, ../sass/components/_tovana-rtl.scss */
 .sidebar-first #content {
   float: left;
 }
 
-/* line 86, ../sass/components/_tovana-rtl.scss */
+/* line 87, ../sass/components/_tovana-rtl.scss */
 .region-sidebar-second .block .block-title {
   margin-right: 40px;
   margin-left: 0;
   padding-left: 0;
   padding-right: 10px;
 }
-/* line 92, ../sass/components/_tovana-rtl.scss */
+/* line 93, ../sass/components/_tovana-rtl.scss */
 .region-sidebar-second .block .view {
-  border-right: 1px dotted;
-  border-left: none;
   padding-right: 50px;
   padding-left: 0;
 }
-/* line 98, ../sass/components/_tovana-rtl.scss */
+/* line 97, ../sass/components/_tovana-rtl.scss */
 .region-sidebar-second .block ul {
   margin-left: 0;
   margin-right: 40px;
@@ -500,7 +502,7 @@ html.js .collapsed .fieldset-legend {
   padding-right: 10px;
 }
 
-/* line 106, ../sass/components/_tovana-rtl.scss */
+/* line 105, ../sass/components/_tovana-rtl.scss */
 #content {
   border-left: 1px dotted;
   border-right: none;
