@@ -155,6 +155,7 @@ body{
     margin-left: 40px;
     padding-left: 10px;
     font-weight: normal;
+    color: $blue;
   }
   .view{
     padding-left: 50px;
@@ -178,7 +179,8 @@ body{
   }
   ul{
     margin: 0 0 0 40px;
-    padding: 0 0 0 10px;
+    padding: 0 0 20px 10px;
+    border-bottom: 1px dotted;
     li{
       list-style-type: none;
       list-style-image: none;
@@ -193,13 +195,9 @@ body{
   }
 }
 
-#block-menu-block-1{
-  ul{
-    border-bottom: 1px dotted;
-    padding-bottom: 20px;
-  }
-  .block-title{
-    color: $blue;
+#block-views-req-bulletin-block{
+  .views-field-title a{
+    color: $default;
   }
 }
 /************  header  **********/
@@ -281,14 +279,14 @@ body{
   float: right;
   p{
     margin: 0;
-  }
-  a{
-      background: url("../images/facebook.png") no-repeat right center #f2ead7;
-      display: block;
-      text-indent: -9999px;
-      height: 24px;
-      width: 24px;
-      margin: 0 8px;
+    a{
+        background: url("../images/facebook.png") no-repeat right center #f2ead7;
+        display: block;
+        text-indent: -9999px;
+        height: 24px;
+        width: 24px;
+        margin: 0 8px;
+    }
   }
 }
 
@@ -465,6 +463,9 @@ body{
   border-bottom: 1px dotted;
   padding: 23px 10px 17px;
   overflow: hidden;
+  a{
+    color: $default;
+  }
   .views-row{
     float: left;
     width: 10%;
@@ -493,6 +494,11 @@ body{
     color: $blue;
     font-weight: normal;
   }
+  .views-field-title{
+    a{
+      color: $default;
+    }
+  }
   .view{
     clear: left;
     padding: 0 20px;
@@ -517,6 +523,12 @@ body{
     ul, li, a:hover{
       background: none!important;
       border: none!important;
+    }
+    a{
+      color: $default;
+    }
+    a:hover, li.active a{
+      color: $dark-blue;
     }
     a, a:hover{
       font-size: 1.3em;
