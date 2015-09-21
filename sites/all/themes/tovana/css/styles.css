@@ -1724,15 +1724,15 @@ tr.selected td {
 }
 /********** global *****************/
 /* line 62, ../sass/components/_tovana.scss */
-textarea:focus, input:focus {
-  outline: 0;
-}
-
-/* line 66, ../sass/components/_tovana.scss */
-*:focus {
+*:focus, textarea:focus, input:focus, a:active, a:hover, a:focus {
   outline: 0;
   outline-style: none;
   outline-width: 0;
+}
+
+/* line 68, ../sass/components/_tovana.scss */
+input::-moz-focus-inner {
+  border: 0;
 }
 
 /* line 72, ../sass/components/_tovana.scss */
@@ -1773,39 +1773,123 @@ body {
   padding: 0;
 }
 
+/* line 100, ../sass/components/_tovana.scss */
+.breadcrumb {
+  font-family: 'Oron-Medium', sans-serif;
+}
+
+/* line 104, ../sass/components/_tovana.scss */
+#main {
+  padding-top: 35px;
+}
+
+/* line 108, ../sass/components/_tovana.scss */
+#page-title {
+  color: #31b0d8;
+  font-size: 2.3em;
+  font-family: 'Oron-Bold', sans-serif;
+  font-weight: normal;
+}
+
 /**********  sidebar  ********/
-/* line 101, ../sass/components/_tovana.scss */
-.sidebar-second .region-sidebar-second {
+/* line 116, ../sass/components/_tovana.scss */
+.sidebar-second .region-sidebar-second, .sidebar-first .region-sidebar-first {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 25% !important;
 }
 
-/* line 107, ../sass/components/_tovana.scss */
-.sidebar-second #content {
-  float: right;
+/* line 122, ../sass/components/_tovana.scss */
+.sidebar-second #content, .sidebar-first #content {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 75% !important;
 }
 
-/* line 114, ../sass/components/_tovana.scss */
-.sidebar-first .region-sidebar-first {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  width: 25% !important;
+/* line 128, ../sass/components/_tovana.scss */
+.sidebar-second #content {
+  float: left;
 }
 
-/* line 120, ../sass/components/_tovana.scss */
+/* line 132, ../sass/components/_tovana.scss */
 .sidebar-first #content {
   float: right;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  width: 75% !important;
+}
+
+/* line 136, ../sass/components/_tovana.scss */
+#content {
+  border-right: 1px dotted;
+  min-height: 500px;
+  padding: 0 62px 0 10px;
+}
+
+/* line 144, ../sass/components/_tovana.scss */
+.region-sidebar-second .block {
+  font-size: 0.9em;
+}
+/* line 146, ../sass/components/_tovana.scss */
+.region-sidebar-second .block .block-title {
+  font-size: 1.3em;
+  font-family: 'Oron-Medium', sans-serif;
+  padding-bottom: 5px;
+  margin-bottom: 18px;
+  border-bottom: 1px dotted #3c3b3b;
+  margin-left: 40px;
+  padding-left: 10px;
+  font-weight: normal;
+}
+/* line 156, ../sass/components/_tovana.scss */
+.region-sidebar-second .block .view {
+  padding-left: 50px;
+  width: 130px;
+  border-left: 1px dotted;
+}
+/* line 161, ../sass/components/_tovana.scss */
+.region-sidebar-second .block .views-row:after {
+  width: 30px;
+  height: 1px;
+  background-color: #62b7d3;
+  content: "";
+  display: block;
+  margin: 10px auto;
+}
+/* line 169, ../sass/components/_tovana.scss */
+.region-sidebar-second .block .views-row-last:after {
+  display: none;
+}
+/* line 173, ../sass/components/_tovana.scss */
+.region-sidebar-second .block .view-footer a {
+  color: #31b0d8;
+  font-family: 'Oron-Medium', sans-serif;
+}
+/* line 178, ../sass/components/_tovana.scss */
+.region-sidebar-second .block ul {
+  margin: 0 0 0 40px;
+  padding: 0 0 0 10px;
+}
+/* line 181, ../sass/components/_tovana.scss */
+.region-sidebar-second .block ul li {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+}
+/* line 185, ../sass/components/_tovana.scss */
+.region-sidebar-second .block ul li a.active, .region-sidebar-second .block ul li a:hover {
+  font-family: 'Oron-bold', sans-serif;
+}
+
+/* line 193, ../sass/components/_tovana.scss */
+#block-menu-block-1 ul {
+  border-bottom: 1px dotted;
+  padding-bottom: 20px;
+}
+/* line 197, ../sass/components/_tovana.scss */
+#block-menu-block-1 .block-title {
+  color: #62b7d3;
 }
 
 /************  header  **********/
-/* line 128, ../sass/components/_tovana.scss */
+/* line 203, ../sass/components/_tovana.scss */
 .header-wrapper {
   position: fixed;
   width: 100%;
@@ -1817,7 +1901,7 @@ body {
   border-top: 17px solid #c4e1ee;
   padding-top: 20px;
 }
-/* line 138, ../sass/components/_tovana.scss */
+/* line 213, ../sass/components/_tovana.scss */
 .header-wrapper #header {
   width: 1265px;
   max-width: 100%;
@@ -1826,7 +1910,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 143, ../sass/components/_tovana.scss */
+/* line 218, ../sass/components/_tovana.scss */
 #navigation {
   position: relative;
   float: right;
@@ -1836,16 +1920,16 @@ body {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
-/* line 151, ../sass/components/_tovana.scss */
+/* line 226, ../sass/components/_tovana.scss */
 #navigation li {
   padding-right: 8.5% !important;
 }
-/* line 153, ../sass/components/_tovana.scss */
+/* line 228, ../sass/components/_tovana.scss */
 #navigation li.last {
   padding: 0 !important;
 }
 
-/* line 159, ../sass/components/_tovana.scss */
+/* line 234, ../sass/components/_tovana.scss */
 #logo {
   float: left;
   width: 20%;
@@ -1853,87 +1937,105 @@ body {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
-/* line 165, ../sass/components/_tovana.scss */
+/* line 240, ../sass/components/_tovana.scss */
 #logo img {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
 
-/* line 171, ../sass/components/_tovana.scss */
+/* line 246, ../sass/components/_tovana.scss */
 .header__region {
   clear: none;
   float: right;
   width: 80%;
 }
 
-/* line 177, ../sass/components/_tovana.scss */
+/* line 252, ../sass/components/_tovana.scss */
 #block-search-form {
   float: right;
-  width: 100%;
 }
-/* line 180, ../sass/components/_tovana.scss */
+/* line 254, ../sass/components/_tovana.scss */
 #block-search-form #search-block-form {
   float: right;
   background-color: #cc9f44;
 }
-/* line 183, ../sass/components/_tovana.scss */
+/* line 257, ../sass/components/_tovana.scss */
 #block-search-form #search-block-form .container-inline {
-  height: 28px;
+  height: 24px;
 }
-/* line 187, ../sass/components/_tovana.scss */
+/* line 261, ../sass/components/_tovana.scss */
 #block-search-form .form-submit {
   font-size: 0.8em;
   color: #fff;
-  height: 28px;
+  height: 24px;
   padding: 0 10px;
   border: none;
   background-color: transparent;
 }
-/* line 195, ../sass/components/_tovana.scss */
+/* line 269, ../sass/components/_tovana.scss */
 #block-search-form .form-text {
   border: 1px solid #cc9f44;
-  height: 28px;
+  height: 24px;
   margin-left: -5px;
 }
 
-/* line 202, ../sass/components/_tovana.scss */
+/* line 276, ../sass/components/_tovana.scss */
+#block-block-4 {
+  float: right;
+}
+/* line 278, ../sass/components/_tovana.scss */
+#block-block-4 p {
+  margin: 0;
+}
+/* line 281, ../sass/components/_tovana.scss */
+#block-block-4 a {
+  background: url("../images/facebook.png") no-repeat right center #f2ead7;
+  display: block;
+  text-indent: -9999px;
+  height: 24px;
+  width: 24px;
+  margin: 0 8px;
+}
+
+/* line 291, ../sass/components/_tovana.scss */
 #block-locale-language {
   float: right;
+  clear: right;
   margin-top: 10px;
 }
-/* line 205, ../sass/components/_tovana.scss */
+/* line 295, ../sass/components/_tovana.scss */
 #block-locale-language li {
   list-style-type: none;
 }
-/* line 207, ../sass/components/_tovana.scss */
+/* line 297, ../sass/components/_tovana.scss */
 #block-locale-language li.active {
   display: none;
 }
-/* line 211, ../sass/components/_tovana.scss */
+/* line 301, ../sass/components/_tovana.scss */
 #block-locale-language ul {
   margin: 0;
   font-size: 0.8em;
 }
-/* line 214, ../sass/components/_tovana.scss */
+/* line 304, ../sass/components/_tovana.scss */
 #block-locale-language ul a {
   color: #cc9f44;
 }
 
 /**********  header whrn scrolling  **********/
-/* line 222, ../sass/components/_tovana.scss */
-.scroll #block-search-form {
+/* line 312, ../sass/components/_tovana.scss */
+.scroll #block-search-form, .scroll #block-block-4 {
   display: none;
 }
-/* line 225, ../sass/components/_tovana.scss */
+/* line 315, ../sass/components/_tovana.scss */
 .scroll #block-locale-language {
   position: relative;
 }
-/* line 227, ../sass/components/_tovana.scss */
+/* line 317, ../sass/components/_tovana.scss */
 .scroll #block-locale-language .en a {
   text-indent: -9999px;
   display: block;
 }
-/* line 230, ../sass/components/_tovana.scss */
+/* line 320, ../sass/components/_tovana.scss */
 .scroll #block-locale-language .en a:after {
   content: "E";
   display: block;
@@ -1947,22 +2049,22 @@ body {
   top: 0;
   left: 0;
 }
-/* line 245, ../sass/components/_tovana.scss */
+/* line 335, ../sass/components/_tovana.scss */
 .scroll #logo {
   width: 85px;
   overflow: hidden;
   height: 60px;
   margin-top: 8px;
 }
-/* line 250, ../sass/components/_tovana.scss */
+/* line 340, ../sass/components/_tovana.scss */
 .scroll #logo img {
   max-width: 96px;
 }
-/* line 254, ../sass/components/_tovana.scss */
+/* line 344, ../sass/components/_tovana.scss */
 .scroll #navigation {
   margin-top: 10px;
 }
-/* line 257, ../sass/components/_tovana.scss */
+/* line 347, ../sass/components/_tovana.scss */
 .scroll .header-wrapper {
   padding-top: 0;
   padding-bottom: 10px;
@@ -1970,37 +2072,37 @@ body {
 }
 
 /**********  main-menu  **********/
-/* line 266, ../sass/components/_tovana.scss */
+/* line 356, ../sass/components/_tovana.scss */
 #main-menu {
   font-size: 1.3em;
 }
-/* line 268, ../sass/components/_tovana.scss */
+/* line 358, ../sass/components/_tovana.scss */
 #main-menu a {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
-/* line 272, ../sass/components/_tovana.scss */
+/* line 362, ../sass/components/_tovana.scss */
 #main-menu a.active, #main-menu a:hover {
   border-top: 8px solid #62b7d3;
 }
-/* line 275, ../sass/components/_tovana.scss */
+/* line 365, ../sass/components/_tovana.scss */
 #main-menu a.active {
   font-family: 'Oron-Medium', sans-serif;
 }
 
 /*********  front  ************/
-/* line 282, ../sass/components/_tovana.scss */
+/* line 372, ../sass/components/_tovana.scss */
 .front #page-title {
   display: none;
 }
 
-/* line 287, ../sass/components/_tovana.scss */
+/* line 377, ../sass/components/_tovana.scss */
 #block-views-banner-presentation-block {
   background: url("../images/slideshow-front.png") no-repeat right center #f2ead7;
   border-radius: 10px;
   height: 178px;
 }
-/* line 291, ../sass/components/_tovana.scss */
+/* line 381, ../sass/components/_tovana.scss */
 #block-views-banner-presentation-block .views-row {
   width: 315px;
   float: left;
@@ -2009,7 +2111,7 @@ body {
   font-size: 1em;
   padding-bottom: 18px;
 }
-/* line 299, ../sass/components/_tovana.scss */
+/* line 389, ../sass/components/_tovana.scss */
 #block-views-banner-presentation-block .views-field-title {
   font-size: 1.3em;
   font-family: 'Oron-Medium', sans-serif;
@@ -2017,17 +2119,17 @@ body {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 306, ../sass/components/_tovana.scss */
+/* line 396, ../sass/components/_tovana.scss */
 #block-views-banner-presentation-block .views-field-field-banner-body {
   line-height: 1.3em;
 }
-/* line 309, ../sass/components/_tovana.scss */
+/* line 399, ../sass/components/_tovana.scss */
 #block-views-banner-presentation-block .views-field-field-link-banner {
   font-family: 'Oron-Medium', sans-serif;
   margin-top: 10px;
 }
 
-/* line 317, ../sass/components/_tovana.scss */
+/* line 407, ../sass/components/_tovana.scss */
 #block-block-1 {
   background-color: #dfeff6;
   border-radius: 10px;
@@ -2037,26 +2139,26 @@ body {
   width: 73%;
   float: right;
 }
-/* line 325, ../sass/components/_tovana.scss */
+/* line 415, ../sass/components/_tovana.scss */
 #block-block-1 .block-title {
   font-size: 2em;
   font-family: 'Oron-Bold', sans-serif;
   color: #31b0d8;
   font-weight: normal;
 }
-/* line 331, ../sass/components/_tovana.scss */
+/* line 421, ../sass/components/_tovana.scss */
 #block-block-1 p {
   margin: 0;
 }
 
-/* line 336, ../sass/components/_tovana.scss */
+/* line 426, ../sass/components/_tovana.scss */
 .region-before-sidebars {
   overflow: hidden;
   position: relative;
   margin-top: 20px;
 }
 
-/* line 342, ../sass/components/_tovana.scss */
+/* line 432, ../sass/components/_tovana.scss */
 #block-block-3 {
   left: 0;
   height: 100%;
@@ -2065,7 +2167,7 @@ body {
   position: absolute;
   background: url("../images/leaf.png") no-repeat center 25% #f5ecd9;
 }
-/* line 349, ../sass/components/_tovana.scss */
+/* line 439, ../sass/components/_tovana.scss */
 #block-block-3 a {
   position: absolute;
   top: 0;
@@ -2074,7 +2176,7 @@ body {
   display: block;
   font-family: "Oron-Medium",sans-serif;
 }
-/* line 357, ../sass/components/_tovana.scss */
+/* line 447, ../sass/components/_tovana.scss */
 #block-block-3 .text {
   bottom: 10px;
   position: absolute;
@@ -2082,45 +2184,7 @@ body {
   width: 100%;
 }
 
-/* line 366, ../sass/components/_tovana.scss */
-#block-views-req-bulletin-block {
-  font-size: 0.9em;
-}
-/* line 368, ../sass/components/_tovana.scss */
-#block-views-req-bulletin-block .block-title {
-  font-size: 1.3em;
-  font-family: 'Oron-Medium', sans-serif;
-  padding-bottom: 5px;
-  margin-bottom: 18px;
-  border-bottom: 1px dotted;
-  margin-left: 40px;
-}
-/* line 376, ../sass/components/_tovana.scss */
-#block-views-req-bulletin-block .view {
-  padding-left: 40px;
-  width: 130px;
-  border-left: 1px dotted;
-}
-/* line 381, ../sass/components/_tovana.scss */
-#block-views-req-bulletin-block .views-row:after {
-  width: 30px;
-  height: 1px;
-  background-color: #62b7d3;
-  content: "";
-  display: block;
-  margin: 10px auto;
-}
-/* line 389, ../sass/components/_tovana.scss */
-#block-views-req-bulletin-block .views-row-last:after {
-  display: none;
-}
-/* line 393, ../sass/components/_tovana.scss */
-#block-views-req-bulletin-block .view-footer a {
-  color: #31b0d8;
-  font-family: 'Oron-Medium', sans-serif;
-}
-
-/* line 402, ../sass/components/_tovana.scss */
+/* line 457, ../sass/components/_tovana.scss */
 #block-views-icon-view-block {
   text-align: center;
   border-top: 1px dotted;
@@ -2128,26 +2192,26 @@ body {
   padding: 23px 10px 17px;
   overflow: hidden;
 }
-/* line 408, ../sass/components/_tovana.scss */
+/* line 463, ../sass/components/_tovana.scss */
 #block-views-icon-view-block .views-row {
   float: left;
   width: 10%;
   margin-right: 5%;
 }
-/* line 413, ../sass/components/_tovana.scss */
+/* line 468, ../sass/components/_tovana.scss */
 #block-views-icon-view-block .views-row-last {
   margin: 0 !important;
 }
-/* line 416, ../sass/components/_tovana.scss */
+/* line 471, ../sass/components/_tovana.scss */
 #block-views-icon-view-block .views-field-title {
   font-family: 'Oron-Medium', sans-serif;
 }
 
-/* line 423, ../sass/components/_tovana.scss */
+/* line 478, ../sass/components/_tovana.scss */
 #block-views-communal-bulletin-board-block {
   margin-top: 15px;
 }
-/* line 425, ../sass/components/_tovana.scss */
+/* line 480, ../sass/components/_tovana.scss */
 #block-views-communal-bulletin-board-block .block-title {
   font-size: 1.3em;
   font-family: 'Oron-Medium', sans-serif;
@@ -2159,32 +2223,32 @@ body {
   color: #62b7d3;
   font-weight: normal;
 }
-/* line 436, ../sass/components/_tovana.scss */
+/* line 491, ../sass/components/_tovana.scss */
 #block-views-communal-bulletin-board-block .view {
   clear: left;
   padding: 0 20px;
 }
-/* line 441, ../sass/components/_tovana.scss */
+/* line 496, ../sass/components/_tovana.scss */
 #block-views-communal-bulletin-board-block .view-footer a {
   color: #31b0d8;
   font-family: 'Oron-Medium', sans-serif;
 }
-/* line 444, ../sass/components/_tovana.scss */
+/* line 499, ../sass/components/_tovana.scss */
 #block-views-communal-bulletin-board-block .view-footer a.he {
   display: none;
 }
 
-/* line 455, ../sass/components/_tovana.scss */
+/* line 510, ../sass/components/_tovana.scss */
 #quicktabs-hompage_tabs_events .item-list {
   border-bottom: 1px dotted;
   padding: 0 20px 10px;
 }
-/* line 458, ../sass/components/_tovana.scss */
+/* line 513, ../sass/components/_tovana.scss */
 #quicktabs-hompage_tabs_events .item-list ul, #quicktabs-hompage_tabs_events .item-list li, #quicktabs-hompage_tabs_events .item-list a:hover {
   background: none !important;
   border: none !important;
 }
-/* line 462, ../sass/components/_tovana.scss */
+/* line 517, ../sass/components/_tovana.scss */
 #quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover {
   font-size: 1.3em;
   border-left: 1px dotted !important;
@@ -2195,63 +2259,64 @@ body {
   line-height: 1.3em;
   padding: 0 15px;
 }
-/* line 472, ../sass/components/_tovana.scss */
+/* line 527, ../sass/components/_tovana.scss */
 #quicktabs-hompage_tabs_events .item-list li {
   margin: 0;
   padding: 0;
 }
-/* line 476, ../sass/components/_tovana.scss */
+/* line 531, ../sass/components/_tovana.scss */
 #quicktabs-hompage_tabs_events .item-list li.first a {
   padding-right: 0;
 }
-/* line 479, ../sass/components/_tovana.scss */
+/* line 534, ../sass/components/_tovana.scss */
 #quicktabs-hompage_tabs_events .item-list li.last a {
   border: none !important;
   padding-left: 0;
 }
 
-/* line 487, ../sass/components/_tovana.scss */
+/* line 542, ../sass/components/_tovana.scss */
 #block-views-events-view-block .views-field-field-date-event {
   font-family: 'Oron-Medium', sans-serif;
 }
-/* line 490, ../sass/components/_tovana.scss */
+/* line 545, ../sass/components/_tovana.scss */
 #block-views-events-view-block .views-row {
   margin-top: 30px;
 }
-/* line 493, ../sass/components/_tovana.scss */
+/* line 548, ../sass/components/_tovana.scss */
 #block-views-events-view-block .view-footer {
   margin-top: 30px;
 }
-/* line 495, ../sass/components/_tovana.scss */
+/* line 550, ../sass/components/_tovana.scss */
 #block-views-events-view-block .view-footer a {
   color: #31b0d8;
   font-family: 'Oron-Medium', sans-serif;
 }
 
-/* line 502, ../sass/components/_tovana.scss */
+/* line 557, ../sass/components/_tovana.scss */
 .quicktabs-tabpage {
   padding: 0 20px;
 }
 
-/* line 508, ../sass/components/_tovana.scss */
+/* line 563, ../sass/components/_tovana.scss */
 #block-block-3 p {
   margin: 0;
 }
 
 /***********  footer  ***********/
-/* line 514, ../sass/components/_tovana.scss */
+/* line 569, ../sass/components/_tovana.scss */
 .region-bottom {
   padding: 0;
   border-top: 1px dotted;
+  margin-top: 20px;
 }
-/* line 517, ../sass/components/_tovana.scss */
+/* line 573, ../sass/components/_tovana.scss */
 .region-bottom #block-block-2 {
   margin-top: 4px;
   border-top: 10px solid #31b0d8;
   text-align: center;
   font-size: 0.8em;
 }
-/* line 522, ../sass/components/_tovana.scss */
+/* line 578, ../sass/components/_tovana.scss */
 .region-bottom #block-block-2 p {
   margin: 10px 0;
 }

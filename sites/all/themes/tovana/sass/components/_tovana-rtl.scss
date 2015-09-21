@@ -16,6 +16,9 @@
   float: left;
 }
 
+#block-block-4{
+  float: left;
+}
 #block-search-form{
   float: left;
   #search-block-form{
@@ -25,6 +28,7 @@
 
 #block-locale-language{
   float: left;
+  clear: left;
   }
 
   /*********  front  ************/
@@ -38,20 +42,6 @@
       }
 }
 
-//help
-
-#block-views-req-bulletin-block{
-  .block-title{
-    margin-right: 40px;
-    margin-left: 0;
-  }
-  .view{
-   border-right: 1px dotted;
-   border-left: none;
-   padding-right: 40px;
-   padding-left: 0;
-  }
-}
 
 //icons
 
@@ -80,4 +70,41 @@
       display: none;
     }
   }
+}
+
+/**********  sidebar  ********/
+
+.sidebar-second #content{
+  float: right;
+}
+
+.sidebar-first #content {
+  float: left;
+}
+
+.region-sidebar-second .block{
+  .block-title{
+    margin-right: 40px;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+  .view{
+   border-right: 1px dotted;
+   border-left: none;
+   padding-right: 50px;
+   padding-left: 0;
+  }
+  ul{
+    margin-left: 0;
+    margin-right: 40px;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+}
+
+#content{
+  border-left: 1px dotted;
+  border-right: none;
+  padding: 0 10px 0 62px;
 }

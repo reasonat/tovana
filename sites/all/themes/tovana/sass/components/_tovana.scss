@@ -59,14 +59,14 @@ $yellow: #cc9f44;
 
 /********** global *****************/
 
-textarea:focus, input:focus{
-    outline: 0;
-}
-
-*:focus {
+*:focus, textarea:focus, input:focus, a:active, a:hover, a:focus {
     outline: 0;
     outline-style:none;
     outline-width:0;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
 }
 
 a{
@@ -96,32 +96,107 @@ body{
 #footer{
   padding: 0;
 }
+
+.breadcrumb{
+  font-family: 'Oron-Medium', sans-serif;  
+}
+
+#main{
+  padding-top: 35px;
+}
+
+#page-title{
+  color: $dark-blue;
+  font-size: 2.3em;
+  font-family: 'Oron-Bold', sans-serif;
+  font-weight: normal;  
+}
 /**********  sidebar  ********/
 
-.sidebar-second .region-sidebar-second {
+.sidebar-second .region-sidebar-second, .sidebar-first .region-sidebar-first {
     margin-left: 0!important;
     margin-right: 0!important;
     width: 25%!important;
 }
 
-.sidebar-second #content {
-    float: right;
+.sidebar-second #content, .sidebar-first #content {
     margin-left: 0!important;
     margin-right: 0!important;
     width: 75%!important;
 }
 
-.sidebar-first .region-sidebar-first {
-    margin-left: 0!important;
-    margin-right: 0!important;
-    width: 25%!important;
+.sidebar-second #content{
+  float: left;
 }
 
 .sidebar-first #content {
-    float: right;
-    margin-left: 0!important;
-    margin-right: 0!important;
-    width: 75%!important;
+  float: right;
+}
+
+#content{
+  border-right: 1px dotted;
+  min-height: 500px;
+  padding: 0 62px 0 10px;
+}
+
+//region sidebar first blocks
+
+.region-sidebar-second .block{
+  font-size: 0.9em;
+  .block-title{
+    font-size: 1.3em;
+    font-family: 'Oron-Medium', sans-serif;  
+    padding-bottom: 5px;
+    margin-bottom: 18px;
+    border-bottom: 1px dotted $default;
+    margin-left: 40px;
+    padding-left: 10px;
+    font-weight: normal;
+  }
+  .view{
+    padding-left: 50px;
+    width: 130px;
+    border-left: 1px dotted;
+  }
+  .views-row:after{
+    width: 30px;
+    height: 1px;
+    background-color: $blue;
+    content: "";
+    display: block;
+    margin: 10px auto;
+  }
+  .views-row-last:after{
+    display: none;
+  }
+  .view-footer{
+    a{
+      color: $dark-blue;
+      font-family: 'Oron-Medium', sans-serif;  
+    }
+  }
+  ul{
+    margin: 0 0 0 40px;
+    padding: 0 0 0 10px;
+    li{
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0;
+      a.active, a:hover{
+        font-family: 'Oron-bold', sans-serif;  
+      }
+    }
+  }
+}
+
+#block-menu-block-1{
+  ul{
+    border-bottom: 1px dotted;
+    padding-bottom: 20px;
+  }
+  .block-title{
+    color: $blue;
+  }
 }
 /************  header  **********/
 
@@ -176,31 +251,46 @@ body{
 
 #block-search-form{
   float: right;
-  width: 100%;
   #search-block-form{
     float: right;
     background-color: $yellow;
     .container-inline{
-      height: 28px;
+      height: 24px;
     }
   }
   .form-submit{
     font-size: 0.8em;
     color: #fff;
-    height: 28px;
+    height: 24px;
     padding: 0 10px;
     border: none;
     background-color: transparent;
   }
   .form-text{
     border: 1px solid $yellow;
-    height: 28px;
+    height: 24px;
     margin-left: -5px;
+  }
+}
+
+#block-block-4{
+  float: right;
+  p{
+    margin: 0;
+  }
+  a{
+      background: url("../images/facebook.png") no-repeat right center #f2ead7;
+      display: block;
+      text-indent: -9999px;
+      height: 24px;
+      width: 24px;
+      margin: 0 8px;
   }
 }
 
 #block-locale-language{
   float: right;
+  clear: right;
   margin-top: 10px;
   li{
     list-style-type: none;
@@ -219,7 +309,7 @@ body{
 /**********  header whrn scrolling  **********/
 
 .scroll{
-  #block-search-form{
+  #block-search-form, #block-block-4{
     display: none;
   }
   #block-locale-language{
@@ -361,41 +451,6 @@ body{
     width: 100%;
   }
 }
-//help
-
-#block-views-req-bulletin-block{
-  font-size: 0.9em;
-  .block-title{
-    font-size: 1.3em;
-    font-family: 'Oron-Medium', sans-serif;  
-    padding-bottom: 5px;
-    margin-bottom: 18px;
-    border-bottom: 1px dotted;
-    margin-left: 40px;
-  }
-  .view{
-    padding-left: 40px;
-    width: 130px;
-    border-left: 1px dotted;
-  }
-  .views-row:after{
-    width: 30px;
-    height: 1px;
-    background-color: $blue;
-    content: "";
-    display: block;
-    margin: 10px auto;
-  }
-  .views-row-last:after{
-    display: none;
-  }
-  .view-footer{
-    a{
-      color: $dark-blue;
-      font-family: 'Oron-Medium', sans-serif;  
-    }
-  }
-}
 
 //icons
 
@@ -514,6 +569,7 @@ body{
 .region-bottom{
   padding: 0;
   border-top: 1px dotted;
+  margin-top: 20px;
   #block-block-2{
     margin-top: 4px;
     border-top: 10px solid $dark-blue;
