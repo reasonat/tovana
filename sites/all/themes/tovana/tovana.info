@@ -92,6 +92,7 @@ regions[help]           = Help
 regions[content_top]    = Content Top
 regions[before_sidebars]= Before Sidebars
 regions[content]        = Content
+regions[content_bottom] = Content Bottom
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[footer]         = Footer

@@ -503,7 +503,7 @@ html.js .collapsed .fieldset-legend {
 }
 
 /* line 105, ../sass/components/_tovana-rtl.scss */
-#content {
+.sidebar-second #content {
   border-left: 1px dotted;
   border-right: none;
   padding: 0 10px 0 62px;
