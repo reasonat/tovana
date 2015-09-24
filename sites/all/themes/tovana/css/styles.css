@@ -2375,6 +2375,92 @@ body {
   border: none;
 }
 
+/*-----------------------------------------------
+                faq
+-----------------------------------------------*/
+/* line 635, ../sass/components/_tovana.scss */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: none;
+  background-color: transparent;
+  border: none;
+}
+
+/* line 641, ../sass/components/_tovana.scss */
+.ui-state-default .ui-icon {
+  background: none;
+}
+
+/* line 645, ../sass/components/_tovana.scss */
+.ui-accordion-icons .ui-accordion-header a {
+  background: url("../images/plus.png") no-repeat scroll right center transparent;
+}
+
+/* line 649, ../sass/components/_tovana.scss */
+.ui-state-active .ui-icon, .ui-widget-content {
+  background: none;
+}
+
+/* line 653, ../sass/components/_tovana.scss */
+.ui-accordion-icons .ui-accordion-header.ui-state-active a {
+  background: url("../images/minus.png") no-repeat scroll right center transparent;
+}
+
+/* line 658, ../sass/components/_tovana.scss */
+.ui-corner-all {
+  border-radius: 0;
+}
+
+/* line 662, ../sass/components/_tovana.scss */
+.ui-accordion .ui-accordion-header {
+  margin-top: -1px;
+}
+
+/* line 665, ../sass/components/_tovana.scss */
+.ui-accordion-icons .ui-accordion-header a:hover {
+  background-color: transparent;
+}
+
+/* line 669, ../sass/components/_tovana.scss */
+.ui-accordion-icons .ui-accordion-header a {
+  padding-right: 16px;
+  padding-top: 11px;
+  border: none;
+  padding-left: 40px;
+  padding-bottom: 11px;
+}
+
+/* line 677, ../sass/components/_tovana.scss */
+.ui-accordion-icons .ui-accordion-header a {
+  border: none;
+}
+
+/* line 681, ../sass/components/_tovana.scss */
+.ui-corner-top, .ui-corner-bottom {
+  border-radius: 0px;
+}
+
+/* line 685, ../sass/components/_tovana.scss */
+.ui-accordion .ui-accordion-header .ui-icon {
+  display: none;
+}
+
+/* line 689, ../sass/components/_tovana.scss */
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-widget-content {
+  border: none;
+  background: none;
+}
+
+/* line 694, ../sass/components/_tovana.scss */
+.ui-accordion-content {
+  font-family: 'Oron-light', sans-serif;
+}
+
+/* line 699, ../sass/components/_tovana.scss */
+#block-views-faq-view-block a {
+  color: #62b7d3;
+  font-family: 'Oron-Medium', sans-serif;
+}
+
 /**
  * @file
  * Print styling

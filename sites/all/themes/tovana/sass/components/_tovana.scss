@@ -627,3 +627,77 @@ body{
     border: none;
   }
 }
+
+/*-----------------------------------------------
+                faq
+-----------------------------------------------*/
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+  background: none;
+  background-color: transparent;
+  border: none;
+}
+
+.ui-state-default .ui-icon{
+  background: none;
+}
+
+ .ui-accordion-icons .ui-accordion-header a{
+    background: url("../images/plus.png") no-repeat scroll right center transparent;
+}
+
+.ui-state-active .ui-icon, .ui-widget-content {
+  background: none;
+}
+
+.ui-accordion-icons .ui-accordion-header.ui-state-active a{
+    background: url("../images/minus.png") no-repeat scroll right center transparent;
+
+}
+
+.ui-corner-all{
+  border-radius: 0;
+}
+
+.ui-accordion .ui-accordion-header {
+    margin-top:-1px;
+}
+.ui-accordion-icons .ui-accordion-header a:hover{
+  background-color: transparent;
+}
+
+.ui-accordion-icons .ui-accordion-header a {
+    padding-right: 16px;
+    padding-top: 11px;
+    border: none;
+    padding-left: 40px;
+    padding-bottom: 11px;
+}
+
+.ui-accordion-icons .ui-accordion-header a{
+  border:none;
+}
+
+.ui-corner-top, .ui-corner-bottom {
+    border-radius: 0px;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon{
+  display: none;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-widget-content{
+  border: none;
+  background: none;
+}
+
+.ui-accordion-content{
+  font-family: 'Oron-light', sans-serif;  
+}
+
+#block-views-faq-view-block{
+  a{
+    color: $blue;
+    font-family: 'Oron-Medium', sans-serif;  
+  }
+}
