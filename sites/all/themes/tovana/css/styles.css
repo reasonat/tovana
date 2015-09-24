@@ -2341,37 +2341,37 @@ body {
 
 /*************  article and etc.  ************/
 /* line 602, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .views-field-title {
+#block-views-main-article-view-block .views-field-title, #block-views-users-view-block .views-field-title, #block-views-users-view-block-1 .views-field-title {
   font-family: 'Oron-Medium', sans-serif;
   font-size: 1.2em;
 }
 /* line 606, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .label {
+#block-views-main-article-view-block .label, #block-views-users-view-block .label, #block-views-users-view-block-1 .label {
   text-decoration: underline;
   float: left;
   margin-right: 5px;
 }
 /* line 611, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .views-field {
+#block-views-main-article-view-block .views-field, #block-views-users-view-block .views-field, #block-views-users-view-block-1 .views-field {
   margin-top: 10px;
 }
 /* line 614, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .views-field-view-node {
+#block-views-main-article-view-block .views-field-view-node, #block-views-main-article-view-block .views-field-view-user, #block-views-users-view-block .views-field-view-node, #block-views-users-view-block .views-field-view-user, #block-views-users-view-block-1 .views-field-view-node, #block-views-users-view-block-1 .views-field-view-user {
   font-family: 'Oron-Medium', sans-serif;
   text-align: left;
 }
 /* line 617, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .views-field-view-node a {
+#block-views-main-article-view-block .views-field-view-node a, #block-views-main-article-view-block .views-field-view-user a, #block-views-users-view-block .views-field-view-node a, #block-views-users-view-block .views-field-view-user a, #block-views-users-view-block-1 .views-field-view-node a, #block-views-users-view-block-1 .views-field-view-user a {
   color: #62b7d3;
 }
 /* line 621, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .views-row {
+#block-views-main-article-view-block .views-row, #block-views-users-view-block .views-row, #block-views-users-view-block-1 .views-row {
   border-bottom: 1px dotted;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
 /* line 626, ../sass/components/_tovana.scss */
-#block-views-main-article-view-block .views-row-last {
+#block-views-main-article-view-block .views-row-last, #block-views-users-view-block .views-row-last, #block-views-users-view-block-1 .views-row-last {
   border: none;
 }
 
