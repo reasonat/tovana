@@ -75,7 +75,7 @@ a{
 }
 
 body{
-  font-family: 'Oron-Light', sans-serif;  
+  font-family: arial, sans-serif;  
   font-size: 17px;
   color: $default;
   background-color: #f6f5ef;
@@ -290,10 +290,38 @@ body{
   }
 }
 
-#block-locale-language{
+#block-block-6{
   float: right;
   clear: right;
   margin-top: 10px;
+  line-height: 1em;
+  a{
+      color: $yellow;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+#block-block-5{
+  float: right;
+  margin-top: 10px;
+  line-height: 1em;
+  a{
+      color: $yellow;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+#block-locale-language{
+  float: right;
+  margin: 10px;
+  border-right: 1px solid $yellow;
+  border-left: 1px solid $yellow;
+  line-height: 1em;
+  padding: 0 10px;
   li{
     list-style-type: none;
     &.active{
@@ -303,6 +331,7 @@ body{
   ul{
     margin: 0;
     font-size: 0.8em;
+    padding: 0;
     a{
       color: $yellow;
     }
@@ -311,11 +340,36 @@ body{
 /**********  header whrn scrolling  **********/
 
 .scroll{
-  #block-search-form, #block-block-4{
+  #block-search-form, #block-block-4, #block-block-6{
     display: none;
+  }
+  #block-block-5{
+    position: relative;
+    border: none;
+    p a{
+      text-indent: -9999px;
+      display: block;
+      &:after{
+        content: "";
+        background: url("../images/arabic_icon.png") no-repeat center center;
+        display: block;
+        text-indent: 0;
+        border:2px solid $blue;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 2px;
+        box-sizing: border-box;
+      }
+    }
   }
   #block-locale-language{
     position: relative;
+    border: none;
     .en a{
       text-indent: -9999px;
       display: block;
@@ -323,14 +377,16 @@ body{
         content: "E";
         display: block;
         text-indent: 0;
-        border:1px solid $blue;
+        border:2px solid $blue;
         border-radius: 50%;
-        height: 23px;
-        width: 23px;
+        height: 25px;
+        width: 25px;
         text-align: center;
         position: absolute;
         top: 0;
         left: 0;
+        padding-top: 2px;
+        box-sizing: border-box;
       }
     }
   }
@@ -361,6 +417,7 @@ body{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     color: $default;
+    font-family: 'Oron-Light', sans-serif;  
   }
   a.active, a:hover{
     border-top: 8px solid $blue;

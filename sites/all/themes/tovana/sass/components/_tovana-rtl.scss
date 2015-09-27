@@ -16,9 +16,15 @@
   float: left;
 }
 
-#block-block-4{
+#block-block-4, #block-block-5{
   float: left;
 }
+
+#block-block-6{
+  float: left;
+  clear: left;
+}
+
 #block-search-form{
   float: left;
   #search-block-form{
@@ -28,7 +34,6 @@
 
 #block-locale-language{
   float: left;
-  clear: left;
   }
 
   /*********  front  ************/
