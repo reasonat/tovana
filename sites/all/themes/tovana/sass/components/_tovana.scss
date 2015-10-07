@@ -636,6 +636,13 @@ body{
     margin:0;
   }
 }
+
+.view-events-view{
+  margin-top: 20px;
+  .view-content a{
+    color: $default;
+  }
+}
 /***********  footer  ***********/
 
 .region-bottom{

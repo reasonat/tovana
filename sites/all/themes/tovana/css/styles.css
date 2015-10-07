@@ -2386,57 +2386,66 @@ body {
   margin: 0;
 }
 
+/* line 640, ../sass/components/_tovana.scss */
+.view-events-view {
+  margin-top: 20px;
+}
+/* line 642, ../sass/components/_tovana.scss */
+.view-events-view .view-content a {
+  color: #3c3b3b;
+}
+
 /***********  footer  ***********/
-/* line 641, ../sass/components/_tovana.scss */
+/* line 648, ../sass/components/_tovana.scss */
 .region-bottom {
   padding: 0;
   border-top: 1px dotted;
   margin-top: 20px;
 }
-/* line 645, ../sass/components/_tovana.scss */
+/* line 652, ../sass/components/_tovana.scss */
 .region-bottom #block-block-2 {
   margin-top: 4px;
   border-top: 10px solid #31b0d8;
   text-align: center;
   font-size: 0.8em;
 }
-/* line 650, ../sass/components/_tovana.scss */
+/* line 657, ../sass/components/_tovana.scss */
 .region-bottom #block-block-2 p {
   margin: 10px 0;
 }
 
 /*************  article and etc.  ************/
-/* line 659, ../sass/components/_tovana.scss */
+/* line 666, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-field-title, #block-views-users-view-block .views-field-title, #block-views-users-view-block-1 .views-field-title {
   font-family: 'Oron-Medium', sans-serif;
   font-size: 1.2em;
 }
-/* line 663, ../sass/components/_tovana.scss */
+/* line 670, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .label, #block-views-users-view-block .label, #block-views-users-view-block-1 .label {
   text-decoration: underline;
   float: left;
   margin-right: 5px;
 }
-/* line 668, ../sass/components/_tovana.scss */
+/* line 675, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-field, #block-views-users-view-block .views-field, #block-views-users-view-block-1 .views-field {
   margin-top: 10px;
 }
-/* line 671, ../sass/components/_tovana.scss */
+/* line 678, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-field-view-node, #block-views-main-article-view-block .views-field-view-user, #block-views-users-view-block .views-field-view-node, #block-views-users-view-block .views-field-view-user, #block-views-users-view-block-1 .views-field-view-node, #block-views-users-view-block-1 .views-field-view-user {
   font-family: 'Oron-Medium', sans-serif;
   text-align: left;
 }
-/* line 674, ../sass/components/_tovana.scss */
+/* line 681, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-field-view-node a, #block-views-main-article-view-block .views-field-view-user a, #block-views-users-view-block .views-field-view-node a, #block-views-users-view-block .views-field-view-user a, #block-views-users-view-block-1 .views-field-view-node a, #block-views-users-view-block-1 .views-field-view-user a {
   color: #62b7d3;
 }
-/* line 678, ../sass/components/_tovana.scss */
+/* line 685, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-row, #block-views-users-view-block .views-row, #block-views-users-view-block-1 .views-row {
   border-bottom: 1px dotted;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
-/* line 683, ../sass/components/_tovana.scss */
+/* line 690, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-row-last, #block-views-users-view-block .views-row-last, #block-views-users-view-block-1 .views-row-last {
   border: none;
 }
@@ -2444,49 +2453,49 @@ body {
 /*-----------------------------------------------
                 faq
 -----------------------------------------------*/
-/* line 692, ../sass/components/_tovana.scss */
+/* line 699, ../sass/components/_tovana.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: none;
   background-color: transparent;
   border: none;
 }
 
-/* line 698, ../sass/components/_tovana.scss */
+/* line 705, ../sass/components/_tovana.scss */
 .ui-state-default .ui-icon {
   background: none;
 }
 
-/* line 702, ../sass/components/_tovana.scss */
+/* line 709, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a {
   background: url("../images/plus.png") no-repeat scroll right center transparent;
 }
 
-/* line 706, ../sass/components/_tovana.scss */
+/* line 713, ../sass/components/_tovana.scss */
 .ui-state-active .ui-icon, .ui-widget-content {
   background: none;
 }
 
-/* line 710, ../sass/components/_tovana.scss */
+/* line 717, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header.ui-state-active a {
   background: url("../images/minus.png") no-repeat scroll right center transparent;
 }
 
-/* line 715, ../sass/components/_tovana.scss */
+/* line 722, ../sass/components/_tovana.scss */
 .ui-corner-all {
   border-radius: 0;
 }
 
-/* line 719, ../sass/components/_tovana.scss */
+/* line 726, ../sass/components/_tovana.scss */
 .ui-accordion .ui-accordion-header {
   margin-top: -1px;
 }
 
-/* line 722, ../sass/components/_tovana.scss */
+/* line 729, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a:hover {
   background-color: transparent;
 }
 
-/* line 726, ../sass/components/_tovana.scss */
+/* line 733, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a {
   padding-right: 16px;
   padding-top: 11px;
@@ -2495,33 +2504,33 @@ body {
   padding-bottom: 11px;
 }
 
-/* line 734, ../sass/components/_tovana.scss */
+/* line 741, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a {
   border: none;
 }
 
-/* line 738, ../sass/components/_tovana.scss */
+/* line 745, ../sass/components/_tovana.scss */
 .ui-corner-top, .ui-corner-bottom {
   border-radius: 0px;
 }
 
-/* line 742, ../sass/components/_tovana.scss */
+/* line 749, ../sass/components/_tovana.scss */
 .ui-accordion .ui-accordion-header .ui-icon {
   display: none;
 }
 
-/* line 746, ../sass/components/_tovana.scss */
+/* line 753, ../sass/components/_tovana.scss */
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-widget-content {
   border: none;
   background: none;
 }
 
-/* line 751, ../sass/components/_tovana.scss */
+/* line 758, ../sass/components/_tovana.scss */
 .ui-accordion-content {
   font-family: 'Oron-light', sans-serif;
 }
 
-/* line 756, ../sass/components/_tovana.scss */
+/* line 763, ../sass/components/_tovana.scss */
 #block-views-faq-view-block a {
   color: #62b7d3;
   font-family: 'Oron-Medium', sans-serif;
