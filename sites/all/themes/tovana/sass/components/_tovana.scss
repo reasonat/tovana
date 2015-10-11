@@ -642,6 +642,12 @@ body{
   .view-content a{
     color: $default;
   }
+  .views-row{
+    margin-bottom: 20px;
+  }
+  .views-row-last{
+    margin-bottom: 0;
+  }
 }
 /***********  footer  ***********/
 
