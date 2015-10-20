@@ -88,6 +88,18 @@
   float: left;
 }
 
+.two-sidebars .region-sidebar-second{
+  float: left;
+}
+
+.two-sidebars .region-sidebar-first{
+  float: right!important;
+}
+
+.two-sidebars #content{
+  float: right;!important;
+}
+
 .region-sidebar-second .block{
   .block-title{
     margin-right: 40px;
