@@ -500,19 +500,19 @@ html.js .collapsed .fieldset-legend {
 }
 
 /* line 102, ../sass/components/_tovana-rtl.scss */
-.region-sidebar-second .block .block-title {
+.region-sidebar-second .block .block-title, .region-sidebar-first .block .block-title {
   margin-right: 40px;
   margin-left: 0;
   padding-left: 0;
   padding-right: 10px;
 }
 /* line 108, ../sass/components/_tovana-rtl.scss */
-.region-sidebar-second .block .view {
+.region-sidebar-second .block .view, .region-sidebar-first .block .view {
   padding-right: 50px;
   padding-left: 0;
 }
 /* line 112, ../sass/components/_tovana-rtl.scss */
-.region-sidebar-second .block ul {
+.region-sidebar-second .block ul, .region-sidebar-first .block ul {
   margin-left: 0;
   margin-right: 40px;
   padding-left: 0;
