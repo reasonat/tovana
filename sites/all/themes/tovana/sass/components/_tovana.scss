@@ -128,12 +128,20 @@ body{
     width: 75%!important;
 }
 
+.two-sidebars .region-sidebar-first, .two-sidebars .region-sidebar-second{
+  width: 20%;
+}
+
 .sidebar-second #content{
   float: left;
 }
 
 .sidebar-first #content {
   float: right;
+}
+
+.two-sidebars #content{
+  width: 80%;
 }
 
 .sidebar-second #content{
@@ -668,7 +676,8 @@ body{
 /*************  article and etc.  ************/
 
 #block-views-main-article-view-block, #block-views-users-view-block, #block-views-users-view-block-1,
-#block-views-books-view-block, #block-views-books-view-block-1{
+#block-views-books-view-block, #block-views-books-view-block-1, .view-post-terms,
+#block-views-newsletters-view-block{
   .views-field-title{
       font-family: 'Oron-Medium', sans-serif; 
       font-size: 1.2em; 
