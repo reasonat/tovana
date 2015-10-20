@@ -515,25 +515,33 @@ html.js .collapsed .fieldset-legend {
 }
 
 /*************  article and etc.  ************/
-/* line 119, ../sass/components/_tovana-rtl.scss */
-#block-views-main-article-view-block .label {
+/*************  article and etc.  ************/
+/* line 122, ../sass/components/_tovana-rtl.scss */
+#block-views-main-article-view-block .label, #block-views-users-view-block .label, #block-views-users-view-block-1 .label,
+#block-views-books-view-block .label, #block-views-books-view-block-1 .label {
   float: right;
   margin-left: 5px;
-  margin-right: 0px;
+  margin-right: 0;
+}
+/* line 127, ../sass/components/_tovana-rtl.scss */
+#block-views-main-article-view-block .views-field-view-node, #block-views-main-article-view-block .views-field-view-user, #block-views-users-view-block .views-field-view-node, #block-views-users-view-block .views-field-view-user, #block-views-users-view-block-1 .views-field-view-node, #block-views-users-view-block-1 .views-field-view-user,
+#block-views-books-view-block .views-field-view-node,
+#block-views-books-view-block .views-field-view-user, #block-views-books-view-block-1 .views-field-view-node, #block-views-books-view-block-1 .views-field-view-user {
+  text-align: left;
 }
 
 /*************  quivk tab front  ************/
-/* line 130, ../sass/components/_tovana-rtl.scss */
+/* line 136, ../sass/components/_tovana-rtl.scss */
 #quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
   border-left: 1px dotted !important;
   border-right: none !important;
 }
-/* line 134, ../sass/components/_tovana-rtl.scss */
+/* line 140, ../sass/components/_tovana-rtl.scss */
 #quicktabs-hompage_tabs_events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a {
   padding-right: 0;
   padding-left: 15px;
 }
-/* line 138, ../sass/components/_tovana-rtl.scss */
+/* line 144, ../sass/components/_tovana-rtl.scss */
 #quicktabs-hompage_tabs_events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a {
   padding-left: 0;
   padding-right: 15px;

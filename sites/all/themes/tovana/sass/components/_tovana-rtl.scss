@@ -115,11 +115,17 @@
 
 /*************  article and etc.  ************/
 
-#block-views-main-article-view-block{
+/*************  article and etc.  ************/
+
+#block-views-main-article-view-block, #block-views-users-view-block, #block-views-users-view-block-1,
+#block-views-books-view-block, #block-views-books-view-block-1{
   .label{
     float: right;
     margin-left: 5px;
-    margin-right: 0px;
+    margin-right: 0;
+  }
+  .views-field-view-node, .views-field-view-user{
+    text-align: left;
   }
 }
 

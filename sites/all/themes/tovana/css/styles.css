@@ -2445,7 +2445,7 @@ body {
 #block-views-books-view-block .views-field-view-node,
 #block-views-books-view-block .views-field-view-user, #block-views-books-view-block-1 .views-field-view-node, #block-views-books-view-block-1 .views-field-view-user {
   font-family: 'Oron-Medium', sans-serif;
-  text-align: left;
+  text-align: right;
 }
 /* line 687, ../sass/components/_tovana.scss */
 #block-views-main-article-view-block .views-field-view-node a, #block-views-main-article-view-block .views-field-view-user a, #block-views-users-view-block .views-field-view-node a, #block-views-users-view-block .views-field-view-user a, #block-views-users-view-block-1 .views-field-view-node a, #block-views-users-view-block-1 .views-field-view-user a,
