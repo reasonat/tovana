@@ -487,19 +487,31 @@ html.js .collapsed .fieldset-legend {
   float: left;
 }
 
-/* line 92, ../sass/components/_tovana-rtl.scss */
+/* line 91, ../sass/components/_tovana-rtl.scss */
+.two-sidebars .region-sidebar-first {
+  width: 20% !important;
+  margin: 0 -80% 0 0 !important;
+}
+
+/* line 96, ../sass/components/_tovana-rtl.scss */
+.two-sidebars #content {
+  margin-left: 0 !important;
+  margin-right: 20% !important;
+}
+
+/* line 102, ../sass/components/_tovana-rtl.scss */
 .region-sidebar-second .block .block-title {
   margin-right: 40px;
   margin-left: 0;
   padding-left: 0;
   padding-right: 10px;
 }
-/* line 98, ../sass/components/_tovana-rtl.scss */
+/* line 108, ../sass/components/_tovana-rtl.scss */
 .region-sidebar-second .block .view {
   padding-right: 50px;
   padding-left: 0;
 }
-/* line 102, ../sass/components/_tovana-rtl.scss */
+/* line 112, ../sass/components/_tovana-rtl.scss */
 .region-sidebar-second .block ul {
   margin-left: 0;
   margin-right: 40px;
@@ -507,7 +519,7 @@ html.js .collapsed .fieldset-legend {
   padding-right: 10px;
 }
 
-/* line 110, ../sass/components/_tovana-rtl.scss */
+/* line 120, ../sass/components/_tovana-rtl.scss */
 .sidebar-second #content {
   border-left: 1px dotted;
   border-right: none;
@@ -516,7 +528,7 @@ html.js .collapsed .fieldset-legend {
 
 /*************  article and etc.  ************/
 /*************  article and etc.  ************/
-/* line 123, ../sass/components/_tovana-rtl.scss */
+/* line 133, ../sass/components/_tovana-rtl.scss */
 #block-views-main-article-view-block .label, #block-views-users-view-block .label, #block-views-users-view-block-1 .label,
 #block-views-books-view-block .label, #block-views-books-view-block-1 .label, .view-post-terms .label,
 #block-views-newsletters-view-block .label {
@@ -524,7 +536,7 @@ html.js .collapsed .fieldset-legend {
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 128, ../sass/components/_tovana-rtl.scss */
+/* line 138, ../sass/components/_tovana-rtl.scss */
 #block-views-main-article-view-block .views-field-view-node, #block-views-main-article-view-block .views-field-view-user, #block-views-users-view-block .views-field-view-node, #block-views-users-view-block .views-field-view-user, #block-views-users-view-block-1 .views-field-view-node, #block-views-users-view-block-1 .views-field-view-user,
 #block-views-books-view-block .views-field-view-node,
 #block-views-books-view-block .views-field-view-user, #block-views-books-view-block-1 .views-field-view-node, #block-views-books-view-block-1 .views-field-view-user, .view-post-terms .views-field-view-node, .view-post-terms .views-field-view-user,
@@ -534,17 +546,17 @@ html.js .collapsed .fieldset-legend {
 }
 
 /*************  quivk tab front  ************/
-/* line 137, ../sass/components/_tovana-rtl.scss */
+/* line 147, ../sass/components/_tovana-rtl.scss */
 #quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
   border-left: 1px dotted !important;
   border-right: none !important;
 }
-/* line 141, ../sass/components/_tovana-rtl.scss */
+/* line 151, ../sass/components/_tovana-rtl.scss */
 #quicktabs-hompage_tabs_events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a {
   padding-right: 0;
   padding-left: 15px;
 }
-/* line 145, ../sass/components/_tovana-rtl.scss */
+/* line 155, ../sass/components/_tovana-rtl.scss */
 #quicktabs-hompage_tabs_events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a {
   padding-left: 0;
   padding-right: 15px;
