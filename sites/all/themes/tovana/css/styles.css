@@ -1,107 +1,67 @@
-/**
- * @file
- * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
- *
- * When you turn on CSS aggregation at admin/config/development/performance, all
- * of these @include files will be combined into a single file.
- */
-/* Import Sass mixins, variables, Compass modules, etc. */
-/* HTML element (SMACSS base) rules */
-/**
- * @file
- * Normalize.css is intended to be used as an alternative to CSS resets.
- *
- * This file is a slight fork of these original sources:
- * - normalize.css v2.1.2 | MIT License | git.io/normalize
- * - normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass
- *
- * It's suggested that you read the normalize.scss file and customise it to meet
- * your needs, rather then including the file in your project and overriding the
- * defaults later in your CSS.
- * @see http://nicolasgallagher.com/about-normalize-css/
- *
- * Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
- *       @see http://snook.ca/archives/html_and_css/no_css_reset/
- */
-/**
- * HTML5 display definitions
- */
-/* Correct `block` display not defined in IE 8/9. */
-/* line 23, ../sass/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/* Correct `inline-block` display not defined in IE 8/9. */
-/* line 38, ../sass/_normalize.scss */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-/* line 52, ../sass/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/* Address styling not present in IE 8/9. */
-/* line 58, ../sass/_normalize.scss */
-[hidden] {
-  display: none;
-}
-
-/**
- * Base
- *
- * Instead of relying on the fonts that are available on a user's computer, you
- * can use web fonts which, like images, are resources downloaded to the user's
- * browser. Because of the bandwidth and rendering resources required, web fonts
- * should be used with care.
- *
- * Numerous resources for web fonts can be found on Google. Here are a few
- * websites where you can find Open Source fonts to download:
- * - http://www.fontsquirrel.com/fontface
- * - http://www.theleagueofmoveabletype.com
- *
- * In order to use these fonts, you will need to convert them into formats
- * suitable for web fonts. We recommend the free-to-use Font Squirrel's
- * Font-Face Generator:
- *   http://www.fontsquirrel.com/fontface/generator
- *
- * The following is an example @font-face declaration. This font can then be
- * used in any ruleset using a property like this:  font-family: Example, serif;
- *
- * Since we're using Sass, you'll need to declare your font faces here, then you
- * can add them to the font variables in the _init.scss partial.
- */
 /*
-@font-face {
-  font-family: 'Example';
-  src: url('../fonts/example.eot');
-  src: url('../fonts/example.eot?iefix') format('eot'),
-    url('../fonts/example.woff') format('woff'),
-    url('../fonts/example.ttf') format('truetype'),
-    url('../fonts/example.svg#webfontOkOndcij') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+Error: Invalid CSS after "  }": expected selector or at-rule, was "}"
+        on line 231 of c:/users/user/sites/tovana/sites/all/themes/tovana/sass/components/_tovana.scss
+        from line 20 of c:/users/user/sites/tovana/sites/all/themes/tovana/sass/styles.scss
+
+226:     margin-left: 0;
+227:     margin-right: 40px;
+228:     padding-left: 0;
+229:     padding-right: 10px;
+230:   }
+231: }
+232: 
+233: #block-views-req-bulletin-block{
+234:   .views-field-title a{
+235:     color: $default;
+236:   }
+
+Backtrace:
+c:/users/user/sites/tovana/sites/all/themes/tovana/sass/components/_tovana.scss:231
+c:/users/user/sites/tovana/sites/all/themes/tovana/sass/styles.scss:20
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/scss/parser.rb:1164:in `expected'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/scss/parser.rb:1098:in `expected'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/scss/parser.rb:43:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:403:in `_to_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:309:in `to_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:278:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:328:in `block in watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/listener.rb:252:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
+<<<<<<< HEAD
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -2669,3 +2629,9 @@ body {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+=======
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  }\": expected selector or at-rule, was \"}\"\A         on line 231 of c:/users/user/sites/tovana/sites/all/themes/tovana/sass/components/_tovana.scss\A         from line 20 of c:/users/user/sites/tovana/sites/all/themes/tovana/sass/styles.scss\A \A 226:     margin-left: 0;\A 227:     margin-right: 40px;\A 228:     padding-left: 0;\A 229:     padding-right: 10px;\A 230:   }\A 231: }\A 232: \A 233: #block-views-req-bulletin-block{\A 234:   .views-field-title a{\A 235:     color: $default;\A 236:   }"; }
+>>>>>>> 1849dc18b9deb781185833e1d63e7c65c722ae88

@@ -211,6 +211,25 @@ body{
   }
 }
 
+.region-sidebar-first .block
+  .block-title{
+    margin-right: 40px;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+  .view{
+   padding-right: 50px;
+   padding-left: 0;
+  }
+  ul{
+    margin-left: 0;
+    margin-right: 40px;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+}
+
 #block-views-req-bulletin-block{
   .views-field-title a{
     color: $default;

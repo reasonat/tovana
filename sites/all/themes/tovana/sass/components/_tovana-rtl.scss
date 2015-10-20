@@ -98,7 +98,7 @@
     margin-right: 20% !important;
 }
 
-.region-sidebar-second .block, .region-sidebar-first .block{
+.region-sidebar-second .block
   .block-title{
     margin-right: 40px;
     margin-left: 0;
@@ -114,6 +114,25 @@
     margin-right: 40px;
     padding-left: 0;
     padding-right: 10px;
+  }
+}
+
+.region-sidebar-first .block{
+  .block-title{
+    margin-left: 40px;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  .view{
+   padding-left: 50px;
+   padding-right: 0;
+  }
+  ul{
+    margin-right: 0;
+    margin-left: 40px;
+    padding-right: 0;
+    padding-left: 10px;
   }
 }
 
