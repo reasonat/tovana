@@ -131,11 +131,9 @@ body{
 .two-sidebars .region-sidebar-first{
   width: 20%!important;
   margin: 0!important;
-  float: left!important;
 }
 
 .two-sidebars .region-sidebar-second{
-  float: right;
   width: 20%!important;
   margin: 0!important;
 }
@@ -149,8 +147,7 @@ body{
 }
 
 .two-sidebars #content{
-  width: 80%!important;
-  float: left!important;
+  width: 60%!important;
   margin: 0!important;
 }
 
