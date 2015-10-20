@@ -522,6 +522,23 @@ html.js .collapsed .fieldset-legend {
   margin-right: 0px;
 }
 
+/*************  quivk tab front  ************/
+/* line 130, ../sass/components/_tovana-rtl.scss */
+#quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
+  border-left: 1px dotted !important;
+  border-right: none !important;
+}
+/* line 134, ../sass/components/_tovana-rtl.scss */
+#quicktabs-hompage_tabs_events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a {
+  padding-right: 0;
+  padding-left: 15px;
+}
+/* line 138, ../sass/components/_tovana-rtl.scss */
+#quicktabs-hompage_tabs_events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */

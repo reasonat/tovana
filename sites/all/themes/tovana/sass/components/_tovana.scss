@@ -573,7 +573,7 @@ body{
 
 //event 
 
-#quicktabs-hompage_tabs_events{
+#quicktabs-hompage_tabs_events, #block-quicktabs-hompage-news{
   .item-list{
     border-bottom: 1px dotted;
     padding: 0 20px 10px;
@@ -589,11 +589,10 @@ body{
     }
     a, a:hover{
       font-size: 1.3em;
-      border-left: 1px dotted!important;
+      border-right: 1px dotted!important;
       background: none;
       font-family: 'Oron-Medium', sans-serif;  
       font-weight: normal;
-      padding: 0;
       line-height: 1.3em;
       padding: 0 15px;
     }
@@ -602,11 +601,11 @@ body{
       padding: 0;
     }
     li.first a{
-      padding-right: 0;
+      padding-left: 0;
     }
     li.last a{
       border:none!important;
-      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

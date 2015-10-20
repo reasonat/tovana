@@ -122,3 +122,22 @@
     margin-right: 0px;
   }
 }
+
+/*************  quivk tab front  ************/
+
+#quicktabs-hompage_tabs_events, #block-quicktabs-hompage-news{
+  .item-list{
+    a, a:hover{
+        border-left: 1px dotted!important;
+        border-right: none!important;
+    }
+    li.first a{
+        padding-right: 0;
+        padding-left: 15px;
+    }
+    li.last a{
+      padding-left: 0;
+      padding-right: 15px;
+    }
+  }
+}
