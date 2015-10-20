@@ -88,6 +88,16 @@
   float: left;
 }
 
+.two-sidebars .region-sidebar-first{
+  width: 20%!important;
+  margin: 0 -80% 0 0 !important
+}
+
+.two-sidebars #content {
+    margin-left: 0 !important;
+    margin-right: 20% !important;
+}
+
 .region-sidebar-second .block{
   .block-title{
     margin-right: 40px;
