@@ -91,6 +91,12 @@ body{
 
 #page{
   padding-top: 215px;
+  @include res(s){
+    padding-top: 123px;
+  }
+  @include res(m){
+    padding-top: 163px;
+  }
 }
 
 #footer{
@@ -159,7 +165,7 @@ body{
 
 //region sidebar first blocks
 
-.region-sidebar-second .block, .region-sidebar-first .block{
+.not-front .region-sidebar-second .block, .not-front .region-sidebar-first .block{
   font-size: 0.9em;
   a{
     color: $default;
@@ -213,7 +219,7 @@ body{
   }
 }
 
-.region-sidebar-first .block{
+.not-front .region-sidebar-first .block{
   .block-title{
     margin-right: 40px;
     margin-left: 0;
@@ -260,22 +266,30 @@ body{
   width: 80%;
   margin-top: 82px;
   height: auto;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+  transition: margin 0.5s;
+  -webkit-transition: margin 0.5s;
   li{
     padding-right: 5.5%!important;
     &.last{
       padding: 0!important;
     }
   }
+  @include res(m){
+    margin-top: 158px;
+  }
 }
 
 #logo{
   float: left;
-  width: 20%;
-  height: 168px;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  @include res(s-m){
+    float: right;
+    width: 80px;
+  }
+  @include res(m){
+    width: 120px;
+  }
   img{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -286,6 +300,15 @@ body{
   clear: none;
   float: right;
   width: 80%;
+  @include res(s-m){
+    float: left;
+    clear: left;
+    width: auto;
+    margin-top: 50px;
+  }
+  @include res(s){
+    margin-top: 20px;
+  }
 }
 
 #block-search-form{
@@ -293,6 +316,9 @@ body{
   #search-block-form{
     float: right;
     background-color: $yellow;
+    @include res(s-m){
+      display: none;
+    }
     .container-inline{
       height: 24px;
     }
@@ -314,6 +340,9 @@ body{
 
 #block-block-4{
   float: right;
+  @include res(s-m){
+    display: none;
+  }
   p{
     margin: 0;
     a{
@@ -332,6 +361,9 @@ body{
   clear: right;
   margin-top: 10px;
   line-height: 1em;
+  @include res(s-m){
+    display: none;
+  }
   a{
       color: $yellow;
   }
@@ -360,6 +392,9 @@ body{
   border-left: 1px solid $yellow;
   line-height: 1em;
   padding: 0 10px;
+  @include res(s-m){
+    border-right: none;
+  }
   li{
     list-style-type: none;
     &.active{
@@ -439,8 +474,15 @@ body{
     overflow: hidden;
     height: 60px;
     margin-top: 8px;
+    @include res(s){
+      height: 35px;
+    }
     img{
       max-width: 96px;
+      @include res(s){
+        max-width: 55px;
+        float: left;
+      }
     }
   }
   #navigation{
@@ -450,6 +492,16 @@ body{
     padding-top: 0;
     padding-bottom: 10px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
+  }
+  .header__region{
+    @include res(s-m){
+      display: none;
+    }
+  }
+  .menu-wrapper{
+    @include res(s-m){
+      margin-top: 10px;
+    }
   }
 }
 
@@ -465,6 +517,9 @@ body{
   }
   a.active, a:hover{
     border-top: 8px solid $blue;
+    @include res(s-m){
+      border: none;
+    }
   }
   a.active{
       font-family: 'Oron-Medium', sans-serif;  
@@ -479,7 +534,13 @@ body{
   padding:5px 13px 7px;
   z-index: 200;
   cursor: pointer;
+<<<<<<< HEAD
   @include res(s-m){
+=======
+  display: none;
+  @include res(s-m){
+    display: block;
+>>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
     padding: 0!important;
     z-index: 300;
     background-color: transparent;
@@ -498,6 +559,7 @@ body{
       margin-bottom: 6px;
     }
   }
+<<<<<<< HEAD
   .text{
     float: left;
     font-family:   'almoni-700', sans-serif;
@@ -509,6 +571,8 @@ body{
       display: none;
     }
   }
+=======
+>>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
   .lines{
     float: left;
     padding-left: 7px;
@@ -516,6 +580,31 @@ body{
   }
 }
 
+<<<<<<< HEAD
+=======
+#navigation{
+  @include res(s-m){
+    margin-left: -100%;
+    width: 100%;
+    float: none!important;
+    position: fixed;
+    padding-top: 5px;
+    right: 0;
+    background-color: #fff;
+    li{
+      width: 100%;
+      text-align: center;
+      padding-bottom: 10px!important;
+    }
+  }
+}
+.display-menu #navigation{
+  @include res(s-m){
+    margin-left: 0;
+  }
+}
+
+>>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
 .display-menu .menu-button{
   color: #fff;
   span{
@@ -654,7 +743,7 @@ body{
 
 //jobs
 
-#block-views-communal-bulletin-board-block{
+#block-views-req-bulletin-block-1{
   margin-top: 15px;
   .block-title{
     font-size: 1.3em;
@@ -683,6 +772,17 @@ body{
         display: none;
       }
     }
+  }
+  .views-row::after {
+    border-bottom: 1px solid $blue;
+    content: "";
+    display: block;
+    margin: 0 auto 10px;
+    padding-top: 10px;
+    width: 67px;
+  }
+  .views-row-last:after{
+    width: 0;
   }
 }
 

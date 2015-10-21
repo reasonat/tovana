@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+  @if $media == l {
+    @media (max-width: 1195px) { @content; }
+  }
+}
+>>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
 /***********  color ****************/
 
 $default: #3c3b3b;
@@ -14,14 +32,25 @@ $yellow: #cc9f44;
     padding-left: 8.5%!important;
     padding-right: 0!important;
   }
+  @include res(s-m){
+    margin-right: -100%;
+    margin-left: 0;
+  }
 }
 
 #logo{
   float: right;
+  @include res(s-m){
+    float: left;
+  }
 }
 
 .header__region{
   float: left;
+  @include res(s-m){
+    float: right;
+    clear: right;
+  }
 }
 
 #block-block-4, #block-block-5{
@@ -42,7 +71,11 @@ $yellow: #cc9f44;
 
 #block-locale-language{
   float: left;
+  @include res(s-m){
+      border-right: 1px solid $yellow;
+      border-left: none;
   }
+}
 
   /*********  front  ************/
 
@@ -68,6 +101,40 @@ $yellow: #cc9f44;
 }
 
 
+<<<<<<< HEAD
+=======
+#block-views-req-bulletin-block-1{
+  .block-title{
+    float: right;
+  }
+  .view{
+    clear: right;
+  }
+  .view-footer{
+    a{
+      font-family: 'Oron-Medium', sans-serif;  
+      &.he{
+        display: block;
+      }
+      &.en{
+        display: none;
+      }
+    }
+  }
+}
+/**********  responsive menu  ******/
+
+.menu-button{
+  float: right;
+}
+
+.display-menu #navigation{
+  @include res(s-m){
+    margin-right: 0;
+  }
+}
+
+>>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
 
 /**********  sidebar  ********/
 
@@ -89,7 +156,7 @@ $yellow: #cc9f44;
     margin-right: 20% !important;
 }
 
-.region-sidebar-second .block{
+.not-front .region-sidebar-second .block{
   .block-title{
     margin-right: 40px;
     margin-left: 0;
@@ -108,7 +175,7 @@ $yellow: #cc9f44;
   }
 }
 
-.region-sidebar-first .block{
+.not-front .region-sidebar-first .block{
   .block-title{
     margin-left: 40px;
     margin-right: 0;
