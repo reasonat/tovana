@@ -44,8 +44,18 @@
         )); ?>
       </nav>
     <?php endif; ?>
-
+    <div class="menu-wrapper">
+      <div class="menu-button">
+        <div class="lines">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </div>
+    </div>
+    
     <?php print render($page['header']); ?>
+
     <div id="navigation">
 
       <?php if ($main_menu): ?>
@@ -121,5 +131,6 @@
   <?php print render($page['footer']); ?>
 
 </div>
-
-<?php print render($page['bottom']); ?>
+<div class="wrapper-bottom">
+  <?php print render($page['bottom']); ?>
+</div>

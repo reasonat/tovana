@@ -32,8 +32,16 @@ $(document).ready(function(){
       });
 });
 
-
-
+$(".menu-button").click(function(){
+  if ($("body").hasClass("display-menu")){
+    $("body").removeClass("display-menu");
   }
+  else {
+    $("body").addClass("display-menu");
+  }
+});
+
+
+}
 };
 })(jQuery, Drupal, this, this.document);
