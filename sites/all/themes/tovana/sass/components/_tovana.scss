@@ -85,7 +85,7 @@ body{
     margin: 0;
 }
 
-#page, .region-bottom{
+#page{
   @include width;
 }
 
@@ -98,7 +98,6 @@ body{
 }
 
 .breadcrumb{
-  font-family: 'Oron-Medium', sans-serif;  
   a{
     color: $default;
   }
@@ -162,6 +161,15 @@ body{
 
 .region-sidebar-second .block, .region-sidebar-first .block{
   font-size: 0.9em;
+  a{
+    color: $default;
+  }
+  a:hover{
+    color: #000;
+  }
+  a.active{
+    font-weight: bold;
+  }
   .block-title{
     font-size: 1.3em;
     font-family: 'Oron-Medium', sans-serif;  
@@ -201,12 +209,6 @@ body{
       list-style-type: none;
       list-style-image: none;
       margin: 0;
-      a{
-        color: $default;
-      }
-      a.active, a:hover{
-        font-family: 'Oron-bold', sans-serif;  
-      }
     }
   }
 }
@@ -241,7 +243,7 @@ body{
   position: fixed;
   width: 100%;
   right: 0;
-  z-index: 200;
+  z-index: 300;
   background-color: #f6f5ef;
   opacity: 0.95;
   top: 0;
@@ -261,7 +263,7 @@ body{
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   li{
-    padding-right: 8.5%!important;
+    padding-right: 5.5%!important;
     &.last{
       padding: 0!important;
     }
@@ -342,6 +344,7 @@ body{
   float: right;
   margin-top: 10px;
   line-height: 1em;
+  right: 20px;
   a{
       color: $yellow;
   }
@@ -405,7 +408,8 @@ body{
   #block-locale-language{
     position: relative;
     border: none;
-    .en a{
+    margin-right: 32px;
+    .en a, .he a{
       text-indent: -9999px;
       display: block;
       &:after{
@@ -422,6 +426,11 @@ body{
         left: 0;
         padding-top: 2px;
         box-sizing: border-box;
+      }
+    }
+    .he a{
+      &:after{
+        content: "ע";
       }
     }
   }
@@ -459,6 +468,77 @@ body{
   }
   a.active{
       font-family: 'Oron-Medium', sans-serif;  
+  }
+}
+
+/*********  responsive menu  *********/
+
+.menu-button{
+  overflow: hidden;
+  float: left;
+  padding:5px 13px 7px;
+  z-index: 200;
+  cursor: pointer;
+  @include res(s-m){
+    padding: 0!important;
+    z-index: 300;
+    background-color: transparent;
+    height: 25px;
+  }
+  span{
+    width: 20px;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: #000;
+    display: block;  
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    @include res(s-m){
+      width: 25px;
+      margin-bottom: 6px;
+    }
+  }
+  .text{
+    float: left;
+    font-family:   'almoni-700', sans-serif;
+    font-size: 1.5em;
+        transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    width: 65px;
+    @include res(s-m){
+      display: none;
+    }
+  }
+  .lines{
+    float: left;
+    padding-left: 7px;
+    padding-top: 6px;
+  }
+}
+
+.display-menu .menu-button{
+  color: #fff;
+  span{
+    margin: 0;
+    background-color: #fff;
+    @include res(s-m){
+      background-color: #000;
+    }
+  }
+  .line1{
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    margin-top: 6px;
+  }
+  .line2{
+    display: none;
+  }
+  .line3{
+    margin-top: -2px;
+    transform: rotate(135deg);
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
   }
 }
 
@@ -555,6 +635,7 @@ body{
   border-bottom: 1px dotted;
   padding: 23px 10px 17px;
   overflow: hidden;
+  clear: both;
   a{
     color: $default;
   }
@@ -610,8 +691,10 @@ body{
 
 #quicktabs-hompage_tabs_events, #block-quicktabs-hompage-news{
   .item-list{
-    border-bottom: 1px dotted;
-    padding: 0 20px 10px;
+    padding: 0 20px 5px;
+    ul{
+      margin-bottom: 5px;
+    }
     ul, li, a:hover{
       background: none!important;
       border: none!important;
@@ -624,7 +707,7 @@ body{
     }
     a, a:hover{
       font-size: 1.3em;
-      border-right: 1px dotted!important;
+      border-right: 1px dotted $default!important;
       background: none;
       font-family: 'Oron-Medium', sans-serif;  
       font-weight: normal;
@@ -643,6 +726,105 @@ body{
       padding-right: 0;
     }
   }
+}
+
+#block-quicktabs-hompage-news{
+      border-top: 1px dotted!important;
+      padding-top: 5px;
+      width: 75%;
+      float: left;
+      .item-list{
+        float: left;
+        border-bottom: 1px dotted!important;
+        margin-bottom: 20px;
+      }
+      .view-content{
+        a{
+          color: $default;
+        }
+      }
+      .view-footer{
+        .he{
+          display: none;
+        }
+      }
+      .views-row:after{
+        border-bottom: 1px solid $blue;
+        content: "";
+        display: block;
+        margin-left: 12%;
+        width: 67px;
+        padding-top: 10px;
+      }
+      .views-row-last:after{
+        width: 0;
+      }
+      .views-row{
+        margin-bottom: 10px;
+      }
+}
+
+#block-views-messages-block-2{
+  width: 25%;
+  float: right;
+  border-top: 1px dotted!important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .view-content{
+    padding-left: 60px;
+    border-left: 1px dotted!important;
+    padding-right: 13px;
+    .views-field-field-image-message img{
+      border-radius: 25px;
+    }
+  }
+  .views-field-title{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    a{
+      display: block;
+      text-align: center;
+      width: 100%;
+      background-color: rgba(0,0,0,0.7);
+      box-sizing: border-box;
+      padding: 17px 3px;
+      color: #fff;
+      border-radius: 0 0 25px 25px;
+    }
+  }
+  .flex-control-nav{
+    height: 18px;
+    right: 12px;
+    position: absolute;
+    top: 17px;
+    width: auto;
+    z-index: 200;
+  }
+  .flex-control-paging li a{
+    background-color: #fff;
+    box-shadow: none;
+    width: 12px;
+    height: 12px;
+    &.flex-active{
+      background-color: #bababa;
+    }
+  }
+  .flex-control-nav li{
+    margin: 0 4px;
+  }
+  .flex-direction-nav{
+    display: none;
+  }
+}
+
+
+.flexslider {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
 }
 
 .view-events-view {
@@ -685,26 +867,26 @@ body{
 }
 /***********  footer  ***********/
 
-.region-bottom{
-  padding: 0;
-  border-top: 1px dotted;
-  margin-top: 20px;
-  #block-block-2{
-    margin-top: 4px;
-    border-top: 10px solid $dark-blue;
-    text-align: center;
-    font-size: 0.8em;
-    p{
-      margin: 10px 0;
+.wrapper-bottom{
+  @include width;
+  .region-bottom{
+    border-top: 1px dotted;
+    margin-top: 20px;
+    #block-block-2{
+      margin-top: 4px;
+      border-top: 10px solid $dark-blue;
+      text-align: center;
+      font-size: 0.8em;
+      p{
+        margin: 10px 0;
+      }
     }
   }
 }
 
 /*************  article and etc.  ************/
 
-#block-views-main-article-view-block, #block-views-users-view-block, #block-views-users-view-block-1,
-#block-views-books-view-block, #block-views-books-view-block-1, .view-post-terms,
-#block-views-newsletters-view-block{
+.view.article-design{
   .views-field-title{
       font-family: 'Oron-Medium', sans-serif; 
       font-size: 1.2em; 
@@ -718,8 +900,9 @@ body{
     margin-top: 10px;
   }
   .views-field-view-node, .views-field-view-user{
-    font-family: 'Oron-Medium', sans-serif;  
     text-align: right;
+    width: 100%;
+    display: block;
     a{
       color: $blue;
     }
@@ -734,6 +917,29 @@ body{
   }
 }
 
+#block-views-main-links-view-block{
+  .views-exposed-form{
+    border-bottom: 1px dotted;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    label{
+      float: left;
+      font-weight: normal;
+      margin-right: 10px;
+      padding-top: 8px;
+    }
+    .views-widget-filter-field_link_category_tid{
+      padding: 0;
+    }
+    .views-widget{
+      float: left;
+      select{
+        border:none;
+        height: 40px;
+      }
+    }
+  }
+}
 /*-----------------------------------------------
                 faq
 -----------------------------------------------*/
@@ -806,4 +1012,28 @@ body{
     color: $blue;
     font-family: 'Oron-Medium', sans-serif;  
   }
+}
+
+/**********  user pages  **************/
+
+.view-users-content-managment.view-display-id-page{
+  table{
+    width: 100%;
+  }
+}
+
+.page-user-my-advertise{
+  #block-views-user-presentation-block{
+    .views-field-nothing-2{
+      font-weight: bold;
+    }
+  }
+}
+
+.page-user-content-managment{
+    #block-views-user-presentation-block{
+      .views-field-nothing-3{
+        font-weight: bold;
+      }
+    }
 }

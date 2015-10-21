@@ -77,3 +77,10 @@ Stack trace:
 [09-Sep-2015 14:09:52 Asia/Jerusalem] PHP Fatal error:  Call to undefined function workflowfield_property_info_callback() in /home/tovana/public_html/sites/all/modules/entity/modules/field.info.inc on line 30
 [21-Sep-2015 22:20:10 Asia/Jerusalem] PHP Fatal error:  Maximum execution time of 180 seconds exceeded in /home/tovana/public_html/includes/token.inc on line 222
 [21-Sep-2015 22:23:09 Asia/Jerusalem] PHP Fatal error:  Maximum execution time of 180 seconds exceeded in /home/tovana/public_html/includes/token.inc on line 222
+[20-Oct-2015 14:46:59 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ':' in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
+[20-Oct-2015 14:47:10 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ':' in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
+[20-Oct-2015 14:47:34 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ':' in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
+[20-Oct-2015 14:47:46 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ':' in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
+[20-Oct-2015 14:49:57 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
+[20-Oct-2015 14:50:06 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
+[20-Oct-2015 14:50:42 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/tovana/public_html/sites/all/modules/custom_breadcrumbs/custom_breadcrumbs.module(778) : eval()'d code on line 1
