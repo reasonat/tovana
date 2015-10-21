@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
  @mixin res($media) {
   @if $media == s {
@@ -15,7 +13,6 @@
     @media (max-width: 1195px) { @content; }
   }
 }
->>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
 /***********  color ****************/
 
 $default: #3c3b3b;
@@ -100,9 +97,8 @@ $yellow: #cc9f44;
   }
 }
 
+//jobs
 
-<<<<<<< HEAD
-=======
 #block-views-req-bulletin-block-1{
   .block-title{
     float: right;
@@ -134,7 +130,6 @@ $yellow: #cc9f44;
   }
 }
 
->>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
 
 /**********  sidebar  ********/
 

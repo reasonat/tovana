@@ -55,23 +55,7 @@
     </div>
     
     <?php print render($page['header']); ?>
-<<<<<<< HEAD
-    <div class="menu-wrapper">
-      <div class="menu-inside-wrapper">
 
-      <div class="menu-button">
-        <div class="text"><?php print t("Menu"); ?></div>
-        <div class="lines">
-          <span class="line1"></span>
-          <span class="line2"></span>
-          <span class="line3"></span>
-        </div>
-      </div>
-    </div>
-    </div>
-=======
-
->>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
     <div id="navigation">
 
       <?php if ($main_menu): ?>

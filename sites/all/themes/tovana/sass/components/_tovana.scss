@@ -534,13 +534,9 @@ body{
   padding:5px 13px 7px;
   z-index: 200;
   cursor: pointer;
-<<<<<<< HEAD
-  @include res(s-m){
-=======
   display: none;
   @include res(s-m){
     display: block;
->>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
     padding: 0!important;
     z-index: 300;
     background-color: transparent;
@@ -559,20 +555,6 @@ body{
       margin-bottom: 6px;
     }
   }
-<<<<<<< HEAD
-  .text{
-    float: left;
-    font-family:   'almoni-700', sans-serif;
-    font-size: 1.5em;
-        transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    width: 65px;
-    @include res(s-m){
-      display: none;
-    }
-  }
-=======
->>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
   .lines{
     float: left;
     padding-left: 7px;
@@ -580,8 +562,6 @@ body{
   }
 }
 
-<<<<<<< HEAD
-=======
 #navigation{
   @include res(s-m){
     margin-left: -100%;
@@ -604,7 +584,6 @@ body{
   }
 }
 
->>>>>>> 0e118b6a70f84a8e040f09663958cf0216c1ead6
 .display-menu .menu-button{
   color: #fff;
   span{
