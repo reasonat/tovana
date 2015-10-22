@@ -29,10 +29,6 @@ $yellow: #cc9f44;
     padding-left: 8.5%!important;
     padding-right: 0!important;
   }
-  @include res(s-m){
-    margin-right: -100%;
-    margin-left: 0;
-  }
 }
 
 #logo{
@@ -146,6 +142,10 @@ $yellow: #cc9f44;
   margin: 0 -80% 0 0 !important
 }
 
+.sidebar-second .region-sidebar-second{
+  float: left;
+}
+
 .two-sidebars #content {
     margin-left: 0 !important;
     margin-right: 20% !important;
@@ -227,6 +227,11 @@ $yellow: #cc9f44;
     a, a:hover{
         border-left: 1px dotted $default!important;
         border-right: none!important;
+        padding: 0 0 0 15px!important;
+        margin: 0 0 0 15px;
+        @include res(s){
+          border: none!important;
+        }
     }
     li.first a{
         padding-right: 0;

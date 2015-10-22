@@ -44,6 +44,7 @@
         )); ?>
       </nav>
     <?php endif; ?>
+
     <div class="menu-wrapper">
       <div class="menu-button">
         <div class="lines">
@@ -53,9 +54,7 @@
         </div>
       </div>
     </div>
-    
-    <?php print render($page['header']); ?>
-
+        <?php print render($page['header']); ?>
     <div id="navigation">
 
       <?php if ($main_menu): ?>
@@ -91,6 +90,19 @@
       <?php print render($page['before_sidebars']); ?>
 
   <div id="main">
+        <?php
+      // Render the sidebars to see if there's anything in them.
+      $sidebar_first  = render($page['sidebar_first']);
+      $sidebar_second = render($page['sidebar_second']);
+    ?>
+
+    <?php if ($sidebar_first || $sidebar_second): ?>
+      <aside class="sidebars">
+        <?php print $sidebar_first; ?>
+        <?php print $sidebar_second; ?>
+      </aside>
+    <?php endif; ?>
+    
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
@@ -113,18 +125,7 @@
 
 
 
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
 
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside>
-    <?php endif; ?>
 
   </div>
 

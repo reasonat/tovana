@@ -125,12 +125,21 @@ body{
     margin-left: 0!important;
     margin-right: 0!important;
     width: 25%!important;
+    float: right;
+    @include res(s-m){
+      width: 100%!important;
+      padding: 0!important;
+    }
 }
 
 .sidebar-second #content, .sidebar-first #content {
     margin-left: 0!important;
     margin-right: 0!important;
     width: 75%!important;
+    @include res(s-m){
+      width: 100%!important;
+      padding: 0!important;
+    }
 }
 
 .two-sidebars .region-sidebar-first{
@@ -161,12 +170,19 @@ body{
   border-right: 1px dotted;
   min-height: 500px;
   padding: 0 62px 0 10px;
+  @include res(s-m){
+    border:none!important;
+    min-height: 100px;
+  }
 }
 
 //region sidebar first blocks
 
 .not-front .region-sidebar-second .block, .not-front .region-sidebar-first .block{
   font-size: 0.9em;
+  @include res(s-m){
+    margin-bottom: 10px;
+  }
   a{
     color: $default;
   }
@@ -186,6 +202,10 @@ body{
     padding-left: 10px;
     font-weight: normal;
     color: $blue;
+    @include res(s-m){
+      margin: 0!important;
+      padding: 0!important;
+    }
   }
   .view{
     padding-left: 50px;
@@ -211,6 +231,10 @@ body{
     margin: 0 0 0 40px;
     padding: 0 0 20px 10px;
     border-bottom: 1px dotted;
+    @include res(s-m){
+      margin: 0!important;
+      padding: 0!important;
+    }
     li{
       list-style-type: none;
       list-style-image: none;
@@ -273,9 +297,6 @@ body{
     &.last{
       padding: 0!important;
     }
-  }
-  @include res(m){
-    margin-top: 158px;
   }
 }
 
@@ -487,6 +508,20 @@ body{
   }
   #navigation{
     margin-top: 10px;
+    @include res(m){
+      margin-top: -290px;
+    }
+    @include res(s){
+      margin-top: -270px;
+    }
+  }
+  &.display-menu #navigation{
+    @include res(m){
+      margin-top: 97px;
+    }
+    @include res(s){
+      margin-top: 45px;
+    }
   }
   .header-wrapper{
     padding-top: 0;
@@ -571,16 +606,23 @@ body{
     padding-top: 5px;
     right: 0;
     background-color: #fff;
+    margin-top: -290px;
     li{
       width: 100%;
       text-align: center;
       padding-bottom: 10px!important;
     }
   }
+  @include res(m){
+    margin-top: -270px;
+  }
 }
 .display-menu #navigation{
-  @include res(s-m){
-    margin-left: 0;
+  @include res(s){
+    margin-top: 82px;
+  }
+   @include res(m){
+    margin-top: 156px;
   }
 }
 
@@ -621,6 +663,11 @@ body{
       background: url("../images/slideshow-front.png") no-repeat right center #f2ead7;
       border-radius: 10px;
       height: 178px;
+      .view{
+        @include res(s-m){
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+      }
       .views-row{
         width: 315px;
         float: left;
@@ -628,6 +675,9 @@ body{
         box-sizing:border-box;
         font-size: 1em;
         padding-bottom: 18px;
+        @include res(s){
+          width: 100%;
+        }
       }
       .views-field-title{
         font-size: 1.3em;
@@ -655,6 +705,10 @@ body{
   box-sizing: border-box;
   width: 73%;
   float: right;
+  @include res(s){
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .block-title{
     font-size: 2em;
     font-family: 'Oron-Bold', sans-serif;  
@@ -679,6 +733,12 @@ body{
   border-radius: 10px;
   position: absolute;
   background: url("../images/leaf.png")no-repeat center 25% #f5ecd9;
+  @include res(s){
+    height: 140px;
+    position: relative;
+    width: 100%;
+    clear: right;
+  }
   a{
     position: absolute;
     top: 0;
@@ -711,6 +771,24 @@ body{
     float: left;
     width: 10%;
     margin-right: 5%;
+    @include res(s){
+      width: 28%;
+      margin-bottom: 10px;
+    }
+    @include res(m){
+      width: 20%;
+      margin-bottom: 10px;
+    }
+  }
+  .views-row-5{
+    @include res(m){
+      clear: both;
+    }
+  }
+  .views-row-4, .views-row-7{
+    @include res(s){
+      clear: both;
+    }
   }
   .views-row-last{
     margin: 0!important;
@@ -724,6 +802,9 @@ body{
 
 #block-views-req-bulletin-block-1{
   margin-top: 15px;
+  @include res(s-m){
+    display: none;
+  }
   .block-title{
     font-size: 1.3em;
     font-family: 'Oron-Medium', sans-serif;  
@@ -768,11 +849,24 @@ body{
 
 //event 
 
-#quicktabs-hompage_tabs_events, #block-quicktabs-hompage-news{
+#block-quicktabs-hompage-tabs-events, #block-quicktabs-hompage-news{
+    @include res(s-m){
+          border-bottom: 1px dotted $default!important;
+          width: 100%!important;
+    }
   .item-list{
     padding: 0 20px 5px;
+    @include res(s-m){
+        border-bottom: 1px dotted $default!important;
+    }
     ul{
       margin-bottom: 5px;
+      @include res(m){
+        height: 75px;
+      }
+      @include res(s){
+        height: 172px;
+      }
     }
     ul, li, a:hover{
       background: none!important;
@@ -791,11 +885,27 @@ body{
       font-family: 'Oron-Medium', sans-serif;  
       font-weight: normal;
       line-height: 1.3em;
-      padding: 0 15px;
+      padding: 0 15px 0 0!important;
+      margin: 0 15px 0 0;
+      @include res(s){
+        border: none!important;
+      }
+    }
+    li:nth-child(2) a,  li:nth-child(2) a:hover{
+      @include res(s-m){
+        border: none!important;
+      }
     }
     li{
       margin: 0;
       padding: 0;
+      @include res(s-m){
+        width: 50%;
+        margin-bottom: 17px;
+      }
+      @include res(s){
+        width: 100%;
+      }
     }
     li.first a{
       padding-left: 0;
@@ -812,10 +922,23 @@ body{
       padding-top: 5px;
       width: 75%;
       float: left;
+      @include res(s-m){
+        border: none!important;
+        margin-top: 30px;
+      }
       .item-list{
         float: left;
         border-bottom: 1px dotted!important;
         margin-bottom: 20px;
+        @include res(s-m){
+          width: 100%;
+          box-sizing: border-box;
+        }
+        ul{
+          @include res(s-m){
+            height: 35px;
+          }
+        }
       }
       .view-content{
         a{
