@@ -2267,7 +2267,7 @@ body {
 
 /**********  header whrn scrolling  **********/
 /* line 492, ../sass/components/_tovana.scss */
-.scroll #block-search-form, .scroll #block-block-4, .scroll #block-block-6 {
+.scroll #block-search-form, .scroll #block-block-4, .scroll #block-block-6, .scroll #block-system-user-menu {
   display: none;
 }
 /* line 495, ../sass/components/_tovana.scss */
