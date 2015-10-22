@@ -288,10 +288,11 @@ body{
   position: relative;
   float: right;
   width: 80%;
-  margin-top: 82px;
+  margin-top: 80px;
   height: auto;
   transition: margin 0.5s;
   -webkit-transition: margin 0.5s;
+  padding-right: 0!important;
   li{
     padding-right: 5.5%!important;
     &.last{
@@ -300,16 +301,40 @@ body{
   }
 }
 
+@media (max-width: 1200px){
+  #navigation{
+    li{
+      padding-right: 3.5%!important;
+    }
+  }
+}
+
+@media (max-width: 1025px){
+  #navigation{
+    margin-top: 56px;
+    width: 550px!important;
+    li{
+      font-size: 15px;
+      a, a:active{
+        font-family: arial,sans-serif!important;
+      }
+    }
+  }
+}
+
 #logo{
   float: left;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  max-width: 20%;
   @include res(s-m){
     float: right;
     width: 80px;
+    max-width: 80px;
   }
   @include res(m){
     width: 120px;
+    max-width: 120px;
   }
   img{
     transition: all 0.5s;
@@ -320,7 +345,7 @@ body{
 .header__region{
   clear: none;
   float: right;
-  width: 80%;
+  width: 70%;
   @include res(s-m){
     float: left;
     clear: left;

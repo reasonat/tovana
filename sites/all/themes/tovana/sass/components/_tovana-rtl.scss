@@ -28,6 +28,28 @@ $yellow: #cc9f44;
   li{
     padding-left: 8.5%!important;
     padding-right: 0!important;
+
+  }
+}
+
+@media (max-width: 1200px){
+  #navigation{
+    li{
+      padding-left: 3.5%!important;
+      padding-right: 0!important;
+    }
+  }
+}
+
+@media (max-width: 1025px){
+  #navigation{
+    width: 508px!important;
+    li{
+      font-size: 19px;
+      a, a:active{
+        font-family: "Oron-Light",sans-serif!important;
+      }
+    }
   }
 }
 
