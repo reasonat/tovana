@@ -92,6 +92,22 @@ $yellow: #cc9f44;
   }
 }
 
+#block-system-user-menu .menu{
+  float: left;
+  clear: left;
+  li{
+    float: left;
+  }
+  a{
+      border-left: 1px solid $yellow;
+      border-right: none;
+      padding-left: 5px;
+      margin-left: 5px;
+      padding-right: 0;
+      margin-right: 0;
+  }
+}
+
   /*********  front  ************/
 
 //slideshow

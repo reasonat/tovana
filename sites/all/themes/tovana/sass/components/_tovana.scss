@@ -288,7 +288,7 @@ body{
   position: relative;
   float: right;
   width: 80%;
-  margin-top: 80px;
+  margin-top: 60px;
   height: auto;
   transition: margin 0.5s;
   -webkit-transition: margin 0.5s;
@@ -406,7 +406,8 @@ body{
   float: right;
   clear: right;
   margin-top: 10px;
-  line-height: 1em;
+  line-height: 1.3em;
+  font-size: 0.8em;
   @include res(s-m){
     display: none;
   }
@@ -453,6 +454,36 @@ body{
     a{
       color: $yellow;
     }
+  }
+}
+
+#block-system-user-menu .menu{
+  float: right;
+  clear: right;
+  line-height: 1em;
+  margin: 0;
+  @include res(s-m){
+    display: none;
+  }
+  li{
+    list-style-type: none;
+    float: right;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  a{  
+      padding-right: 5px;
+      margin-right: 5px;
+      color: $yellow;
+      font-size: 0.8em;
+      border-right: 1px solid $yellow;
+      display: block;
+  }
+  li.first a{
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 }
 /**********  header whrn scrolling  **********/
@@ -675,12 +706,14 @@ body{
       background: url("../images/slideshow-front.png") no-repeat right center #f2ead7;
       border-radius: 10px;
       height: 178px;
+      overflow: hidden;
       .view{
         @include res(s-m){
           background-color: rgba(255, 255, 255, 0.4);
         }
       }
       .views-row{
+        background-color: #f2ead7;
         width: 315px;
         float: left;
         padding: 18px;
@@ -689,6 +722,9 @@ body{
         padding-bottom: 18px;
         @include res(s){
           width: 100%;
+        }
+        @include res(s-m){
+          background-color: transparent;
         }
       }
       .views-field-title{
