@@ -119,6 +119,10 @@ body{
   font-family: 'Oron-Bold', sans-serif;
   font-weight: normal;  
 }
+
+.text-format-wrapper .filter-wrapper{
+  display: none;
+}
 /**********  sidebar  ********/
 
 .sidebar-second .region-sidebar-second, .sidebar-first .region-sidebar-first {
