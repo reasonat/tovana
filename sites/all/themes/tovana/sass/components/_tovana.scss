@@ -1292,3 +1292,56 @@ body{
       }
     }
 }
+
+/****  user tab  ********/
+
+
+.page-user .tabs-primary{
+  width: 25%;
+  clear: right;
+  float: right;
+  font-size: 0.9em;
+  background-image: none;
+  text-align: left;
+  margin: 0;
+  box-sizing:border-box;
+  li{
+    width: 100%;
+    border: none!important;
+    background-image: none;
+    padding-left: 40px;
+    a, a:hover{
+      background-color: transparent;
+      border: none!important;
+      background-image: none!important;
+      letter-spacing: 0.001em!important;
+      text-align: left!important;
+      padding: 0;
+    }
+  }
+  .block-title-user{
+    font-size: 1.3em;
+    font-family: 'Oron-Medium', sans-serif;  
+    padding-bottom: 5px;
+    margin-bottom: 18px;
+    padding-left: 40px;
+    font-weight: normal;
+    color: $blue;
+    box-sizing:border-box;
+    span{
+    border-bottom: 1px dotted $default;
+    display: block;
+    }
+    @include res(s-m){
+      margin: 0!important;
+      padding: 0!important;
+    }
+}
+}
+
+#user-login{
+  float: left;
+  width: 75%;
+  border-right: 1px dotted;
+  box-sizing:border-box;
+}
