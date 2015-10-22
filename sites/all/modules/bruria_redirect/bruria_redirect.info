@@ -1,0 +1,3 @@
+name = Bruria redirect 
+description = redirect the user after update or save an account
+core = 7.x
