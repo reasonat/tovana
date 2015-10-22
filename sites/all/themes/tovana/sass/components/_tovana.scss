@@ -422,7 +422,6 @@ body{
   float: right;
   margin-top: 10px;
   line-height: 1em;
-  right: 20px;
   a{
       color: $yellow;
   }
@@ -465,6 +464,7 @@ body{
   #block-block-5{
     position: relative;
     border: none;
+    right: 20px;
     p a{
       text-indent: -9999px;
       display: block;
@@ -489,30 +489,17 @@ body{
   #block-locale-language{
     position: relative;
     border: none;
-    margin-right: 32px;
-    .en a, .he a{
-      text-indent: -9999px;
+    margin-left: 0px;
+    a{
+      border: 2px solid #62b7d3;
+      border-radius: 50%;
+      box-sizing: border-box;
       display: block;
-      &:after{
-        content: "E";
-        display: block;
-        text-indent: 0;
-        border:2px solid $blue;
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        text-align: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-top: 2px;
-        box-sizing: border-box;
-      }
-    }
-    .he a{
-      &:after{
-        content: "ע";
-      }
+      height: 25px;
+      overflow: hidden;
+      padding: 1px 4px 4px;
+      text-align: center;
+      width: 25px;
     }
   }
   #logo{

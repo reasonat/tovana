@@ -698,6 +698,12 @@ html.js .collapsed .fieldset-legend {
   left: 12px;
 }
 
+/* line 303, ../sass/components/_tovana-rtl.scss */
+.scroll #block-locale-language {
+  margin-right: 17px;
+  margin-left: 0;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
