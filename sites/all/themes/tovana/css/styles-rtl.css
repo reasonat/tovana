@@ -723,6 +723,35 @@ html.js .collapsed .fieldset-legend {
   margin-left: 0;
 }
 
+/****  user tab  ********/
+/* line 328, ../sass/components/_tovana-rtl.scss */
+.page-user .tabs-primary {
+  clear: left;
+  float: left;
+}
+/* line 331, ../sass/components/_tovana-rtl.scss */
+.page-user .tabs-primary li {
+  padding-right: 40px;
+  padding-left: 0;
+}
+/* line 334, ../sass/components/_tovana-rtl.scss */
+.page-user .tabs-primary li a, .page-user .tabs-primary li a:hover {
+  text-align: right !important;
+}
+/* line 338, ../sass/components/_tovana-rtl.scss */
+.page-user .tabs-primary .block-title-user {
+  font-family: 'Oron-Medium', sans-serif;
+  padding-right: 40px;
+  padding-left: 0;
+}
+
+/* line 345, ../sass/components/_tovana-rtl.scss */
+#user-login {
+  float: right;
+  border-left: 1px dotted;
+  border-right: none;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */

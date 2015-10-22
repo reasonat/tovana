@@ -321,3 +321,29 @@ $yellow: #cc9f44;
     margin-left: 0;
   }
 }
+
+/****  user tab  ********/
+
+
+.page-user .tabs-primary{
+  clear: left;
+  float: left;
+  li{
+    padding-right: 40px;
+    padding-left: 0;
+    a, a:hover{
+      text-align: right!important;
+    }
+  }
+  .block-title-user{
+    font-family: 'Oron-Medium', sans-serif;  
+    padding-right: 40px;
+    padding-left: 0;
+}
+}
+
+#user-login{
+  float: right;
+  border-left: 1px dotted;
+  border-right: none;
+}
