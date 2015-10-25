@@ -3277,6 +3277,10 @@ body {
   box-sizing: border-box;
 }
 /* line 1329, ../sass/components/_tovana.scss */
+.page-user .tabs-primary .block-title-user.he {
+  display: none;
+}
+/* line 1332, ../sass/components/_tovana.scss */
 .page-user .tabs-primary .block-title-user span {
   border-bottom: 1px dotted #3c3b3b;
   display: block;
@@ -3289,12 +3293,17 @@ body {
   }
 }
 
-/* line 1340, ../sass/components/_tovana.scss */
-#user-login {
+/* line 1343, ../sass/components/_tovana.scss */
+.page-user h1.page-title, .page-user .view-communal-bulletin-board,
+.page-user .view-users-content-managment,
+.page-user .view-main-article-view, .page-user .view-podcasts,
+.page-user .view-commerce-user-orders {
   float: left;
   width: 75%;
   border-right: 1px dotted;
   box-sizing: border-box;
+  padding: 0 62px 0 10px;
+  min-height: 300px;
 }
 
 /**

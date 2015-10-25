@@ -744,12 +744,24 @@ html.js .collapsed .fieldset-legend {
   padding-right: 40px;
   padding-left: 0;
 }
-
+/* line 342, ../sass/components/_tovana-rtl.scss */
+.page-user .tabs-primary .block-title-user.he {
+  display: block;
+}
 /* line 345, ../sass/components/_tovana-rtl.scss */
-#user-login {
+.page-user .tabs-primary .block-title-user.en {
+  display: none;
+}
+
+/* line 351, ../sass/components/_tovana-rtl.scss */
+.page-user h1.page-title, .page-user .view-communal-bulletin-board,
+.page-user .view-users-content-managment,
+.page-user .view-main-article-view, .page-user .view-podcasts,
+.page-user .view-commerce-user-orders {
   float: right;
   border-left: 1px dotted;
   border-right: none;
+  padding: 0 10px 0 62px;
 }
 
 /* SMACSS theme rules */

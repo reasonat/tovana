@@ -339,11 +339,21 @@ $yellow: #cc9f44;
     font-family: 'Oron-Medium', sans-serif;  
     padding-right: 40px;
     padding-left: 0;
-}
+    &.he{
+      display: block;
+    }
+    &.en{
+      display: none;
+    }
+  }
 }
 
-#user-login{
+.page-user h1.page-title, .page-user .view-communal-bulletin-board,
+.page-user .view-users-content-managment,
+.page-user .view-main-article-view, .page-user .view-podcasts,
+.page-user .view-commerce-user-orders{
   float: right;
   border-left: 1px dotted;
   border-right: none;
+  padding: 0 10px 0 62px
 }

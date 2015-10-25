@@ -1326,6 +1326,9 @@ body{
     font-weight: normal;
     color: $blue;
     box-sizing:border-box;
+    &.he{
+      display: none;
+    }
     span{
     border-bottom: 1px dotted $default;
     display: block;
@@ -1334,12 +1337,17 @@ body{
       margin: 0!important;
       padding: 0!important;
     }
-}
+  }
 }
 
-#user-login{
+.page-user h1.page-title, .page-user .view-communal-bulletin-board,
+.page-user .view-users-content-managment,
+.page-user .view-main-article-view, .page-user .view-podcasts,
+.page-user .view-commerce-user-orders{
   float: left;
   width: 75%;
   border-right: 1px dotted;
   box-sizing:border-box;
+  padding: 0 62px 0 10px;
+  min-height: 300px;
 }

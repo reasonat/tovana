@@ -41,7 +41,7 @@ $(".menu-button").click(function(){
   }
 });
 
-$( ".page-user .tabs-primary" ).prepend( "<h2 class='block__title block-title block-title-user'><span>User Menu</span></h2>" );
+$( ".page-user .tabs-primary" ).prepend( "<h2 class='block__title block-title block-title-user en'><span>User Menu</span></h2><h2 class='block__title block-title block-title-user he'><span>תפריט משתמש</span></h2>" );
 
 
 }
