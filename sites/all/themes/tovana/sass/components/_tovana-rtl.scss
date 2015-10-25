@@ -348,10 +348,10 @@ $yellow: #cc9f44;
   }
 }
 
-.page-user h1.page-title, .page-user .view-communal-bulletin-board,
+.page-user h1#page-title, .page-user .view-communal-bulletin-board,
 .page-user .view-users-content-managment,
 .page-user .view-main-article-view, .page-user .view-podcasts,
-.page-user .view-commerce-user-orders{
+.page-user .view-commerce-user-orders, .page-user #user-login{
   float: right;
   border-left: 1px dotted;
   border-right: none;

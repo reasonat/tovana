@@ -22,5 +22,8 @@
  * the view is modified.
  */
 ?>
-<?php print $output; ?>
+  <?php print $fields['title']->content; ?>
+  <audio controls="" src="<?php print $fields['field_podcast_url']->content; ?>"></audio>
+
+  
 
