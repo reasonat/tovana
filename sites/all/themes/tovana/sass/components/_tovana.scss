@@ -1199,6 +1199,40 @@ body{
     }
   }
 }
+
+#block-views-podcasts-block-1{
+  audio{
+    margin: 20px 0;
+  }
+  .views-exposed-form{
+    select{
+      height: 28px;
+      border:none;
+      width: 100%;
+    }
+  }
+  .views-exposed-widget{
+    width: 17%;
+    margin-bottom: 30px;
+    min-width: 180px;
+    @include res(m){
+      width: 46%;
+    }
+    @include res(s){
+      width: 100%;
+    }
+  }
+  .views-submit-button, .views-reset-button{
+    width: auto;
+    min-width: auto;
+    input{
+      box-shadow: none;
+      height: 28px;
+      margin-top: 23px !important;
+      background-color: #fff;
+    }
+  }
+}
 /*-----------------------------------------------
                 faq
 -----------------------------------------------*/

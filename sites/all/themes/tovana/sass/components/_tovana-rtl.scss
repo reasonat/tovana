@@ -258,6 +258,12 @@ $yellow: #cc9f44;
     }
   }
 }
+
+#block-views-podcasts-block-1{
+  .views-exposed-form .views-exposed-widget {
+      padding: 0.5em 0 0 1em;
+  }
+}
 /*************  quick tab front  ************/
 
 #quicktabs-hompage_tabs_events, #block-quicktabs-hompage-news{
