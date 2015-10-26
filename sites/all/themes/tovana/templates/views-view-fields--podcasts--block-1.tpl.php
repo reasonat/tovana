@@ -21,9 +21,10 @@
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
  */
+
 ?>
   <?php print $fields['title']->content; ?>
-  <audio controls="" src="<?php print $fields['field_podcast_url']->content; ?>"></audio>
+  <audio controls="" src="<?php print urldecode($fields['field_podcast_url']->content); ?>"></audio>
 
   
 
