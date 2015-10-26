@@ -1378,10 +1378,16 @@ body{
   }
 }
 
+.page-user{
+  table{
+    width: 100%;
+  }
+}
+
 .page-user h1#page-title, .page-user .view-communal-bulletin-board,
 .page-user .view-users-content-managment,
 .page-user .view-main-article-view, .page-user .view-podcasts,
-.page-user .view-commerce-user-orders, .page-user #user-login{
+.page-user .view-commerce-user-orders, .page-user #user-login, .page-user .view-register-events{
   float: left;
   width: 75%;
   border-right: 1px dotted;
@@ -1392,4 +1398,5 @@ body{
 
 .page-user h1#page-title{
   min-height: 0;
+  border-color: $default!important;
 }
