@@ -1,0 +1,5 @@
+
+name = Bruria configuration module
+core = 7.x
+package = Tikke
+files[]= bruria.module

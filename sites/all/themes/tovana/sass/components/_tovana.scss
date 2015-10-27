@@ -1400,3 +1400,16 @@ body{
   min-height: 0;
   border-color: $default!important;
 }
+
+.ajax-progress{
+  position: absolute;
+  width: 300px;
+}
+
+/********  checkput  **********/
+
+.page-checkout{
+  table{
+    width: 100%;
+  }
+}

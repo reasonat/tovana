@@ -3363,6 +3363,18 @@ body {
   border-color: #3c3b3b !important;
 }
 
+/* line 1404, ../sass/components/_tovana.scss */
+.ajax-progress {
+  position: absolute;
+  width: 300px;
+}
+
+/********  checkput  **********/
+/* line 1412, ../sass/components/_tovana.scss */
+.page-checkout table {
+  width: 100%;
+}
+
 /**
  * @file
  * Print styling
