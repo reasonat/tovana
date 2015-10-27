@@ -906,7 +906,7 @@ body{
 
 //event 
 
-#block-quicktabs-hompage-tabs-events, #block-quicktabs-hompage-news{
+#block-quicktabs-hompage-tabs-events, #block-quicktabs-hompage-news, #block-quicktabs-events{
     @include res(s-m){
           border-bottom: 1px dotted $default!important;
           width: 100%!important;

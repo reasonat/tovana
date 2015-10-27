@@ -660,7 +660,7 @@ html.js .collapsed .fieldset-legend {
 
 /*************  quick tab front  ************/
 /* line 271, ../sass/components/_tovana-rtl.scss */
-#quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
+#quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-events .item-list a, #block-quicktabs-events .item-list a:hover {
   border-left: 1px dotted #3c3b3b !important;
   border-right: none !important;
   padding: 0 0 0 15px !important;
@@ -668,17 +668,17 @@ html.js .collapsed .fieldset-legend {
 }
 @media (max-width: 480px) {
   /* line 271, ../sass/components/_tovana-rtl.scss */
-  #quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
+  #quicktabs-hompage_tabs_events .item-list a, #quicktabs-hompage_tabs_events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-events .item-list a, #block-quicktabs-events .item-list a:hover {
     border: none !important;
   }
 }
 /* line 280, ../sass/components/_tovana-rtl.scss */
-#quicktabs-hompage_tabs_events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a {
+#quicktabs-hompage_tabs_events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a, #block-quicktabs-events .item-list li.first a {
   padding-right: 0;
   padding-left: 15px;
 }
 /* line 284, ../sass/components/_tovana-rtl.scss */
-#quicktabs-hompage_tabs_events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a {
+#quicktabs-hompage_tabs_events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a, #block-quicktabs-events .item-list li.last a {
   padding-left: 0;
   padding-right: 15px;
 }

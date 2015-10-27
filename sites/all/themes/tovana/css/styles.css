@@ -2781,52 +2781,52 @@ body {
 
 @media (max-width: 767px) {
   /* line 909, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events, #block-quicktabs-hompage-news {
+  #block-quicktabs-hompage-tabs-events, #block-quicktabs-hompage-news, #block-quicktabs-events {
     border-bottom: 1px dotted #3c3b3b !important;
     width: 100% !important;
   }
 }
 /* line 914, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list, #block-quicktabs-hompage-news .item-list {
+#block-quicktabs-hompage-tabs-events .item-list, #block-quicktabs-hompage-news .item-list, #block-quicktabs-events .item-list {
   padding: 0 20px 5px;
 }
 @media (max-width: 767px) {
   /* line 914, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list, #block-quicktabs-hompage-news .item-list {
+  #block-quicktabs-hompage-tabs-events .item-list, #block-quicktabs-hompage-news .item-list, #block-quicktabs-events .item-list {
     border-bottom: 1px dotted #3c3b3b !important;
   }
 }
 /* line 919, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-news .item-list ul {
+#block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-news .item-list ul, #block-quicktabs-events .item-list ul {
   margin-bottom: 5px;
 }
 @media (min-width: 481px) and (max-width: 767px) {
   /* line 919, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-news .item-list ul {
+  #block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-news .item-list ul, #block-quicktabs-events .item-list ul {
     height: 75px;
   }
 }
 @media (max-width: 480px) {
   /* line 919, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-news .item-list ul {
+  #block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-news .item-list ul, #block-quicktabs-events .item-list ul {
     height: 172px;
   }
 }
 /* line 928, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-news .item-list ul, #block-quicktabs-hompage-news .item-list li, #block-quicktabs-hompage-news .item-list a:hover {
+#block-quicktabs-hompage-tabs-events .item-list ul, #block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-news .item-list ul, #block-quicktabs-hompage-news .item-list li, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-events .item-list ul, #block-quicktabs-events .item-list li, #block-quicktabs-events .item-list a:hover {
   background: none !important;
   border: none !important;
 }
 /* line 932, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list a, #block-quicktabs-hompage-news .item-list a {
+#block-quicktabs-hompage-tabs-events .item-list a, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-events .item-list a {
   color: #3c3b3b;
 }
 /* line 935, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-tabs-events .item-list li.active a, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-hompage-news .item-list li.active a {
+#block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-tabs-events .item-list li.active a, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-hompage-news .item-list li.active a, #block-quicktabs-events .item-list a:hover, #block-quicktabs-events .item-list li.active a {
   color: #31b0d8;
 }
 /* line 938, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list a, #block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
+#block-quicktabs-hompage-tabs-events .item-list a, #block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-events .item-list a, #block-quicktabs-events .item-list a:hover {
   font-size: 1.3em;
   border-right: 1px dotted #3c3b3b !important;
   background: none;
@@ -2838,40 +2838,40 @@ body {
 }
 @media (max-width: 480px) {
   /* line 938, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list a, #block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover {
+  #block-quicktabs-hompage-tabs-events .item-list a, #block-quicktabs-hompage-tabs-events .item-list a:hover, #block-quicktabs-hompage-news .item-list a, #block-quicktabs-hompage-news .item-list a:hover, #block-quicktabs-events .item-list a, #block-quicktabs-events .item-list a:hover {
     border: none !important;
   }
 }
 @media (max-width: 767px) {
   /* line 951, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list li:nth-child(2) a, #block-quicktabs-hompage-tabs-events .item-list li:nth-child(2) a:hover, #block-quicktabs-hompage-news .item-list li:nth-child(2) a, #block-quicktabs-hompage-news .item-list li:nth-child(2) a:hover {
+  #block-quicktabs-hompage-tabs-events .item-list li:nth-child(2) a, #block-quicktabs-hompage-tabs-events .item-list li:nth-child(2) a:hover, #block-quicktabs-hompage-news .item-list li:nth-child(2) a, #block-quicktabs-hompage-news .item-list li:nth-child(2) a:hover, #block-quicktabs-events .item-list li:nth-child(2) a, #block-quicktabs-events .item-list li:nth-child(2) a:hover {
     border: none !important;
   }
 }
 /* line 956, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-news .item-list li {
+#block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-news .item-list li, #block-quicktabs-events .item-list li {
   margin: 0;
   padding: 0;
 }
 @media (max-width: 767px) {
   /* line 956, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-news .item-list li {
+  #block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-news .item-list li, #block-quicktabs-events .item-list li {
     width: 50%;
     margin-bottom: 17px;
   }
 }
 @media (max-width: 480px) {
   /* line 956, ../sass/components/_tovana.scss */
-  #block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-news .item-list li {
+  #block-quicktabs-hompage-tabs-events .item-list li, #block-quicktabs-hompage-news .item-list li, #block-quicktabs-events .item-list li {
     width: 100%;
   }
 }
 /* line 967, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a {
+#block-quicktabs-hompage-tabs-events .item-list li.first a, #block-quicktabs-hompage-news .item-list li.first a, #block-quicktabs-events .item-list li.first a {
   padding-left: 0;
 }
 /* line 970, ../sass/components/_tovana.scss */
-#block-quicktabs-hompage-tabs-events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a {
+#block-quicktabs-hompage-tabs-events .item-list li.last a, #block-quicktabs-hompage-news .item-list li.last a, #block-quicktabs-events .item-list li.last a {
   border: none !important;
   padding-right: 0;
 }
