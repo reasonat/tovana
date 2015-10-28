@@ -3295,15 +3295,16 @@ table {
   background-image: none;
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
 }
-/* line 1343, ../sass/components/_tovana.scss */
+/* line 1344, ../sass/components/_tovana.scss */
 .page-user .tabs-primary li {
   width: 100%;
   border: none !important;
   background-image: none;
   padding-left: 40px;
 }
-/* line 1348, ../sass/components/_tovana.scss */
+/* line 1349, ../sass/components/_tovana.scss */
 .page-user .tabs-primary li a, .page-user .tabs-primary li a:hover {
   background-color: transparent;
   border: none !important;
@@ -3312,8 +3313,15 @@ table {
   text-align: left !important;
   padding: 0;
 }
-/* line 1357, ../sass/components/_tovana.scss */
-.page-user .tabs-primary .block-title-user {
+
+/* line 1360, ../sass/components/_tovana.scss */
+.page-user #content > h2 {
+  width: 25%;
+  clear: right;
+  float: right;
+  font-size: 0.9em;
+  background-image: none;
+  margin: 0 !important;
   font-size: 1.3em;
   padding-bottom: 5px;
   margin-bottom: 18px;
@@ -3322,18 +3330,9 @@ table {
   color: #62b7d3;
   box-sizing: border-box;
 }
-/* line 1365, ../sass/components/_tovana.scss */
-.page-user .tabs-primary .block-title-user.he {
-  display: none;
-}
-/* line 1368, ../sass/components/_tovana.scss */
-.page-user .tabs-primary .block-title-user span {
-  border-bottom: 1px dotted #3c3b3b;
-  display: block;
-}
 @media (max-width: 767px) {
-  /* line 1357, ../sass/components/_tovana.scss */
-  .page-user .tabs-primary .block-title-user {
+  /* line 1360, ../sass/components/_tovana.scss */
+  .page-user #content > h2 {
     margin: 0 !important;
     padding: 0 !important;
   }

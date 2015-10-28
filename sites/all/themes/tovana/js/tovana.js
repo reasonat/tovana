@@ -41,7 +41,7 @@ $(".menu-button").click(function(){
   }
 });
 
-$( ".page-user #content .element-invisible" ).removeClass( "element-invisible" );
+$( ".page-user #content > .element-invisible" ).removeClass( "element-invisible" );
 
 
 }

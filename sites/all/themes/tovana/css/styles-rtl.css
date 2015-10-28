@@ -743,22 +743,17 @@ html.js .collapsed .fieldset-legend {
 .page-user .tabs-primary li a, .page-user .tabs-primary li a:hover {
   text-align: right !important;
 }
-/* line 344, ../sass/components/_tovana-rtl.scss */
-.page-user .tabs-primary .block-title-user {
+
+/* line 346, ../sass/components/_tovana-rtl.scss */
+.page-user #content > h2 {
   font-family: 'Oron-Medium', sans-serif;
   padding-right: 40px;
   padding-left: 0;
-}
-/* line 348, ../sass/components/_tovana-rtl.scss */
-.page-user .tabs-primary .block-title-user.he {
-  display: block;
-}
-/* line 351, ../sass/components/_tovana-rtl.scss */
-.page-user .tabs-primary .block-title-user.en {
-  display: none;
+  float: left;
+  clear: left;
 }
 
-/* line 357, ../sass/components/_tovana-rtl.scss */
+/* line 354, ../sass/components/_tovana-rtl.scss */
 .page-user h1#page-title,
 .page-user .user-view {
   float: right;

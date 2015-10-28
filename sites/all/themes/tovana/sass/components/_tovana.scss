@@ -1340,6 +1340,7 @@ table{
   background-image: none;
   margin: 0;
   box-sizing:border-box;
+  padding: 0;
   li{
     width: 100%;
     border: none!important;
@@ -1354,7 +1355,15 @@ table{
       padding: 0;
     }
   }
-  .block-title-user{
+}
+
+.page-user #content > h2{
+    width: 25%;
+    clear: right;
+    float: right;
+    font-size: 0.9em;
+    background-image: none;
+    margin: 0!important;
     font-size: 1.3em;
     padding-bottom: 5px;
     margin-bottom: 18px;
@@ -1362,20 +1371,11 @@ table{
     font-weight: normal;
     color: $blue;
     box-sizing:border-box;
-    &.he{
-      display: none;
-    }
-    span{
-    border-bottom: 1px dotted $default;
-    display: block;
-    }
     @include res(s-m){
       margin: 0!important;
       padding: 0!important;
     }
-  }
 }
-
 .page-user h1#page-title,
 .page-user .user-view{
   float: left;
