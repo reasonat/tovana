@@ -1384,10 +1384,8 @@ body{
   }
 }
 
-.page-user h1#page-title, .page-user .view-communal-bulletin-board,
-.page-user .view-users-content-managment,
-.page-user .view-main-article-view, .page-user .view-podcasts,
-.page-user .view-commerce-user-orders, .page-user #user-login, .page-user .view-register-events{
+.page-user h1#page-title,
+.page-user .user-view{
   float: left;
   width: 75%;
   border-right: 1px dotted;
@@ -1411,5 +1409,8 @@ body{
 .page-checkout{
   table{
     width: 100%;
+  }
+  .form-item-customer-profile-billing-commerce-customer-address-und-0-premise{
+    display: none;
   }
 }

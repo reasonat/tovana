@@ -3345,10 +3345,8 @@ body {
 }
 
 /* line 1387, ../sass/components/_tovana.scss */
-.page-user h1#page-title, .page-user .view-communal-bulletin-board,
-.page-user .view-users-content-managment,
-.page-user .view-main-article-view, .page-user .view-podcasts,
-.page-user .view-commerce-user-orders, .page-user #user-login, .page-user .view-register-events {
+.page-user h1#page-title,
+.page-user .user-view {
   float: left;
   width: 75%;
   border-right: 1px dotted;
@@ -3357,22 +3355,26 @@ body {
   min-height: 300px;
 }
 
-/* line 1399, ../sass/components/_tovana.scss */
+/* line 1397, ../sass/components/_tovana.scss */
 .page-user h1#page-title {
   min-height: 0;
   border-color: #3c3b3b !important;
 }
 
-/* line 1404, ../sass/components/_tovana.scss */
+/* line 1402, ../sass/components/_tovana.scss */
 .ajax-progress {
   position: absolute;
   width: 300px;
 }
 
 /********  checkput  **********/
-/* line 1412, ../sass/components/_tovana.scss */
+/* line 1410, ../sass/components/_tovana.scss */
 .page-checkout table {
   width: 100%;
+}
+/* line 1413, ../sass/components/_tovana.scss */
+.page-checkout .form-item-customer-profile-billing-commerce-customer-address-und-0-premise {
+  display: none;
 }
 
 /**
