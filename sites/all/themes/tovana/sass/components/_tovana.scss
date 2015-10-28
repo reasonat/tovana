@@ -127,6 +127,10 @@ body{
 #quickbar{
   z-index: 400!important;
 }
+
+table{
+  width: 100%;
+}
 /**********  sidebar  ********/
 
 .sidebar-second .region-sidebar-second, .sidebar-first .region-sidebar-first {
@@ -1309,12 +1313,6 @@ body{
 
 /**********  user pages  **************/
 
-.view-users-content-managment.view-display-id-page{
-  table{
-    width: 100%;
-  }
-}
-
 .page-user-my-advertise{
   #block-views-user-presentation-block{
     .views-field-nothing-2{
@@ -1378,12 +1376,6 @@ body{
   }
 }
 
-.page-user{
-  table{
-    width: 100%;
-  }
-}
-
 .page-user h1#page-title,
 .page-user .user-view{
   float: left;
@@ -1407,9 +1399,6 @@ body{
 /********  checkput  **********/
 
 .page-checkout{
-  table{
-    width: 100%;
-  }
   .form-item-customer-profile-billing-commerce-customer-address-und-0-premise{
     display: none;
   }
