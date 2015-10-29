@@ -352,9 +352,11 @@ $yellow: #cc9f44;
 }
 
 .page-user h1#page-title,
-.page-user .user-view{
+.page-user .user-view, 
+.page-user .profile{
   float: right;
   border-left: 1px dotted;
   border-right: none;
-  padding: 0 10px 0 62px
+  padding: 0 10px 0 62px;
+  clear: right;
 }

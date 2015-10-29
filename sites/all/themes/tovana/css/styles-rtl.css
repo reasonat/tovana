@@ -755,11 +755,13 @@ html.js .collapsed .fieldset-legend {
 
 /* line 354, ../sass/components/_tovana-rtl.scss */
 .page-user h1#page-title,
-.page-user .user-view {
+.page-user .user-view,
+.page-user .profile {
   float: right;
   border-left: 1px dotted;
   border-right: none;
   padding: 0 10px 0 62px;
+  clear: right;
 }
 
 /* SMACSS theme rules */

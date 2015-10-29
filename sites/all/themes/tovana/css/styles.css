@@ -3340,29 +3340,32 @@ table {
 
 /* line 1379, ../sass/components/_tovana.scss */
 .page-user h1#page-title,
-.page-user .user-view {
+.page-user .user-view,
+.page-user .profile {
   float: left;
+  clear: left;
   width: 75%;
   border-right: 1px dotted;
   box-sizing: border-box;
   padding: 0 62px 0 10px;
   min-height: 300px;
+  margin-top: 0;
 }
 
-/* line 1389, ../sass/components/_tovana.scss */
+/* line 1392, ../sass/components/_tovana.scss */
 .page-user h1#page-title {
   min-height: 0;
   border-color: #3c3b3b !important;
 }
 
-/* line 1394, ../sass/components/_tovana.scss */
+/* line 1397, ../sass/components/_tovana.scss */
 .ajax-progress {
   position: absolute;
   width: 300px;
 }
 
 /********  checkput  **********/
-/* line 1402, ../sass/components/_tovana.scss */
+/* line 1405, ../sass/components/_tovana.scss */
 .page-checkout .form-item-customer-profile-billing-commerce-customer-address-und-0-premise {
   display: none;
 }

@@ -1377,13 +1377,16 @@ table{
     }
 }
 .page-user h1#page-title,
-.page-user .user-view{
+.page-user .user-view, 
+.page-user .profile{
   float: left;
+  clear: left;
   width: 75%;
   border-right: 1px dotted;
   box-sizing:border-box;
   padding: 0 62px 0 10px;
   min-height: 300px;
+  margin-top: 0; 
 }
 
 .page-user h1#page-title{
