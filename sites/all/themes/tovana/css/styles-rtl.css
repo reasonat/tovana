@@ -753,7 +753,13 @@ html.js .collapsed .fieldset-legend {
   clear: left;
 }
 
-/* line 354, ../sass/components/_tovana-rtl.scss */
+/* line 355, ../sass/components/_tovana-rtl.scss */
+.page-user .profile .field-name-field-user-image {
+  float: right;
+  margin: 0 0 0 40px;
+}
+
+/* line 361, ../sass/components/_tovana-rtl.scss */
 .page-user h1#page-title,
 .page-user .user-view,
 .page-user .profile {

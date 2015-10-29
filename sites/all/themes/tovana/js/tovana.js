@@ -43,6 +43,11 @@ $(".menu-button").click(function(){
 
 $( ".page-user #content > .element-invisible" ).removeClass( "element-invisible" );
 
+$(".view-register-events.view-display-id-page_2 tbody .views-field-field-comment-recorded-event").each(function(){
+  if($.trim($(this).html())!=''){
+    $(this).parent().addClass("rasham");
+  }
+});
 
 }
 };

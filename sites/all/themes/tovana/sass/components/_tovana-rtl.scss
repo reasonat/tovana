@@ -351,6 +351,13 @@ $yellow: #cc9f44;
     clear: left;
 }
 
+.page-user .profile{
+  .field-name-field-user-image{
+    float: right;
+    margin: 0 0 0 40px;
+  }
+}
+
 .page-user h1#page-title,
 .page-user .user-view, 
 .page-user .profile{

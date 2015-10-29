@@ -3352,20 +3352,35 @@ table {
   margin-top: 0;
 }
 
-/* line 1392, ../sass/components/_tovana.scss */
+/* line 1393, ../sass/components/_tovana.scss */
+.page-user .profile .field-name-field-user-image {
+  float: left;
+  margin: 0 40px 0 0;
+}
+/* line 1397, ../sass/components/_tovana.scss */
+.page-user .profile p {
+  margin-top: 0;
+}
+
+/* line 1402, ../sass/components/_tovana.scss */
 .page-user h1#page-title {
   min-height: 0;
   border-color: #3c3b3b !important;
 }
 
-/* line 1397, ../sass/components/_tovana.scss */
+/* line 1407, ../sass/components/_tovana.scss */
 .ajax-progress {
   position: absolute;
   width: 300px;
 }
 
+/* line 1413, ../sass/components/_tovana.scss */
+.view-register-events.view-display-id-page_2 tr.rasham {
+  background-color: #FDC3C3;
+}
+
 /********  checkput  **********/
-/* line 1405, ../sass/components/_tovana.scss */
+/* line 1420, ../sass/components/_tovana.scss */
 .page-checkout .form-item-customer-profile-billing-commerce-customer-address-und-0-premise {
   display: none;
 }

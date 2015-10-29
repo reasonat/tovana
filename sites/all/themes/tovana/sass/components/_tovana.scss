@@ -1389,6 +1389,16 @@ table{
   margin-top: 0; 
 }
 
+.page-user .profile{
+  .field-name-field-user-image{
+    float: left;
+    margin: 0 40px 0 0;
+  }
+  p{
+    margin-top: 0;
+  }
+}
+
 .page-user h1#page-title{
   min-height: 0;
   border-color: $default!important;
@@ -1399,6 +1409,11 @@ table{
   width: 300px;
 }
 
+.view-register-events.view-display-id-page_2{
+  tr.rasham{
+    background-color: #FDC3C3;
+  }
+}
 /********  checkput  **********/
 
 .page-checkout{
