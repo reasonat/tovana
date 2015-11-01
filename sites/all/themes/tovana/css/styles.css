@@ -3419,41 +3419,42 @@ table {
 /* line 1462, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-title {
   font-family: arial;
+  font-size: 1em;
 }
-/* line 1465, ../sass/components/_tovana.scss */
+/* line 1466, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-field-accessability, #block-quicktabs-events table .views-field-field-address {
   min-width: 100px;
 }
-/* line 1468, ../sass/components/_tovana.scss */
+/* line 1469, ../sass/components/_tovana.scss */
 #block-quicktabs-events table td, #block-quicktabs-events table th {
   padding: 10px;
   text-align: left;
 }
-/* line 1474, ../sass/components/_tovana.scss */
+/* line 1475, ../sass/components/_tovana.scss */
 #block-quicktabs-events #quicktabs-events .item-list {
   padding: 0;
 }
-/* line 1478, ../sass/components/_tovana.scss */
+/* line 1479, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content {
   margin-top: 20px;
 }
-/* line 1480, ../sass/components/_tovana.scss */
+/* line 1481, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-title {
   margin-bottom: 10px;
 }
-/* line 1483, ../sass/components/_tovana.scss */
+/* line 1484, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-repeat-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-open-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-close-day,
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-event, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-day {
   float: left;
   margin-right: 5px;
   margin-bottom: 10px;
 }
-/* line 1489, ../sass/components/_tovana.scss */
+/* line 1490, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: left;
 }
 
-/* line 1495, ../sass/components/_tovana.scss */
+/* line 1496, ../sass/components/_tovana.scss */
 .quicktabs-tabpage {
   padding: 0;
 }
