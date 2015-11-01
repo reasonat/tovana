@@ -1455,12 +1455,16 @@ table{
   table{
     .views-field-view-node{
       min-width: 120px;
+      margin: 0;
+      text-align: left;
+      font-family: arial;
     }
     .views-field-field-accessability, .views-field-field-address{
       min-width: 100px;
     }
     td, th{
       padding: 10px;
+      text-align: left;
     }
   }
   #quicktabs-events{

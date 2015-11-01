@@ -795,6 +795,10 @@ html.js .collapsed .fieldset-legend {
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: right;
 }
+/* line 398, ../sass/components/_tovana-rtl.scss */
+#block-quicktabs-events table th, #block-quicktabs-events table td {
+  text-align: right;
+}
 
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
