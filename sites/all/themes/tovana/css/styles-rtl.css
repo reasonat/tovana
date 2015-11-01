@@ -800,6 +800,11 @@ html.js .collapsed .fieldset-legend {
   text-align: right;
 }
 
+/* line 405, ../sass/components/_tovana-rtl.scss */
+.not-front .region-sidebar-second .block .block-title, .not-front .region-sidebar-first .block .block-title {
+  font-family: 'Oron-Medium', sans-serif;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
