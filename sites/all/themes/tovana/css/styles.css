@@ -3417,39 +3417,43 @@ table {
   font-family: arial;
 }
 /* line 1462, ../sass/components/_tovana.scss */
+#block-quicktabs-events table .views-field-title {
+  font-family: arial;
+}
+/* line 1465, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-field-accessability, #block-quicktabs-events table .views-field-field-address {
   min-width: 100px;
 }
-/* line 1465, ../sass/components/_tovana.scss */
+/* line 1468, ../sass/components/_tovana.scss */
 #block-quicktabs-events table td, #block-quicktabs-events table th {
   padding: 10px;
   text-align: left;
 }
-/* line 1471, ../sass/components/_tovana.scss */
+/* line 1474, ../sass/components/_tovana.scss */
 #block-quicktabs-events #quicktabs-events .item-list {
   padding: 0;
 }
-/* line 1475, ../sass/components/_tovana.scss */
+/* line 1478, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content {
   margin-top: 20px;
 }
-/* line 1477, ../sass/components/_tovana.scss */
+/* line 1480, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-title {
   margin-bottom: 10px;
 }
-/* line 1480, ../sass/components/_tovana.scss */
+/* line 1483, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-repeat-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-open-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-close-day,
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-event, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-day {
   float: left;
   margin-right: 5px;
   margin-bottom: 10px;
 }
-/* line 1486, ../sass/components/_tovana.scss */
+/* line 1489, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: left;
 }
 
-/* line 1492, ../sass/components/_tovana.scss */
+/* line 1495, ../sass/components/_tovana.scss */
 .quicktabs-tabpage {
   padding: 0;
 }
