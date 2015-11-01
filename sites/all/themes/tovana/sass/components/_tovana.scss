@@ -805,7 +805,7 @@ table{
   width: 25%;
   border-radius: 10px;
   position: absolute;
-  background: ("../images/leaf.png")no-repeat center 25% #f5ecd9;
+  background: url("../images/leaf.png") no-repeat center 25% #f5ecd9;
   @include res(s){
     height: 140px;
     position: relative;

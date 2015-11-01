@@ -2659,7 +2659,7 @@ table {
   width: 25%;
   border-radius: 10px;
   position: absolute;
-  background: "../images/leaf.png" no-repeat center 25% #f5ecd9;
+  background: url("../images/leaf.png") no-repeat center 25% #f5ecd9;
 }
 @media (max-width: 480px) {
   /* line 802, ../sass/components/_tovana.scss */
