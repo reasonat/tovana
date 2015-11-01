@@ -131,6 +131,19 @@ body{
 table{
   width: 100%;
 }
+
+.view .pager{
+  .pager-current, .pager-ellipsis{
+    border-right: 1px dotted #3c3b3b !important;
+    margin: 0 15px 0 0px!important;
+    padding: 0 15px 0 0px !important;
+  }
+  .pager-current{
+    color: $blue;
+  }
+}
+
+
 /**********  sidebar  ********/
 
 .sidebar-second .region-sidebar-second, .sidebar-first .region-sidebar-first {
@@ -350,8 +363,8 @@ table{
     max-width: 120px;
   }
   img{
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   }
 }
 
@@ -793,7 +806,7 @@ table{
   width: 25%;
   border-radius: 10px;
   position: absolute;
-  background: url("../images/leaf.png")no-repeat center 25% #f5ecd9;
+  background: ("../images/leaf.png")no-repeat center 25% #f5ecd9;
   @include res(s){
     height: 140px;
     position: relative;
@@ -929,7 +942,7 @@ table{
         height: 172px;
       }
     }
-    ul, li, a:hover{
+    ul, .quicktabs-tabs li, a:hover{
       background: none!important;
       border: none!important;
     }
@@ -1090,7 +1103,7 @@ table{
     margin: 0;
 }
 
-.view-events-view {
+.front .view-events-view {
   .views-field-field-date-event{
     font-family: 'Oron-Medium', sans-serif;  
   }
@@ -1116,7 +1129,7 @@ table{
   }
 }
 
-.view-events-view{
+.front .view-events-view{
   margin-top: 20px;
   .view-content a{
     color: $default;
@@ -1420,4 +1433,58 @@ table{
   .form-item-customer-profile-billing-commerce-customer-address-und-0-premise{
     display: none;
   }
+}
+
+/********  all events page  **********/
+
+#block-quicktabs-events{
+  .view-events-view{
+    .views-exposed-form{
+      input.form-text, select{
+        border: none;
+        height: 33px;
+        background-color: #fff;
+      }
+      .form-submit{
+        background-color: #fff;
+        height: 33px;
+        margin-top: 24px;
+      }
+    }
+  }
+  table{
+    .views-field-view-node{
+      min-width: 120px;
+    }
+    .views-field-field-accessability, .views-field-field-address{
+      min-width: 100px;
+    }
+    td, th{
+      padding: 10px;
+    }
+  }
+  #quicktabs-events{
+    .item-list{
+      padding: 0;
+    }
+  }
+  .view-display-id-block_5 .view-content{
+    margin-top: 20px;
+    .views-field-title{
+      margin-bottom: 10px;
+    }
+    .views-field-field-repeat-day, .views-field-field-hour-open-day, .views-field-field-hour-close-day,
+    .views-field-field-date-event, .views-field-field-date-day{
+      float: left;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+    .views-field-field-accessability{
+      clear: left;
+    }
+  }
+}
+
+.quicktabs-tabpage {
+  padding: 0;
 }

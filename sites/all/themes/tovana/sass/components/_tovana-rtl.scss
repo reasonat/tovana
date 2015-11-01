@@ -21,6 +21,15 @@ $light-blue: #c4e1ee;
 $dark-blue: #31b0d8;
 $yellow: #cc9f44;
 
+.view .pager{
+  .pager-current, .pager-ellipsis{
+    border-left: 1px dotted #3c3b3b !important;
+    border-right: medium none !important;
+    margin: 0 0 0 15px!important;
+    padding: 0 0 0 15px !important;
+  }
+}
+
 /************  header  **********/
 
 #navigation{
@@ -259,11 +268,9 @@ $yellow: #cc9f44;
   }
 }
 
-#block-views-podcasts-block-1{
   .views-exposed-form .views-exposed-widget {
       padding: 0.5em 0 0 1em;
   }
-}
 /*************  quick tab front  ************/
 
 #quicktabs-hompage_tabs_events, #block-quicktabs-hompage-news, #block-quicktabs-events{
@@ -366,4 +373,25 @@ $yellow: #cc9f44;
   border-right: none;
   padding: 0 10px 0 62px;
   clear: right;
+}
+
+
+#block-quicktabs-events table .views-field-view-node{
+  text-align: right;
+}
+
+/********  all events page  **********/
+
+#block-quicktabs-events{
+  .view-display-id-block_5 .view-content{
+    .views-field-field-repeat-day, .views-field-field-hour-open-day, .views-field-field-hour-close-day,
+    .views-field-field-date-event, .views-field-field-date-day{
+      float: right;
+      margin-left: 5px;
+      margin-right: 0;
+    }
+    .views-field-field-accessability{
+      clear: right;
+    }
+  }
 }
