@@ -27,7 +27,7 @@
   <?php print $fields['field_description']->content; ?>
   <audio controls="" src="<?php print urldecode($fields['field_podcast_url']->content); ?>"></audio>
   <?php print $fields['field_podcast_quality']->content; ?>
-  <?php print $fields['view_node']->content; ?>
+  <div class="views-field-view-node"><?php print $fields['view_node']->content; ?></div>
 
 
 
