@@ -1185,9 +1185,11 @@ table{
     text-decoration: underline;
     float: left;
     margin-right: 5px;
+    clear: none;
   }
   .views-field{
     margin-top: 10px;
+    clear: right;
   }
   .views-field-view-node, .views-field-view-user{
     text-align: right;
