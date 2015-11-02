@@ -3455,7 +3455,7 @@ table {
   float: left;
   margin-right: 5px;
   margin-bottom: 10px;
-  clear: none;
+  clear: none !important;
 }
 /* line 1504, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field {
