@@ -6,4 +6,13 @@ function bruria_commerce_price_formatted_components_alter(&$components, $price, 
     $component['title'] = t($component['title']);
   }
 }
+
+function bruria_form_alter(&$form, &$form_state, $form_id) { 
+  if (strpos($form_id, 'commerce_cart_add_to_cart_form') !== FALSE) {
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Register'),
+    );
+  }
+}
 ?>
