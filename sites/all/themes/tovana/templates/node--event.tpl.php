@@ -35,6 +35,21 @@
     hide($content['comments']);
     hide($content['links']);
     print render($content);
+	
+	if($days4bapproval = config_pages_get('tovana_settings','field_approval_days')) {
+	  
+	  if($node->field_date_event['und'][0]['value']) {
+	  $eventtime = strtotime($node->field_date_event['und'][0]['value']);
+	  
+	    $approvaltime = $eventtime - ($days4bapproval*60*60*24);
+		
+		if($approvaltime < time()) {
+		  print flag_create_link('commerce_line_item', $node->field_product['und'][0]['product_id']);
+		  print flag_create_link('commerce_line_item', 6);
+		 echo 'flag for approval printed here';
+		}
+	  }
+	}
   ?>
 
   <?php print render($content['links']); ?>
