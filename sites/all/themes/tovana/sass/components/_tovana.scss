@@ -185,18 +185,21 @@ table{
 
 .two-sidebars .region-sidebar-first{
   width: 20%!important;
-  margin: 0 0% 0 -80% !important
 }
 
 .two-sidebars .region-sidebar-second{
   width: 20%!important;
   margin: 0!important;
+  float: right;
 }
 
 .two-sidebars #content {
     margin-left: 20% !important;
     margin-right: 0 !important;
     width: 60% !important;
+    border-left: 1px dotted;
+    border-right: 1px dotted;
+    min-height: 400px;
 }
 
 .sidebar-second #content{
@@ -328,7 +331,7 @@ table{
   position: relative;
   float: right;
   width: 80%;
-  margin-top: 60px;
+  margin-top: 52px;
   height: auto;
   transition: margin 0.5s;
   -webkit-transition: margin 0.5s;
@@ -445,7 +448,6 @@ table{
 #block-block-6{
   float: right;
   clear: right;
-  margin-top: 10px;
   line-height: 1.3em;
   font-size: 0.8em;
   @include res(s-m){
@@ -461,7 +463,6 @@ table{
 
 #block-block-5{
   float: right;
-  margin-top: 10px;
   line-height: 1em;
   a{
       color: $yellow;
@@ -473,7 +474,7 @@ table{
 
 #block-locale-language{
   float: right;
-  margin: 10px;
+  margin: 0px 10px 10px;
   border-right: 1px solid $yellow;
   border-left: 1px solid $yellow;
   line-height: 1em;
@@ -633,7 +634,7 @@ table{
     color: $default;
     font-family: 'Oron-Light', sans-serif;  
   }
-  a.active, a:hover{
+  a.active, a:hover, a.active-trail{
     border-top: 8px solid $blue;
     @include res(s-m){
       border: none;
@@ -881,9 +882,6 @@ table{
   .views-row-last{
     margin: 0!important;
   }
-  .views-field-title{
-    font-family: 'Oron-Medium', sans-serif;  
-  }
 }
 
 //jobs
@@ -1118,8 +1116,8 @@ table{
 }
 
 .front .view-events-view {
-  .views-field-field-date-event{
-    font-family: 'Oron-Medium', sans-serif;  
+  .views-field-field-date-event, .views-field-field-date-day{
+    font-weight: bold; 
   }
   .views-row{
     margin-top: 30px;
@@ -1178,7 +1176,6 @@ table{
 
 .view.article-design{
   .views-field-title{
-      font-family: 'Oron-Medium', sans-serif; 
       font-size: 1.2em; 
   }
   .label{

@@ -138,6 +138,9 @@ $yellow: #cc9f44;
     margin-right: 0%;
     margin-left: 5%;
   }
+  .views-field-title{
+    font-family: 'Oron-Medium', sans-serif;  
+  }
 }
 
 //jobs
@@ -184,12 +187,12 @@ $yellow: #cc9f44;
   float: left;
 }
 
-.two-sidebars .region-sidebar-first{
-  width: 20%!important;
-  margin: 0 -80% 0 0 !important
-}
 
 .sidebar-second .region-sidebar-second{
+  float: left;
+}
+
+.two-sidebars .region-sidebar-second{
   float: left;
 }
 
@@ -335,6 +338,11 @@ $yellow: #cc9f44;
   }
 }
 
+.front .view-events-view {
+  .views-field-field-date-event, .views-field-field-date-day{
+    font-family: 'Oron-Medium', sans-serif; 
+  }
+}
 /****  user tab  ********/
 
 
