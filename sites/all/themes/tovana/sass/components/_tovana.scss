@@ -1519,6 +1519,7 @@ table{
 .comment-add a{
   @include button;
   display: block;
+  float: left;
 }
 
 .page-comment{

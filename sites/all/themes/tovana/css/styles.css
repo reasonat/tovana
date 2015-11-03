@@ -3480,29 +3480,30 @@ table {
   font-weight: bold;
   padding: 5px 10px;
   display: block;
+  float: left;
 }
 /* line 42, ../sass/components/_tovana.scss */
 .comment-add a:hover {
   opacity: 0.8;
 }
 
-/* line 1525, ../sass/components/_tovana.scss */
+/* line 1526, ../sass/components/_tovana.scss */
 .page-comment .comment-add a {
   display: none;
 }
 
-/* line 1530, ../sass/components/_tovana.scss */
+/* line 1531, ../sass/components/_tovana.scss */
 .comment .comment-title a {
   pointer-events: none;
   cursor: default;
 }
-/* line 1534, ../sass/components/_tovana.scss */
+/* line 1535, ../sass/components/_tovana.scss */
 .comment .submitted {
   margin: 0;
   color: #868583;
 }
 
-/* line 1540, ../sass/components/_tovana.scss */
+/* line 1541, ../sass/components/_tovana.scss */
 article.comment {
   border-bottom: 1px dotted #868583;
 }
