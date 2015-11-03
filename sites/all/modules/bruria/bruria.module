@@ -15,4 +15,9 @@ function bruria_form_alter(&$form, &$form_state, $form_id) {
     );
   }
 }
+
+function bruria_form_comment_form_alter(&$form) {
+  $form['author']['homepage']['#access'] = FALSE;
+}
+
 ?>
