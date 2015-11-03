@@ -805,6 +805,11 @@ html.js .collapsed .fieldset-legend {
   font-family: 'Oron-Medium', sans-serif;
 }
 
+/* line 410, ../sass/components/_tovana-rtl.scss */
+.comment-add a {
+  float: right;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
