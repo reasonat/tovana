@@ -475,9 +475,11 @@ table{
 #block-block-7{
     display: none;
     float: right;
-    margin-right: 13px;
+    margin-right: 25px;
     p{
       margin: 0;
+      float: right;
+      margin-left: 5px;
       a{
           border:2px solid $blue;
           height: 25px;
@@ -489,6 +491,11 @@ table{
             margin: 3px auto;
             display: block;
           }
+      }
+      a.contact{
+        img{
+          margin: 4px auto;
+        }
       }
     }
 }
