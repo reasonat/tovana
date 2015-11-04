@@ -304,12 +304,6 @@ table{
     padding-right: 10px;
   }
 }
-
-#block-views-req-bulletin-block{
-  .views-field-title a{
-    color: $default;
-  }
-}
 /************  header  **********/
 
 .header-wrapper{
@@ -1574,4 +1568,58 @@ table{
 
 article.comment{
   border-bottom: 1px dotted #868583;
+}
+
+/********  How can I help  - form  **********/
+
+#block-webform-client-block-4454{
+  .block-title{
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  .form-item{
+    width: 47%;
+    float: right;
+    padding: 7px 0;
+    clear: right;
+    margin: 0;
+    input{
+      border: none;
+      height: 40px;
+      width: 100%;
+    }
+    textarea{
+      border: none;
+    }
+    @include res(s-m){
+      width: 100%;
+    }
+  }
+  #webform-component-content-req{
+    position: absolute;
+    left: 0;
+    label{
+      padding: 7px 10px;
+    }
+    textarea{
+      height: 139px;
+    }
+    @include res(s-m){
+      position: relative;
+      left: auto;
+    }
+  }
+  label{
+    font-weight: normal;
+    opacity: 0.8;
+    padding: 7px 0;
+  }
+  .form-actions{
+    clear: both;
+    padding-top: 30px;
+    input{
+      @include button;
+      border:none;
+    }
+  }
 }
