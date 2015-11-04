@@ -1285,10 +1285,8 @@ table{
     width: auto;
     min-width: auto;
     input{
-      box-shadow: none;
-      height: 28px;
-      margin-top: 23px !important;
-      background-color: #fff;
+      @include button;
+      border: none;
     }
   }
 }

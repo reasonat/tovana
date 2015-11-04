@@ -3224,58 +3224,64 @@ table {
 }
 /* line 1287, ../sass/components/_tovana.scss */
 #block-views-podcasts-block-1 .views-submit-button input, #block-views-podcasts-block-1 .views-reset-button input {
-  box-shadow: none;
-  height: 28px;
-  margin-top: 23px !important;
-  background-color: #fff;
+  background-color: #cc9f44;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+}
+/* line 42, ../sass/components/_tovana.scss */
+#block-views-podcasts-block-1 .views-submit-button input:hover, #block-views-podcasts-block-1 .views-reset-button input:hover {
+  opacity: 0.8;
 }
 
 /*-----------------------------------------------
                 faq
 -----------------------------------------------*/
-/* line 1299, ../sass/components/_tovana.scss */
+/* line 1297, ../sass/components/_tovana.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: none;
   background-color: transparent;
   border: none;
 }
 
-/* line 1305, ../sass/components/_tovana.scss */
+/* line 1303, ../sass/components/_tovana.scss */
 .ui-state-default .ui-icon {
   background: none;
 }
 
-/* line 1309, ../sass/components/_tovana.scss */
+/* line 1307, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a {
   background: url("../images/plus.png") no-repeat scroll right center transparent;
 }
 
-/* line 1313, ../sass/components/_tovana.scss */
+/* line 1311, ../sass/components/_tovana.scss */
 .ui-state-active .ui-icon, .ui-widget-content {
   background: none;
 }
 
-/* line 1317, ../sass/components/_tovana.scss */
+/* line 1315, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header.ui-state-active a {
   background: url("../images/minus.png") no-repeat scroll right center transparent;
 }
 
-/* line 1322, ../sass/components/_tovana.scss */
+/* line 1320, ../sass/components/_tovana.scss */
 .ui-corner-all {
   border-radius: 0;
 }
 
-/* line 1326, ../sass/components/_tovana.scss */
+/* line 1324, ../sass/components/_tovana.scss */
 .ui-accordion .ui-accordion-header {
   margin-top: -1px;
 }
 
-/* line 1329, ../sass/components/_tovana.scss */
+/* line 1327, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a:hover {
   background-color: transparent;
 }
 
-/* line 1333, ../sass/components/_tovana.scss */
+/* line 1331, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a {
   padding-right: 16px;
   padding-top: 11px;
@@ -3284,51 +3290,51 @@ table {
   padding-bottom: 11px;
 }
 
-/* line 1341, ../sass/components/_tovana.scss */
+/* line 1339, ../sass/components/_tovana.scss */
 .ui-accordion-icons .ui-accordion-header a {
   border: none;
 }
 
-/* line 1345, ../sass/components/_tovana.scss */
+/* line 1343, ../sass/components/_tovana.scss */
 .ui-corner-top, .ui-corner-bottom {
   border-radius: 0px;
 }
 
-/* line 1349, ../sass/components/_tovana.scss */
+/* line 1347, ../sass/components/_tovana.scss */
 .ui-accordion .ui-accordion-header .ui-icon {
   display: none;
 }
 
-/* line 1353, ../sass/components/_tovana.scss */
+/* line 1351, ../sass/components/_tovana.scss */
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-widget-content {
   border: none;
   background: none;
 }
 
-/* line 1358, ../sass/components/_tovana.scss */
+/* line 1356, ../sass/components/_tovana.scss */
 .ui-accordion-content {
   font-family: 'Oron-light', sans-serif;
 }
 
-/* line 1363, ../sass/components/_tovana.scss */
+/* line 1361, ../sass/components/_tovana.scss */
 #block-views-faq-view-block a {
   color: #62b7d3;
   font-family: 'Oron-Medium', sans-serif;
 }
 
 /**********  user pages  **************/
-/* line 1373, ../sass/components/_tovana.scss */
+/* line 1371, ../sass/components/_tovana.scss */
 .page-user-my-advertise #block-views-user-presentation-block .views-field-nothing-2 {
   font-weight: bold;
 }
 
-/* line 1381, ../sass/components/_tovana.scss */
+/* line 1379, ../sass/components/_tovana.scss */
 .page-user-content-managment #block-views-user-presentation-block .views-field-nothing-3 {
   font-weight: bold;
 }
 
 /****  user tab  ********/
-/* line 1390, ../sass/components/_tovana.scss */
+/* line 1388, ../sass/components/_tovana.scss */
 .page-user .tabs-primary {
   width: 25%;
   clear: right;
@@ -3339,14 +3345,14 @@ table {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 1399, ../sass/components/_tovana.scss */
+/* line 1397, ../sass/components/_tovana.scss */
 .page-user .tabs-primary li {
   width: 100%;
   border: none !important;
   background-image: none;
   padding-left: 40px;
 }
-/* line 1404, ../sass/components/_tovana.scss */
+/* line 1402, ../sass/components/_tovana.scss */
 .page-user .tabs-primary li a, .page-user .tabs-primary li a:hover {
   background-color: transparent;
   border: none !important;
@@ -3356,7 +3362,7 @@ table {
   padding: 0;
 }
 
-/* line 1415, ../sass/components/_tovana.scss */
+/* line 1413, ../sass/components/_tovana.scss */
 .page-user #content > h2 {
   width: 25%;
   clear: right;
@@ -3373,14 +3379,14 @@ table {
   box-sizing: border-box;
 }
 @media (max-width: 767px) {
-  /* line 1415, ../sass/components/_tovana.scss */
+  /* line 1413, ../sass/components/_tovana.scss */
   .page-user #content > h2 {
     margin: 0 !important;
     padding: 0 !important;
   }
 }
 
-/* line 1434, ../sass/components/_tovana.scss */
+/* line 1432, ../sass/components/_tovana.scss */
 .page-user h1#page-title,
 .page-user .user-view,
 .page-user .profile {
@@ -3394,47 +3400,47 @@ table {
   margin-top: 0;
 }
 
-/* line 1448, ../sass/components/_tovana.scss */
+/* line 1446, ../sass/components/_tovana.scss */
 .page-user .profile .field-name-field-user-image {
   float: left;
   margin: 0 40px 0 0;
 }
-/* line 1452, ../sass/components/_tovana.scss */
+/* line 1450, ../sass/components/_tovana.scss */
 .page-user .profile p {
   margin-top: 0;
 }
 
-/* line 1457, ../sass/components/_tovana.scss */
+/* line 1455, ../sass/components/_tovana.scss */
 .page-user h1#page-title {
   min-height: 0;
   border-color: #3c3b3b !important;
 }
 
-/* line 1462, ../sass/components/_tovana.scss */
+/* line 1460, ../sass/components/_tovana.scss */
 .ajax-progress {
   position: absolute;
   width: 300px;
 }
 
-/* line 1468, ../sass/components/_tovana.scss */
+/* line 1466, ../sass/components/_tovana.scss */
 .view-register-events.view-display-id-page_2 tr.rasham {
   background-color: #FDC3C3;
 }
 
 /********  checkput  **********/
-/* line 1475, ../sass/components/_tovana.scss */
+/* line 1473, ../sass/components/_tovana.scss */
 .page-checkout .form-item-customer-profile-billing-commerce-customer-address-und-0-premise {
   display: none;
 }
 
 /********  all events page  **********/
-/* line 1485, ../sass/components/_tovana.scss */
+/* line 1483, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-events-view .views-exposed-form input.form-text, #block-quicktabs-events .view-events-view .views-exposed-form select {
   border: none;
   height: 33px;
   background-color: #fff;
 }
-/* line 1490, ../sass/components/_tovana.scss */
+/* line 1488, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-events-view .views-exposed-form .form-submit {
   background-color: #cc9f44;
   color: #fff;
@@ -3447,40 +3453,40 @@ table {
 #block-quicktabs-events .view-events-view .views-exposed-form .form-submit:hover {
   opacity: 0.8;
 }
-/* line 1497, ../sass/components/_tovana.scss */
+/* line 1495, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-view-node {
   min-width: 120px;
   margin: 0;
   text-align: left;
   font-family: arial;
 }
-/* line 1503, ../sass/components/_tovana.scss */
+/* line 1501, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-title {
   font-family: arial;
   font-size: 1em;
 }
-/* line 1507, ../sass/components/_tovana.scss */
+/* line 1505, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-field-accessability, #block-quicktabs-events table .views-field-field-address {
   min-width: 100px;
 }
-/* line 1510, ../sass/components/_tovana.scss */
+/* line 1508, ../sass/components/_tovana.scss */
 #block-quicktabs-events table td, #block-quicktabs-events table th {
   padding: 10px;
   text-align: left;
 }
-/* line 1516, ../sass/components/_tovana.scss */
+/* line 1514, ../sass/components/_tovana.scss */
 #block-quicktabs-events #quicktabs-events .item-list {
   padding: 0;
 }
-/* line 1520, ../sass/components/_tovana.scss */
+/* line 1518, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content {
   margin-top: 20px;
 }
-/* line 1522, ../sass/components/_tovana.scss */
+/* line 1520, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-title {
   margin-bottom: 10px;
 }
-/* line 1525, ../sass/components/_tovana.scss */
+/* line 1523, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-repeat-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-open-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-close-day,
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-event, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-day {
   float: left;
@@ -3488,22 +3494,22 @@ table {
   margin-bottom: 10px;
   clear: none !important;
 }
-/* line 1532, ../sass/components/_tovana.scss */
+/* line 1530, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field {
   clear: right;
 }
-/* line 1535, ../sass/components/_tovana.scss */
+/* line 1533, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: left;
 }
 
-/* line 1541, ../sass/components/_tovana.scss */
+/* line 1539, ../sass/components/_tovana.scss */
 .quicktabs-tabpage {
   padding: 0;
 }
 
 /***********  comment  ************/
-/* line 1547, ../sass/components/_tovana.scss */
+/* line 1545, ../sass/components/_tovana.scss */
 .comment-add a {
   background-color: #cc9f44;
   color: #fff;
@@ -3518,34 +3524,34 @@ table {
   opacity: 0.8;
 }
 
-/* line 1554, ../sass/components/_tovana.scss */
+/* line 1552, ../sass/components/_tovana.scss */
 .page-comment .comment-add a {
   display: none;
 }
 
-/* line 1559, ../sass/components/_tovana.scss */
+/* line 1557, ../sass/components/_tovana.scss */
 .comment .comment-title a {
   pointer-events: none;
   cursor: default;
 }
-/* line 1563, ../sass/components/_tovana.scss */
+/* line 1561, ../sass/components/_tovana.scss */
 .comment .submitted {
   margin: 0;
   color: #868583;
 }
 
-/* line 1569, ../sass/components/_tovana.scss */
+/* line 1567, ../sass/components/_tovana.scss */
 article.comment {
   border-bottom: 1px dotted #868583;
 }
 
 /********  How can I help  - form  **********/
-/* line 1576, ../sass/components/_tovana.scss */
+/* line 1574, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .block-title {
   font-size: 1.5em;
   font-weight: normal;
 }
-/* line 1580, ../sass/components/_tovana.scss */
+/* line 1578, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-item {
   width: 47%;
   float: right;
@@ -3553,54 +3559,54 @@ article.comment {
   clear: right;
   margin: 0;
 }
-/* line 1586, ../sass/components/_tovana.scss */
+/* line 1584, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-item input {
   border: none;
   height: 40px;
   width: 100%;
 }
-/* line 1591, ../sass/components/_tovana.scss */
+/* line 1589, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-item textarea {
   border: none;
 }
 @media (max-width: 767px) {
-  /* line 1580, ../sass/components/_tovana.scss */
+  /* line 1578, ../sass/components/_tovana.scss */
   #block-webform-client-block-4454 .form-item {
     width: 100%;
   }
 }
-/* line 1598, ../sass/components/_tovana.scss */
+/* line 1596, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 #webform-component-content-req {
   position: absolute;
   left: 0;
 }
-/* line 1601, ../sass/components/_tovana.scss */
+/* line 1599, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 #webform-component-content-req label {
   padding: 7px 10px;
 }
-/* line 1604, ../sass/components/_tovana.scss */
+/* line 1602, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 #webform-component-content-req textarea {
   height: 139px;
 }
 @media (max-width: 767px) {
-  /* line 1598, ../sass/components/_tovana.scss */
+  /* line 1596, ../sass/components/_tovana.scss */
   #block-webform-client-block-4454 #webform-component-content-req {
     position: relative;
     left: auto;
   }
 }
-/* line 1612, ../sass/components/_tovana.scss */
+/* line 1610, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 label {
   font-weight: normal;
   opacity: 0.8;
   padding: 7px 0;
 }
-/* line 1617, ../sass/components/_tovana.scss */
+/* line 1615, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-actions {
   clear: both;
   padding-top: 30px;
 }
-/* line 1620, ../sass/components/_tovana.scss */
+/* line 1618, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-actions input {
   background-color: #cc9f44;
   color: #fff;
