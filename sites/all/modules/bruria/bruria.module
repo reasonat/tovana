@@ -9,10 +9,12 @@ function bruria_commerce_price_formatted_components_alter(&$components, $price, 
 
 function bruria_form_alter(&$form, &$form_state, $form_id) { 
   if (strpos($form_id, 'commerce_cart_add_to_cart_form') !== FALSE) {
-    $form['submit'] = array(
-      '#type' => 'submit',
-      '#value' => t('Register'),
-    );
+    if ($form['submit']['#value'] == t('Add to cart')){
+      $form['submit']['#value'] = t('Register');
+    }
+    else{
+      $form['submit']['#value'] = t('Registration closed');
+    }
   }
 }
 
