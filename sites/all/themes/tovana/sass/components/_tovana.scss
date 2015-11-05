@@ -1482,6 +1482,9 @@ table{
   }
 }
 
+.page-cart .form-submit{
+    @include button;
+}
 /********  all events page  **********/
 
 .views-exposed-form{
