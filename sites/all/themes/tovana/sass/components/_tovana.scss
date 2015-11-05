@@ -1486,18 +1486,14 @@ table{
         @include button;
         border: none;
   }
-}
-
-#block-quicktabs-events{
-  .view-events-view{
-    .views-exposed-form{
-      input.form-text, select{
+  input.form-text, select{
         border: none;
         height: 33px;
         background-color: #fff;
-      }
-    }
   }
+}
+
+#block-quicktabs-events{
   table{
     .views-field-view-node{
       min-width: 120px;
