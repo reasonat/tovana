@@ -58,8 +58,13 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
    */
   function date_default_value($prefix, $options = NULL) {
     $default_date = '';
-    if (empty($options)) {
-      $options = $this->options;
+   if (empty($options)) {
+     if ($this->options['is_grouped']) {
+        $options = $this->options['group_info']['group_items'][$this->options['group_info']['default_group']]['value'][$prefix . '_group'];
+      }
+      else {
+        $options = $this->options;
+      }
     }
     // If this is a remembered value, use the value from the SESSION.
     if (!empty($this->options['expose']['remember'])) {
@@ -81,8 +86,11 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
     }
     // This a fixed date.
     else {
-      $default_date = $options['value'][$prefix];
-    }
+      if ($this->options['is_grouped']) {
+        $default_date = (empty($options[$prefix])) ? '' : $options[$prefix];
+      } else {
+        $default_date = (empty($options['value'][$prefix])) ? '' : $options['value'][$prefix];
+      }    }
     return $default_date;
   }
 
@@ -100,6 +108,11 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
     if (empty($input)) {
       if (empty($this->options['exposed'])) {
         return str_replace(' ', 'T', $this->date_default_value($prefix));
+       }
+      elseif ($this->options['is_grouped'] && isset($_GET[$this->options['group_info']['identifier']])) {
+        $identifier = $_GET[$this->options['group_info']['identifier']];
+        $options = $this->options['group_info']['group_items'][$identifier]['value'][$prefix . '_group'];
+        return str_replace(' ', 'T', $this->date_default_value($prefix, $options));
       }
       elseif (isset($this->options['expose']['identifier']) && !isset($_GET[$this->options['expose']['identifier']])) {
         return str_replace(' ', 'T', $this->date_default_value($prefix));
@@ -295,16 +308,16 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         $source = 'edit-' . drupal_html_id($this->options['expose']['operator_id']);
       }
     }
-
+static $element_no = 1;
     if ($which == 'all' || $which == 'value') {
-      $form['value'] += $this->date_parts_form($form_state, 'value', $source, $which, $this->operator_values(1), $identifier, 'default_date');
+      $form['value'] += $this->date_parts_form($form_state, 'value', $source, $which, $this->operator_values(1), $identifier, 'default_date', $element_no);
     }
 
     if ($which == 'all' || $which == 'minmax') {
-      $form['value'] += $this->date_parts_form($form_state, 'min', $source, $which, $this->operator_values(2), $identifier, 'default_date');
-      $form['value'] += $this->date_parts_form($form_state, 'max', $source, $which, $this->operator_values(2), $identifier, 'default_to_date');
+$form['value'] += $this->date_parts_form($form_state, 'min', $source, $which, $this->operator_values(2), $identifier, 'default_date', $element_no);
+      $form['value'] += $this->date_parts_form($form_state, 'max', $source, $which, $this->operator_values(2), $identifier, 'default_to_date', $element_no);
     }
-
+$element_no++;
     // Add some extra validation for the select widget to be sure that
     // the user inputs all parts of the date.
     if ($this->options['form_type'] == 'date_select') {
@@ -332,8 +345,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
    * @return
    *   The form date part element for this instance.
    */
-  function date_parts_form($form_state, $prefix, $source, $which, $operator_values, $identifier, $relative_id) {
-    module_load_include('inc', 'date_api', 'date_api_elements');
+function date_parts_form(&$form_state, $prefix, $source, $which, $operator_values, $identifier, $relative_id, $element_no = 0) {    module_load_include('inc', 'date_api', 'date_api_elements');
     switch ($prefix) {
       case 'min':
         $label = t('Start date');
@@ -356,7 +368,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
 
     $format = $this->date_handler->views_formats($this->options['granularity'], 'display');
     $granularity = array_keys($this->date_handler->date_parts($this->options['granularity']));
-    $relative_value = ($prefix == 'max' ? $this->options['default_to_date'] : $this->options['default_date']);
+ 
 
     if (!empty($form_state['exposed'])) {
       // UI when the date selector is exposed.
@@ -366,7 +378,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         '#title' => check_plain($label),
         '#type' => $type,
         '#size' => 20,
-        '#default_value' => !empty($this->value[$prefix]) ? $this->value[$prefix] : $default_date,
+        '#default_value' => $default_select_date_value,
         '#date_format' => date_limit_format($format, $granularity),
         '#date_label_position' => 'within',
         '#date_year_range' => $this->options['year_range'],
@@ -384,6 +396,19 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
     }
     else {
       // UI when the date selector is on the views configuration screen.
+
+      // Fix for grouped between filter. Input class has to be different
+      // for each group and efault value needs to be taken from group item.
+      $relative_value_key = ($prefix == 'max' ? 'default_to_date' : 'default_date');
+      if ($this->options['is_grouped']) {
+        $input_class = "$prefix-$element_no-choose-input-type";
+        $default_select_date_value = !empty($this->options['group_info']['group_items'][$element_no]['value'][$prefix . '_group'][$prefix]) ? $this->options['group_info']['group_items'][$element_no]['value'][$prefix . '_group'][$prefix] : $default_date;
+        $relative_value = !empty($this->options['group_info']['group_items'][$element_no]['value'][$prefix . '_group'][$relative_value_key]) ? $this->options['group_info']['group_items'][$element_no]['value'][$prefix . '_group'][$relative_value_key] : $this->options[$relative_value_key];
+      } else {
+        $input_class = "$prefix-choose-input-type";
+        $default_select_date_value = !empty($this->value[$prefix]) ? $this->value[$prefix] : $default_date;
+        $relative_value = $this->options[$relative_value_key];
+      }
       $default_date = '';
       $id = 'edit-options-value-' . $prefix;
       $form[$prefix . '_group'] = array(
@@ -394,7 +419,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         '#title' => check_plain($label),
         '#type' => 'select',
         '#options' => array('date' => t('Select a date'), 'relative' => ('Enter a relative date')),
-        '#attributes' => array('class' => array($prefix . '-choose-input-type')),
+        '#attributes' => array('class' => array($input_class)),
         '#default_value' => !empty($relative_value) ? 'relative' : 'date',
       );
       $form[$prefix . '_group'][$prefix] = array(
@@ -410,7 +435,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         '#suffix' => '</div></div>',
         '#states' => array(
           'visible' => array(
-            ":input.{$prefix}-choose-input-type" => array('value' => 'date'),
+           ":input.$input_class" => array('value' => 'date'),
           ),
         ),
       );
@@ -421,7 +446,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         '#description' => t("Relative dates are computed when the view is displayed. Examples: now, now +1 day, 12AM today, Monday next week. <a href=\"@relative_format\">More examples of relative date formats in the PHP documentation</a>.", array('@relative_format' => 'http://www.php.net/manual/en/datetime.formats.relative.php')),
         '#states' => array(
           'visible' => array(
-            ":input.{$prefix}-choose-input-type" => array('value' => 'relative'),
+          ":input.$input_class" => array('value' => 'relative'),
           ),
         ),
       );
