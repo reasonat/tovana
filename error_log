@@ -105,3 +105,4 @@ Stack trace:
 [25-Oct-2015 14:33:42 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dpm() in /home/tovana/public_html/sites/all/themes/tovana/templates/views-view-fields--podcasts--block-1.tpl.php on line 25
 [25-Oct-2015 14:36:05 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 5986388 bytes) in /home/tovana/public_html/sites/all/modules/devel/devel.module on line 1470
 [25-Oct-2015 14:37:08 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 5949279 bytes) in /home/tovana/public_html/sites/all/modules/devel/devel.module on line 1470
+[04-Nov-2015 09:51:20 Asia/Jerusalem] PHP Fatal error:  Unsupported operand types in /home/tovana1/public_html/modules/block/block.module on line 519
