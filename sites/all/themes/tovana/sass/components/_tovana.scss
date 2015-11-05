@@ -1481,6 +1481,13 @@ table{
 
 /********  all events page  **********/
 
+.views-exposed-form{
+  .form-submit{
+        @include button;
+        border: none;
+  }
+}
+
 #block-quicktabs-events{
   .view-events-view{
     .views-exposed-form{
@@ -1488,10 +1495,6 @@ table{
         border: none;
         height: 33px;
         background-color: #fff;
-      }
-      .form-submit{
-        @include button;
-        border: none;
       }
     }
   }
