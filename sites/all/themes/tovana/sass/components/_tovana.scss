@@ -1477,6 +1477,9 @@ table{
   .form-item-customer-profile-billing-commerce-customer-address-und-0-premise{
     display: none;
   }
+  .view-commerce-cart-summary .view-footer a{
+    @include button;
+  }
 }
 
 /********  all events page  **********/
