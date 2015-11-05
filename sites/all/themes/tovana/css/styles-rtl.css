@@ -831,6 +831,13 @@ html.js .collapsed .fieldset-legend {
   float: right;
 }
 
+/********  checkput  **********/
+/* line 436, ../sass/components/_tovana-rtl.scss */
+.page-cart .form-submit {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
