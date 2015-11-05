@@ -22,4 +22,20 @@ function bruria_form_comment_form_alter(&$form) {
   $form['author']['homepage']['#access'] = FALSE;
 }
 
+ function bruria_views_access_callbacks() {
+  return array(
+    'bruria_user_has_access' => t('User can only see tab on his own profile'));
+}
+
+function bruria_user_has_access() {
+  global $user;
+  if (arg(0) == 'user' && $user->uid == arg(1)){
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+
 ?>
