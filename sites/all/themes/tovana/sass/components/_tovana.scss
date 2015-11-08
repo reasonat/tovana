@@ -1487,6 +1487,16 @@ table{
     border: none;
     margin-left: 10px;
 }
+
+.page-cart.i18n-en .views-field-line-item-title,
+.page-checkout.i18n-en .views-field-line-item-title{
+  display: none;
+}
+
+.page-cart.i18n-he .views-field-field-english-title,
+.page-checkout.i18n-he .views-field-field-english-title{
+    display: none;
+}
 /********  all events page  **********/
 
 .views-exposed-form{
