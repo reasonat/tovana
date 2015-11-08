@@ -3432,12 +3432,17 @@ table {
   background-color: #FDC3C3;
 }
 
+/* line 1475, ../sass/components/_tovana.scss */
+.view-register-events th {
+  text-align: left;
+}
+
 /********  checkput  **********/
-/* line 1477, ../sass/components/_tovana.scss */
+/* line 1481, ../sass/components/_tovana.scss */
 .page-checkout .form-item-customer-profile-billing-commerce-customer-address-und-0-premise {
   display: none;
 }
-/* line 1480, ../sass/components/_tovana.scss */
+/* line 1484, ../sass/components/_tovana.scss */
 .page-checkout .view-commerce-cart-summary .view-footer a {
   background-color: #cc9f44;
   color: #fff;
@@ -3450,7 +3455,7 @@ table {
   opacity: 0.8;
 }
 
-/* line 1485, ../sass/components/_tovana.scss */
+/* line 1489, ../sass/components/_tovana.scss */
 .page-cart .form-submit {
   background-color: #cc9f44;
   color: #fff;
@@ -3465,14 +3470,14 @@ table {
   opacity: 0.8;
 }
 
-/* line 1491, ../sass/components/_tovana.scss */
+/* line 1495, ../sass/components/_tovana.scss */
 .page-cart.i18n-en .views-field-line-item-title,
 .page-checkout.i18n-en .views-field-line-item-title,
 .i18n-en .view-register-events .views-field-title {
   display: none;
 }
 
-/* line 1497, ../sass/components/_tovana.scss */
+/* line 1501, ../sass/components/_tovana.scss */
 .page-cart.i18n-he .views-field-field-english-title,
 .page-checkout.i18n-he .views-field-field-english-title,
 .i18n-he .view-register-events .views-field-field-english-title {
@@ -3480,7 +3485,7 @@ table {
 }
 
 /********  all events page  **********/
-/* line 1505, ../sass/components/_tovana.scss */
+/* line 1509, ../sass/components/_tovana.scss */
 .views-exposed-form .form-submit {
   background-color: #cc9f44;
   color: #fff;
@@ -3493,47 +3498,47 @@ table {
 .views-exposed-form .form-submit:hover {
   opacity: 0.8;
 }
-/* line 1509, ../sass/components/_tovana.scss */
+/* line 1513, ../sass/components/_tovana.scss */
 .views-exposed-form input.form-text, .views-exposed-form select {
   border: none;
   height: 33px;
   background-color: #fff;
 }
 
-/* line 1518, ../sass/components/_tovana.scss */
+/* line 1522, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-view-node {
   min-width: 120px;
   margin: 0;
   text-align: left;
   font-family: arial;
 }
-/* line 1524, ../sass/components/_tovana.scss */
+/* line 1528, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-title {
   font-family: arial;
   font-size: 1em;
 }
-/* line 1528, ../sass/components/_tovana.scss */
+/* line 1532, ../sass/components/_tovana.scss */
 #block-quicktabs-events table .views-field-field-accessability, #block-quicktabs-events table .views-field-field-address {
   min-width: 100px;
 }
-/* line 1531, ../sass/components/_tovana.scss */
+/* line 1535, ../sass/components/_tovana.scss */
 #block-quicktabs-events table td, #block-quicktabs-events table th {
   padding: 10px;
   text-align: left;
 }
-/* line 1537, ../sass/components/_tovana.scss */
+/* line 1541, ../sass/components/_tovana.scss */
 #block-quicktabs-events #quicktabs-events .item-list {
   padding: 0;
 }
-/* line 1541, ../sass/components/_tovana.scss */
+/* line 1545, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content {
   margin-top: 20px;
 }
-/* line 1543, ../sass/components/_tovana.scss */
+/* line 1547, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-title {
   margin-bottom: 10px;
 }
-/* line 1546, ../sass/components/_tovana.scss */
+/* line 1550, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-repeat-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-open-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-close-day,
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-event, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-day {
   float: left;
@@ -3541,22 +3546,22 @@ table {
   margin-bottom: 10px;
   clear: none !important;
 }
-/* line 1553, ../sass/components/_tovana.scss */
+/* line 1557, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field {
   clear: right;
 }
-/* line 1556, ../sass/components/_tovana.scss */
+/* line 1560, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: left;
 }
 
-/* line 1562, ../sass/components/_tovana.scss */
+/* line 1566, ../sass/components/_tovana.scss */
 .quicktabs-tabpage {
   padding: 0;
 }
 
 /***********  comment  ************/
-/* line 1568, ../sass/components/_tovana.scss */
+/* line 1572, ../sass/components/_tovana.scss */
 .comment-add a {
   background-color: #cc9f44;
   color: #fff;
@@ -3571,34 +3576,34 @@ table {
   opacity: 0.8;
 }
 
-/* line 1575, ../sass/components/_tovana.scss */
+/* line 1579, ../sass/components/_tovana.scss */
 .page-comment .comment-add a {
   display: none;
 }
 
-/* line 1580, ../sass/components/_tovana.scss */
+/* line 1584, ../sass/components/_tovana.scss */
 .comment .comment-title a {
   pointer-events: none;
   cursor: default;
 }
-/* line 1584, ../sass/components/_tovana.scss */
+/* line 1588, ../sass/components/_tovana.scss */
 .comment .submitted {
   margin: 0;
   color: #868583;
 }
 
-/* line 1590, ../sass/components/_tovana.scss */
+/* line 1594, ../sass/components/_tovana.scss */
 article.comment {
   border-bottom: 1px dotted #868583;
 }
 
 /********  How can I help  - form  **********/
-/* line 1597, ../sass/components/_tovana.scss */
+/* line 1601, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .block-title {
   font-size: 1.5em;
   font-weight: normal;
 }
-/* line 1601, ../sass/components/_tovana.scss */
+/* line 1605, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-item {
   width: 47%;
   float: right;
@@ -3606,54 +3611,54 @@ article.comment {
   clear: right;
   margin: 0;
 }
-/* line 1607, ../sass/components/_tovana.scss */
+/* line 1611, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-item input {
   border: none;
   height: 40px;
   width: 100%;
 }
-/* line 1612, ../sass/components/_tovana.scss */
+/* line 1616, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-item textarea {
   border: none;
 }
 @media (max-width: 767px) {
-  /* line 1601, ../sass/components/_tovana.scss */
+  /* line 1605, ../sass/components/_tovana.scss */
   #block-webform-client-block-4454 .form-item {
     width: 100%;
   }
 }
-/* line 1619, ../sass/components/_tovana.scss */
+/* line 1623, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 #webform-component-content-req {
   position: absolute;
   left: 0;
 }
-/* line 1622, ../sass/components/_tovana.scss */
+/* line 1626, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 #webform-component-content-req label {
   padding: 7px 10px;
 }
-/* line 1625, ../sass/components/_tovana.scss */
+/* line 1629, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 #webform-component-content-req textarea {
   height: 139px;
 }
 @media (max-width: 767px) {
-  /* line 1619, ../sass/components/_tovana.scss */
+  /* line 1623, ../sass/components/_tovana.scss */
   #block-webform-client-block-4454 #webform-component-content-req {
     position: relative;
     left: auto;
   }
 }
-/* line 1633, ../sass/components/_tovana.scss */
+/* line 1637, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 label {
   font-weight: normal;
   opacity: 0.8;
   padding: 7px 0;
 }
-/* line 1638, ../sass/components/_tovana.scss */
+/* line 1642, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-actions {
   clear: both;
   padding-top: 30px;
 }
-/* line 1641, ../sass/components/_tovana.scss */
+/* line 1645, ../sass/components/_tovana.scss */
 #block-webform-client-block-4454 .form-actions input {
   background-color: #cc9f44;
   color: #fff;

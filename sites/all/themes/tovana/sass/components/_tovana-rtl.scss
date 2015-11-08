@@ -356,7 +356,9 @@ $yellow: #cc9f44;
 }
 /****  user tab  ********/
 
-
+.view-register-events th{
+  text-align: right;
+}
 .page-user .tabs-primary{
   clear: left;
   float: left;
