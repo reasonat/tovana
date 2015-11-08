@@ -3467,15 +3467,15 @@ table {
 
 /* line 1491, ../sass/components/_tovana.scss */
 .page-cart.i18n-en .views-field-line-item-title,
-.page-checkout.i18n-en .views-field-line-item-title
-.i18n-en .view-register-events {
+.page-checkout.i18n-en .views-field-line-item-title,
+.i18n-en .view-register-events .views-field-line-item-title {
   display: none;
 }
 
 /* line 1497, ../sass/components/_tovana.scss */
 .page-cart.i18n-he .views-field-field-english-title,
 .page-checkout.i18n-he .views-field-field-english-title,
-.i18n-he .view-register-events {
+.i18n-he .view-register-events .views-field-field-english-title {
   display: none;
 }
 
