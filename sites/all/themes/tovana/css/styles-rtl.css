@@ -759,7 +759,7 @@ html.js .collapsed .fieldset-legend {
 
 /****  user tab  ********/
 /* line 359, ../sass/components/_tovana-rtl.scss */
-.view-register-events th {
+.page-user table th {
   text-align: right;
 }
 
