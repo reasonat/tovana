@@ -1505,6 +1505,15 @@ table{
 .i18n-he .view-register-events .views-field-field-english-title{
     display: none;
 }
+
+.checkout-continue{
+  @include button;
+  border: none;
+}
+
+.button-operator{
+  margin: 0 10px;
+}
 /********  all events page  **********/
 
 .views-exposed-form{
