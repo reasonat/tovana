@@ -1489,12 +1489,14 @@ table{
 }
 
 .page-cart.i18n-en .views-field-line-item-title,
-.page-checkout.i18n-en .views-field-line-item-title{
+.page-checkout.i18n-en .views-field-line-item-title
+.i18n-en .view-register-events{
   display: none;
 }
 
 .page-cart.i18n-he .views-field-field-english-title,
-.page-checkout.i18n-he .views-field-field-english-title{
+.page-checkout.i18n-he .views-field-field-english-title,
+.i18n-he .view-register-events{
     display: none;
 }
 /********  all events page  **********/
