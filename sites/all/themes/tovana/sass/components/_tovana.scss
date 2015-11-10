@@ -720,6 +720,9 @@ table{
     right: 0;
     background-color: #fff;
     margin-top: -290px;
+    width: 100%!important;
+    margin-right: 0;
+    margin-left: 0;
     li{
       width: 100%;
       text-align: center;
@@ -1035,6 +1038,14 @@ table{
   }
 }
 
+#block-quicktabs-events{
+  #quicktabs-events > .item-list{
+    @include res(s-m){
+      display: none;
+    }
+  }
+}
+
 #block-quicktabs-hompage-news{
       border-top: 1px dotted!important;
       padding-top: 5px;
@@ -1090,6 +1101,9 @@ table{
   border-top: 1px dotted!important;
   padding-top: 30px;
   padding-bottom: 30px;
+  @include res(s-m){
+    display: none;
+  }
   .view-content{
     padding-left: 60px;
     border-left: 1px dotted!important;
@@ -1183,6 +1197,19 @@ table{
   }
   .views-row-last{
     margin-bottom: 0;
+  }
+}
+
+#block-views-events-view-block-6, #block-views-events-view-block-5{
+  .views-exposed-form{
+    .views-exposed-widget{
+      @include res(s-m){
+        display: none;
+      }
+    }
+    #edit-combine-wrapper{
+      display: block;
+    }
   }
 }
 /***********  footer  ***********/
@@ -1402,6 +1429,11 @@ table{
 
 /****  user tab  ********/
 
+#user-login{
+  @include res(s-m){
+  clear: both;
+  }
+}
 
 .page-user .tabs-primary{
   width: 25%;
@@ -1412,6 +1444,9 @@ table{
   margin: 0;
   box-sizing:border-box;
   padding: 0;
+  @include res(s-m){
+    width: 100%;
+  }
   li{
     width: 100%;
     border: none!important;
@@ -1461,8 +1496,15 @@ table{
   padding: 0 62px 0 10px;
   min-height: 300px;
   margin-top: 0; 
+  @include res(s-m){
+    width: 100%;
+    border: none!important;
+  }
 }
 
+.url-textfield{
+  display: none;
+}
 .page-user .profile{
   .field-name-field-user-image{
     float: left;
@@ -1516,6 +1558,21 @@ table{
 
 .button-operator{
   margin: 0 10px;
+}
+
+#commerce-checkout-form-checkout{
+  .account{
+    input{
+      @include res(m){
+        width: 50%;
+      }
+    }
+  }
+  .form-item, input{
+      @include res(s){
+        width: 100%;
+      }
+  }
 }
 /********  all events page  **********/
 
@@ -1664,3 +1721,12 @@ article.comment{
 }
 
 
+/*********  contact  ***********/
+
+.node-4407, .node-4408{
+  table{
+    td{
+      padding: 5px;
+    }
+  }
+}

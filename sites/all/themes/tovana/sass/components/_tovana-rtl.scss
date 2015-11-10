@@ -50,7 +50,7 @@ $yellow: #cc9f44;
   }
 }
 
-@media (max-width: 1025px){
+@media (max-width: 1025px) and (min-width: 768px){
   #navigation{
     width: 508px!important;
     li{

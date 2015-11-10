@@ -419,7 +419,7 @@ html.js .collapsed .fieldset-legend {
     padding-right: 0 !important;
   }
 }
-@media (max-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 768px) {
   /* line 54, ../sass/components/_tovana-rtl.scss */
   #navigation {
     width: 508px !important;
