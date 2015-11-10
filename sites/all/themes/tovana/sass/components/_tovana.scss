@@ -1368,6 +1368,18 @@ table{
 
 /**********  user pages  **************/
 
+.page-user .region-highlighted{
+  float: left;
+  color: #62b7d3;
+  font-size: 1.3em;
+  padding-left: 40px;
+  width: 25%;
+}
+
+.page-user #content h2{
+  display: none;
+}
+
 .page-user-my-advertise{
   #block-views-user-presentation-block{
     .views-field-nothing-2{

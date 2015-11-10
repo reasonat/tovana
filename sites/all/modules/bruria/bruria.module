@@ -7,6 +7,8 @@ function bruria_commerce_price_formatted_components_alter(&$components, $price, 
   }
 }
 
+/*********  change add to cart button text ************/
+
 function bruria_form_alter(&$form, &$form_state, $form_id) { 
   if (strpos($form_id, 'commerce_cart_add_to_cart_form') !== FALSE) {
     if ($form['submit']['#value'] == t('Add to cart')){
@@ -17,6 +19,8 @@ function bruria_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
+/**********  add a permission to see only user tab  *************/
 
 function bruria_form_comment_form_alter(&$form) {
   $form['author']['homepage']['#access'] = FALSE;
