@@ -43,10 +43,9 @@
 	  
 	    $approvaltime = $eventtime - ($days4bapproval*60*60*24);
 		
-		if($approvaltime < time()) {
-		  print flag_create_link('commerce_line_item', $node->field_product['und'][0]['product_id']);
-		  print flag_create_link('commerce_line_item', 6);
-		 echo 'flag for approval printed here';
+		if($approvaltime < time() ) { //print approval flag if enough time b4 event start is in past
+		//if($approvaltime < time() && $eventtime > time()) { //print approval flag if enough time b4 event start is in past and event date is in future
+		  print flag_create_link('arrive_event_node_flag', $node->nid);
 		}
 	  }
 	}
