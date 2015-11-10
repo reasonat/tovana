@@ -1529,6 +1529,11 @@ table{
   tr.rasham{
     background-color: #FDC3C3;
   }
+  .views-field-product-attributes{
+    .line-item-title{
+      display: none;
+    }
+  }
 }
 
 .page-user table th{
@@ -1735,6 +1740,7 @@ article.comment{
       display: block;
       td{
         width: 100%;
+        display: block;
       }
     }
   }
