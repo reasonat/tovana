@@ -1526,6 +1526,11 @@ table{
 }
 
 .view-register-events.view-display-id-page_2{
+  table{
+    th, td{
+      padding: 5px;
+    }
+  }
   tr.rasham{
     background-color: #FDC3C3;
   }
