@@ -356,6 +356,16 @@ $yellow: #cc9f44;
 }
 /****  user tab  ********/
 
+.page-user .region-highlighted{
+  float: left;
+  border-right: 1px dotted $default;
+  border-left:none;
+  #block-views-user-page-name-block{
+    padding-right: 40px;
+    margin-left: 0;
+  }
+}
+
 .page-user table th{
   text-align: right;
 }

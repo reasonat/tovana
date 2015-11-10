@@ -1369,11 +1369,15 @@ table{
 /**********  user pages  **************/
 
 .page-user .region-highlighted{
-  float: left;
+  float: right;
   color: #62b7d3;
   font-size: 1.3em;
-  padding-left: 40px;
   width: 25%;
+  border-left: 1px dotted $default;
+  #block-views-user-page-name-block{
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
 }
 
 .page-user #content h2{

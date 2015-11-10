@@ -759,26 +759,38 @@ html.js .collapsed .fieldset-legend {
 
 /****  user tab  ********/
 /* line 359, ../sass/components/_tovana-rtl.scss */
+.page-user .region-highlighted {
+  float: left;
+  border-right: 1px dotted #3c3b3b;
+  border-left: none;
+}
+/* line 363, ../sass/components/_tovana-rtl.scss */
+.page-user .region-highlighted #block-views-user-page-name-block {
+  padding-right: 40px;
+  margin-left: 0;
+}
+
+/* line 369, ../sass/components/_tovana-rtl.scss */
 .page-user table th {
   text-align: right;
 }
 
-/* line 362, ../sass/components/_tovana-rtl.scss */
+/* line 372, ../sass/components/_tovana-rtl.scss */
 .page-user .tabs-primary {
   clear: left;
   float: left;
 }
-/* line 365, ../sass/components/_tovana-rtl.scss */
+/* line 375, ../sass/components/_tovana-rtl.scss */
 .page-user .tabs-primary li {
   padding-right: 40px;
   padding-left: 0;
 }
-/* line 368, ../sass/components/_tovana-rtl.scss */
+/* line 378, ../sass/components/_tovana-rtl.scss */
 .page-user .tabs-primary li a, .page-user .tabs-primary li a:hover {
   text-align: right !important;
 }
 
-/* line 374, ../sass/components/_tovana-rtl.scss */
+/* line 384, ../sass/components/_tovana-rtl.scss */
 .page-user #content > h2 {
   font-family: 'Oron-Medium', sans-serif;
   padding-right: 40px;
@@ -787,13 +799,13 @@ html.js .collapsed .fieldset-legend {
   clear: left;
 }
 
-/* line 383, ../sass/components/_tovana-rtl.scss */
+/* line 393, ../sass/components/_tovana-rtl.scss */
 .page-user .profile .field-name-field-user-image {
   float: right;
   margin: 0 0 0 40px;
 }
 
-/* line 389, ../sass/components/_tovana-rtl.scss */
+/* line 399, ../sass/components/_tovana-rtl.scss */
 .page-user h1#page-title,
 .page-user .user-view,
 .page-user .profile {
@@ -804,40 +816,40 @@ html.js .collapsed .fieldset-legend {
   clear: right;
 }
 
-/* line 400, ../sass/components/_tovana-rtl.scss */
+/* line 410, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events table .views-field-view-node {
   text-align: right;
 }
 
 /********  all events page  **********/
-/* line 408, ../sass/components/_tovana-rtl.scss */
+/* line 418, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-repeat-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-open-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-close-day,
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-event, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-day {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 414, ../sass/components/_tovana-rtl.scss */
+/* line 424, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: right;
 }
-/* line 419, ../sass/components/_tovana-rtl.scss */
+/* line 429, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events table th, #block-quicktabs-events table td {
   text-align: right;
 }
 
-/* line 426, ../sass/components/_tovana-rtl.scss */
+/* line 436, ../sass/components/_tovana-rtl.scss */
 .not-front .region-sidebar-second .block .block-title, .not-front .region-sidebar-first .block .block-title {
   font-family: 'Oron-Medium', sans-serif;
 }
 
-/* line 431, ../sass/components/_tovana-rtl.scss */
+/* line 441, ../sass/components/_tovana-rtl.scss */
 .comment-add a {
   float: right;
 }
 
 /********  checkput  **********/
-/* line 438, ../sass/components/_tovana-rtl.scss */
+/* line 448, ../sass/components/_tovana-rtl.scss */
 .page-cart .form-submit {
   margin-right: 10px;
   margin-left: 0;
