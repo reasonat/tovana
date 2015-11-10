@@ -2112,13 +2112,13 @@ table {
     float: left;
     clear: left;
     width: auto;
-    margin-top: 50px;
+    margin-top: 58px;
   }
 }
 @media (max-width: 480px) {
   /* line 382, ../sass/components/_tovana.scss */
   .header__region {
-    margin-top: 20px;
+    margin-top: 28px;
   }
 }
 
@@ -2396,7 +2396,7 @@ table {
   /* line 611, ../sass/components/_tovana.scss */
   .scroll #logo img {
     max-width: 55px;
-    float: left;
+    float: right;
   }
 }
 /* line 619, ../sass/components/_tovana.scss */
@@ -3768,6 +3768,18 @@ article.comment {
 /* line 1728, ../sass/components/_tovana.scss */
 .node-4407 table td, .node-4408 table td {
   padding: 5px;
+}
+/* line 1731, ../sass/components/_tovana.scss */
+.node-4407 table tr, .node-4408 table tr {
+  display: none;
+}
+/* line 1734, ../sass/components/_tovana.scss */
+.node-4407 table tr.sectiontableentry1, .node-4407 table tr.sectiontableentry2, .node-4408 table tr.sectiontableentry1, .node-4408 table tr.sectiontableentry2 {
+  display: block;
+}
+/* line 1736, ../sass/components/_tovana.scss */
+.node-4407 table tr.sectiontableentry1 td, .node-4407 table tr.sectiontableentry2 td, .node-4408 table tr.sectiontableentry1 td, .node-4408 table tr.sectiontableentry2 td {
+  width: 100%;
 }
 
 /**

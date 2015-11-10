@@ -387,10 +387,10 @@ table{
     float: left;
     clear: left;
     width: auto;
-    margin-top: 50px;
+    margin-top: 58px;
   }
   @include res(s){
-    margin-top: 20px;
+    margin-top: 28px;
   }
 }
 
@@ -612,7 +612,7 @@ table{
       max-width: 96px;
       @include res(s){
         max-width: 55px;
-        float: left;
+        float: right;
       }
     }
   }
@@ -1727,6 +1727,15 @@ article.comment{
   table{
     td{
       padding: 5px;
+    }
+    tr{
+      display: none;
+    }
+    tr.sectiontableentry1, tr.sectiontableentry2{
+      display: block;
+      td{
+        width: 100%;
+      }
     }
   }
 }

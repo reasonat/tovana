@@ -347,6 +347,11 @@ $yellow: #cc9f44;
     margin-right: 17px;
     margin-left: 0;
   }
+  #logo img{
+    @include res(s-m){
+      float: left!important;
+    }
+  }
 }
 
 .front .view-events-view {
