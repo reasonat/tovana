@@ -1,0 +1,105 @@
+<?php 
+
+
+/**
+ * Implements hook_rules_action_info()
+ */
+function translaterule_rules_action_info()
+{
+  return array(
+    'translaterule_action_node_translate' => array(
+      'label' => t('Translate a node into every enabled language'),
+      'group' => t('Node'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node', 
+          'label' => t('Content')
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_rules_condition_info()
+ */
+function translaterule_rules_condition_info() {
+  return array(
+    'translaterule_action_node_is_translation_source' => array(
+      'label' => t('Content is translation source'),
+      'group' => t('Node'),
+      'help' => t('Evaluates to TRUE if the given node is the translation source.'),
+      'arguments' => array(
+        'node' => array(
+            'type' => 'node', 
+            'label' => t('Current node')
+        ),
+      ),
+      'module' => 'translaterule',
+    ),
+  );
+}
+
+function translaterule_action_node_is_translation_source($node)
+{
+  return ($node->language == $node->translations->original) ? TRUE : FALSE;
+}
+
+/**
+ * Creates a translation for a node in every enabled language
+ * 
+ * @param $node (node object)
+*/
+function translaterule_action_node_translate($node)
+{
+  $node->tnid = $node->nid;
+  
+  // GET THE ENABLED LANGUAGE LIST
+  $languages = i18n_language_list();
+  unset($languages[$node->language]);
+
+  foreach ($languages as $langcode => $language)
+  {
+    // CLONE THE CURRENT NODE
+    $new_node = clone $node;
+    
+    // CLEAR THE VALUES, SET THE LANGUAGE AND SAVE
+    $new_node->nid = NULL;
+    $new_node->vid = NULL;
+    $new_node->tnid = $node->tnid;
+    $new_node->created = NULL;
+    $new_node->book['mlid'] = NULL;
+    $new_node->path = NULL;
+    $new_node->files = array();
+    $new_node->language = $langcode;
+
+    node_save($new_node);
+  }
+
+  // IF WE HAVE AT LEAST ONE ENABLED LANGUAGE, UPDATE THE TRANSLATION SET
+  if(count($languages) > 0)
+    db_update('node')
+    ->fields(array(
+      'tnid' => $node->nid,
+    ))
+    ->condition('nid', $node->nid, '=')
+    ->execute();;
+
+  return array('node' => $node);
+}
+
+// add or between conexual fileter  
+function translaterule_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+function translaterule_field_widget_form_alter(&$element, &$form_state, $context) {
+  if ($context['field']['type'] == 'field_explore' && isset($element['#options'])) {
+    $element['#options'] = array_reverse($element['#options'], TRUE);
+  }
+}
+
+
+?>
