@@ -827,35 +827,40 @@ html.js .collapsed .fieldset-legend {
   text-align: right;
 }
 
+/* line 419, ../sass/components/_tovana-rtl.scss */
+#block-quicktabs-events .view-display-id-block_5 .view-content .views-field {
+  clear: right;
+}
+
 /********  all events page  **********/
-/* line 423, ../sass/components/_tovana-rtl.scss */
+/* line 426, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-repeat-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-open-day, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-hour-close-day,
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-event, #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-date-day {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 429, ../sass/components/_tovana-rtl.scss */
+/* line 432, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
   clear: right;
 }
-/* line 434, ../sass/components/_tovana-rtl.scss */
+/* line 437, ../sass/components/_tovana-rtl.scss */
 #block-quicktabs-events table th, #block-quicktabs-events table td {
   text-align: right;
 }
 
-/* line 441, ../sass/components/_tovana-rtl.scss */
+/* line 444, ../sass/components/_tovana-rtl.scss */
 .not-front .region-sidebar-second .block .block-title, .not-front .region-sidebar-first .block .block-title {
   font-family: 'Oron-Medium', sans-serif;
 }
 
-/* line 446, ../sass/components/_tovana-rtl.scss */
+/* line 449, ../sass/components/_tovana-rtl.scss */
 .comment-add a {
   float: right;
 }
 
 /********  checkput  **********/
-/* line 453, ../sass/components/_tovana-rtl.scss */
+/* line 456, ../sass/components/_tovana-rtl.scss */
 .page-cart .form-submit {
   margin-right: 10px;
   margin-left: 0;

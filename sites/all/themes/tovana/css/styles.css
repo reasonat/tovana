@@ -3648,7 +3648,7 @@ table {
 }
 /* line 1638, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field {
-  clear: right;
+  clear: left;
 }
 /* line 1641, ../sass/components/_tovana.scss */
 #block-quicktabs-events .view-display-id-block_5 .view-content .views-field-field-accessability {
