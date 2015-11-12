@@ -1,9 +1,11 @@
 <?php
 /**
  * @file
- * A standard Views filter for a single date field, using Date API form selectors and sql handling.
+ * A standard Views filter for a single date field,
+ * using Date API form selectors and sql handling.
  */
 
+// @codingStandardsIgnoreStart
 class date_views_filter_handler_simple extends views_handler_filter_date {
   var $date_handler = NULL;
   var $offset = NULL;
@@ -58,8 +60,8 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
    */
   function date_default_value($prefix, $options = NULL) {
     $default_date = '';
-   if (empty($options)) {
-     if ($this->options['is_grouped']) {
+    if (empty($options)) {
+      if ($this->options['is_grouped']) {
         $options = $this->options['group_info']['group_items'][$this->options['group_info']['default_group']]['value'][$prefix . '_group'];
       }
       else {
@@ -90,7 +92,8 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         $default_date = (empty($options[$prefix])) ? '' : $options[$prefix];
       } else {
         $default_date = (empty($options['value'][$prefix])) ? '' : $options['value'][$prefix];
-      }    }
+      }
+    }
     return $default_date;
   }
 
@@ -108,7 +111,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
     if (empty($input)) {
       if (empty($this->options['exposed'])) {
         return str_replace(' ', 'T', $this->date_default_value($prefix));
-       }
+      }
       elseif ($this->options['is_grouped'] && isset($_GET[$this->options['group_info']['identifier']])) {
         $identifier = $_GET[$this->options['group_info']['identifier']];
         $options = $this->options['group_info']['group_items'][$identifier]['value'][$prefix . '_group'];
@@ -276,7 +279,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
   }
 
   function extra_options_validate($form, &$form_state) {
-    if (!preg_match('/^(?:\-[0-9]{1,4}|[0-9]{4}):(?:[\+|\-][0-9]{1,4}|[0-9]{4})$/', $form_state['values']['options']['year_range'])) {
+    if (!preg_match('/^(?:[\+\-][0-9]{1,4}|[0-9]{4}):(?:[\+\-][0-9]{1,4}|[0-9]{4})$/', $form_state['values']['options']['year_range'])) {
       form_error($form['year_range'], t('Date year range must be in the format -9:+9, 2005:2010, -9:2010, or 2005:+9'));
     }
   }
@@ -314,7 +317,7 @@ static $element_no = 1;
     }
 
     if ($which == 'all' || $which == 'minmax') {
-$form['value'] += $this->date_parts_form($form_state, 'min', $source, $which, $this->operator_values(2), $identifier, 'default_date', $element_no);
+  $form['value'] += $this->date_parts_form($form_state, 'min', $source, $which, $this->operator_values(2), $identifier, 'default_date', $element_no);
       $form['value'] += $this->date_parts_form($form_state, 'max', $source, $which, $this->operator_values(2), $identifier, 'default_to_date', $element_no);
     }
 $element_no++;
@@ -345,7 +348,8 @@ $element_no++;
    * @return
    *   The form date part element for this instance.
    */
-function date_parts_form(&$form_state, $prefix, $source, $which, $operator_values, $identifier, $relative_id, $element_no = 0) {    module_load_include('inc', 'date_api', 'date_api_elements');
+  function date_parts_form(&$form_state, $prefix, $source, $which, $operator_values, $identifier, $relative_id, $element_no = 0) {
+    module_load_include('inc', 'date_api', 'date_api_elements');
     switch ($prefix) {
       case 'min':
         $label = t('Start date');
@@ -368,17 +372,16 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
 
     $format = $this->date_handler->views_formats($this->options['granularity'], 'display');
     $granularity = array_keys($this->date_handler->date_parts($this->options['granularity']));
- 
+    $default_date = $this->date_default_value($prefix);
 
     if (!empty($form_state['exposed'])) {
       // UI when the date selector is exposed.
-      $default_date = $this->date_default_value($prefix);
       $id = 'edit-' . str_replace('_', '-', $this->field) . '-' . $prefix;
       $form[$prefix] = array(
         '#title' => check_plain($label),
         '#type' => $type,
         '#size' => 20,
-        '#default_value' => $default_select_date_value,
+        '#default_value' => !empty($this->value[$prefix]) ? $this->value[$prefix] : $default_date,
         '#date_format' => date_limit_format($format, $granularity),
         '#date_label_position' => 'within',
         '#date_year_range' => $this->options['year_range'],
@@ -391,7 +394,10 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
         $form[$prefix]['#dependency'] = array($source => $operator_values);
       }
       if (!isset($form_state['input'][$identifier][$prefix])) {
-        $form_state['input'][$identifier][$prefix] = $this->value[$prefix];
+        // Ensure these exist.
+        foreach ($granularity as $key) {
+          $form_state['input'][$identifier][$prefix][$key] = NULL;
+        }
       }
     }
     else {
@@ -409,6 +415,7 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
         $default_select_date_value = !empty($this->value[$prefix]) ? $this->value[$prefix] : $default_date;
         $relative_value = $this->options[$relative_value_key];
       }
+
       $default_date = '';
       $id = 'edit-options-value-' . $prefix;
       $form[$prefix . '_group'] = array(
@@ -426,7 +433,7 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
         '#title' => t('Select a date'),
         '#type' => $type,
         '#size' => 20,
-        '#default_value' => !empty($this->value[$prefix]) ? $this->value[$prefix] : $default_date,
+       '#default_value' => $default_select_date_value,
         '#date_format' => date_limit_format($format, $granularity),
         '#date_label_position' => 'within',
         '#date_year_range' => $this->options['year_range'],
@@ -435,7 +442,7 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
         '#suffix' => '</div></div>',
         '#states' => array(
           'visible' => array(
-           ":input.$input_class" => array('value' => 'date'),
+            ":input.$input_class" => array('value' => 'date'),
           ),
         ),
       );
@@ -446,7 +453,7 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
         '#description' => t("Relative dates are computed when the view is displayed. Examples: now, now +1 day, 12AM today, Monday next week. <a href=\"@relative_format\">More examples of relative date formats in the PHP documentation</a>.", array('@relative_format' => 'http://www.php.net/manual/en/datetime.formats.relative.php')),
         '#states' => array(
           'visible' => array(
-          ":input.$input_class" => array('value' => 'relative'),
+            ":input.$input_class" => array('value' => 'relative'),
           ),
         ),
       );
@@ -555,3 +562,4 @@ function date_parts_form(&$form_state, $prefix, $source, $which, $operator_value
   }
 
 }
+// @codingStandardsIgnoreEnd
