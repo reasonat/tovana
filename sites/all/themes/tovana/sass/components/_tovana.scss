@@ -1435,8 +1435,8 @@ table{
 
 .field-name-field-location-node{
   .field-name-field-map{
-    float: left;
-    margin: 0px 20px 20px 0;
+    float: right;
+    margin: 0px 0px 20px 20px;
     .geolocation-help, .geolocation-map{
       margin-top: 0;
     }
@@ -1754,6 +1754,14 @@ table{
     .line-item-title{
       display: none;
     }
+  }
+}
+
+.view-register-events.view-display-id-block_1{
+  .view-header{
+    color: #31b0d8;
+    font-family: "Oron-Bold",sans-serif;
+    font-size: 2em;
   }
 }
 

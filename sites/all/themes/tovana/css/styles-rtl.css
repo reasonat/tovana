@@ -883,20 +883,24 @@ html.js .collapsed .fieldset-legend {
 /* line 475, ../sass/components/_tovana-rtl.scss */
 .node-event .horizontal-tabs-list li.last {
   border-left: none !important;
-  border-right: 1px dotted !important;
+  border-right: none !important;
 }
 /* line 479, ../sass/components/_tovana-rtl.scss */
+.node-event .horizontal-tabs-list li.first {
+  border-right: none !important;
+}
+/* line 482, ../sass/components/_tovana-rtl.scss */
 .node-event .horizontal-tabs-list li.first a {
   padding-right: 0 !important;
   padding-left: 0.6em !important;
 }
-/* line 484, ../sass/components/_tovana-rtl.scss */
+/* line 487, ../sass/components/_tovana-rtl.scss */
 .node-event .field-group-htabs-wrapper {
   float: right;
   padding-left: 20px;
   padding-right: 0;
 }
-/* line 489, ../sass/components/_tovana-rtl.scss */
+/* line 492, ../sass/components/_tovana-rtl.scss */
 .node-event .event-details {
   float: left;
   border-left: none;
@@ -905,49 +909,49 @@ html.js .collapsed .fieldset-legend {
   padding-left: 0;
   text-align: right;
 }
-/* line 498, ../sass/components/_tovana-rtl.scss */
+/* line 501, ../sass/components/_tovana-rtl.scss */
 .node-event .event-details .group-date .field-name-field-hour-close-day:before, .node-event .event-details .group-date .field-name-field-date-day:before {
   left: auto;
   right: 0;
 }
-/* line 502, ../sass/components/_tovana-rtl.scss */
+/* line 505, ../sass/components/_tovana-rtl.scss */
 .node-event .event-details .group-date .field-name-field-hour-close-day .field-items, .node-event .event-details .group-date .field-name-field-date-day .field-items {
   margin-right: 10px;
   margin-left: 0;
 }
-/* line 509, ../sass/components/_tovana-rtl.scss */
+/* line 512, ../sass/components/_tovana-rtl.scss */
 .node-event .event-details #edit-line-item-fields input, .node-event .event-details .field-name-field-commitment input {
   float: right;
   margin-left: 6px;
   margin-right: 0;
 }
-/* line 514, ../sass/components/_tovana-rtl.scss */
+/* line 517, ../sass/components/_tovana-rtl.scss */
 .node-event .event-details #edit-line-item-fields .form-type-radio, .node-event .event-details .field-name-field-commitment .form-type-radio {
   clear: right;
 }
-/* line 519, ../sass/components/_tovana-rtl.scss */
+/* line 522, ../sass/components/_tovana-rtl.scss */
 .node-event .event-details .field-name-field-birth-date fieldset {
   margin-right: 0;
 }
-/* line 525, ../sass/components/_tovana-rtl.scss */
+/* line 528, ../sass/components/_tovana-rtl.scss */
 .node-event .field-name-field-event-instructors .field-item, .node-event .field-name-field-event-teachers .field-item {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 533, ../sass/components/_tovana-rtl.scss */
+/* line 536, ../sass/components/_tovana-rtl.scss */
 .node-event .field-name-field-commitment .description .he {
   display: block;
 }
-/* line 536, ../sass/components/_tovana-rtl.scss */
+/* line 539, ../sass/components/_tovana-rtl.scss */
 .node-event .field-name-field-commitment .description .en {
   display: none;
 }
 
-/* line 544, ../sass/components/_tovana-rtl.scss */
+/* line 547, ../sass/components/_tovana-rtl.scss */
 .field-name-field-location-node .field-name-field-map {
-  float: right;
-  margin: 0px 0px 20px 20px;
+  float: left;
+  margin: 0px 20px 20px 0px;
 }
 
 /* SMACSS theme rules */

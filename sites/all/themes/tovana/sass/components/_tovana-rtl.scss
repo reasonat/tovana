@@ -474,7 +474,10 @@ $yellow: #cc9f44;
      }
     li.last{
       border-left: none!important;
-      border-right: 1px dotted!important;
+      border-right: none!important;
+    }
+    li.first{
+      border-right: none!important;
     }
     li.first a{
       padding-right: 0!important;
@@ -542,8 +545,8 @@ $yellow: #cc9f44;
 
 .field-name-field-location-node{
   .field-name-field-map{
-    float: right;
-    margin: 0px 0px 20px 20px;
+    float: left;
+    margin: 0px 20px 20px 0px;
   }
 }
 
