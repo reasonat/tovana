@@ -3315,14 +3315,14 @@ table {
   margin-top: 0;
 }
 /* line 1357, ../sass/components/_tovana.scss */
-.node-event .event-details #edit-line-item-fields input, .node-event .event-details .field-name-field-commitment input {
+.node-event .event-details #edit-line-item-fields input, .node-event .event-details .field-name-field-commitment input, .node-event .event-details .field-name-commerce-donate-amount input {
   float: left;
   margin-right: 6px;
   margin-top: 6px;
   width: auto;
 }
 /* line 1363, ../sass/components/_tovana.scss */
-.node-event .event-details #edit-line-item-fields .form-type-radio, .node-event .event-details .field-name-field-commitment .form-type-radio {
+.node-event .event-details #edit-line-item-fields .form-type-radio, .node-event .event-details .field-name-field-commitment .form-type-radio, .node-event .event-details .field-name-commerce-donate-amount .form-type-radio {
   clear: left;
 }
 /* line 1368, ../sass/components/_tovana.scss */
