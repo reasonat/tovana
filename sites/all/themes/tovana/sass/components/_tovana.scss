@@ -1234,6 +1234,10 @@ table{
 /*********  event page  ***********/
 
 .node-event{
+  .field-type-entityreference{
+    clear: left;
+    overflow: hidden;
+  }
   .field-name-field-event-img{
     float: right;
     max-width: 50%;
