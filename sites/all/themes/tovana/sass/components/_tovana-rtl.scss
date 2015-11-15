@@ -521,6 +521,13 @@ $yellow: #cc9f44;
       }
     }
   }
+  .field-name-field-event-instructors, .field-name-field-event-teachers{
+    .field-item{
+      float: right;
+      margin-left: 5px;
+      margin-right: 0;
+    }
+  }
 }
 
 .field-name-field-location-node{

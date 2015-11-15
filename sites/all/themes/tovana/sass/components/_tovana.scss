@@ -1416,6 +1416,12 @@ table{
     background-color: #fff;
     padding: 10px;
   }
+  .field-name-field-event-instructors, .field-name-field-event-teachers{
+    .field-item{
+      float: left;
+      margin-right: 5px;
+    }
+  }
 }
 
 .field-name-field-location-node{

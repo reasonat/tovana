@@ -929,8 +929,14 @@ html.js .collapsed .fieldset-legend {
 .node-event .event-details .field-name-field-birth-date fieldset {
   margin-right: 0;
 }
+/* line 525, ../sass/components/_tovana-rtl.scss */
+.node-event .field-name-field-event-instructors .field-item, .node-event .field-name-field-event-teachers .field-item {
+  float: right;
+  margin-left: 5px;
+  margin-right: 0;
+}
 
-/* line 527, ../sass/components/_tovana-rtl.scss */
+/* line 534, ../sass/components/_tovana-rtl.scss */
 .field-name-field-location-node .field-name-field-map {
   float: right;
   margin: 0px 0px 20px 20px;
