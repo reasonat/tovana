@@ -992,10 +992,7 @@ div.add-or-remove-shortcuts {
 
 /********** add event  ************/
 
-.page-node-add-event{
-  #edit-field-location-node{
-    #edit-field-location-node-und-actions-bundle{
+.page-node-add-event .form-item-field-location-node-und-actions-bundle,
+.page-node-edit.node-type-event .form-item-field-location-node-und-actions-bundle{
       display: none;
-    }
   }
-}
