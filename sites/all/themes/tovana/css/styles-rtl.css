@@ -935,8 +935,16 @@ html.js .collapsed .fieldset-legend {
   margin-left: 5px;
   margin-right: 0;
 }
+/* line 533, ../sass/components/_tovana-rtl.scss */
+.node-event .field-name-field-commitment .description .he {
+  display: block;
+}
+/* line 536, ../sass/components/_tovana-rtl.scss */
+.node-event .field-name-field-commitment .description .en {
+  display: none;
+}
 
-/* line 534, ../sass/components/_tovana-rtl.scss */
+/* line 544, ../sass/components/_tovana-rtl.scss */
 .field-name-field-location-node .field-name-field-map {
   float: right;
   margin: 0px 0px 20px 20px;

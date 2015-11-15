@@ -528,6 +528,16 @@ $yellow: #cc9f44;
       margin-right: 0;
     }
   }
+  .field-name-field-commitment{
+    .description{
+      .he{
+        display: block;
+      }
+      .en{
+        display: none;
+      }
+    }
+  }
 }
 
 .field-name-field-location-node{

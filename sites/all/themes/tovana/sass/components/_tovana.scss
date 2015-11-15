@@ -1327,7 +1327,7 @@ table{
       color: #fff;
       margin-bottom: 10px;
       overflow: hidden;
-      padding: 10px;
+      padding: 18px 10px 10px 10px;
       text-align: center;
       .field-name-field-hour-open-day, .field-name-field-date-event{
         display: inline-block;
@@ -1378,6 +1378,7 @@ table{
         width: 100%;
         .form-item{
           width: 100%;
+          padding-top: 0;
         }
       }
       .form-type-date-popup{
@@ -1425,6 +1426,9 @@ table{
   .field-name-field-commitment{
     .description{
       margin: 0;
+      .he{
+        display: none;
+      }
     }
   }
 }
