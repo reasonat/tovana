@@ -1231,6 +1231,203 @@ table{
   }
 }
 
+/*********  event page  ***********/
+
+.node-event{
+  .field-name-field-event-img{
+    float: right;
+    max-width: 50%;
+    @include res(s-m){
+      max-width: 100%;
+    }
+  }
+  .form-submit{
+    @include button;
+    border: none;
+    margin: 20px 0;
+    padding: 3px 10px 7px;
+    &.form-button-disabled{
+      opacity: 0.8;
+    }
+  }
+  div.horizontal-tabs{
+    border: none;
+  }
+  .horizontal-tabs-list{
+      background-color: transparent!important;
+      border-bottom: 1px dotted!important;
+      padding-bottom: 10px!important;
+      margin-bottom: 20px!important; 
+      border-right: none!important;
+      border-left: none!important;
+      border-top: none;
+    li, li:hover{
+      background-color: transparent!important;
+      border-right: 1px dotted!important;
+      a{
+          background-color: transparent!important;
+          strong{
+            color: $default;
+            font-weight: normal;
+            font-family: "Oron-Medium",sans-serif;
+            font-size: 1.3em;
+          }
+       }
+     }
+    li.last{
+      border-right: none!important;
+    }
+    li.first a{
+      padding-left: 0!important;
+    }
+    li.selected{
+      a strong{
+        color: $blue!important;
+      }
+    }
+  }
+  .group-the-event, .horizontal-tabs-pane{
+    padding: 0!important;
+  }
+  .field-group-htabs-wrapper{
+    float: left;
+    width: 75%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    @include res(s-m){
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .event-details{
+    width: 25%;
+    float: right;
+    border-left: 1px dotted;
+    padding-left: 20px;
+    text-align: left;
+    box-sizing: border-box;
+    @include res(s-m){
+      width: 100%;
+      border:none!important;
+      padding: 0;
+    }
+    .form-item {
+      margin: 5px 0;
+    }
+    .group-date-open-close{
+      font-weight: bold;
+    }
+    .group-date{
+      background: $blue;
+      border-radius: 6px;
+      color: #fff;
+      margin-bottom: 10px;
+      overflow: hidden;
+      padding: 10px;
+      text-align: center;
+      .field-name-field-hour-open-day, .field-name-field-date-event{
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .field-name-field-hour-close-day, .field-name-field-date-day{
+        display: inline-block;
+        position: relative;
+        &:before{
+          content: "-";
+          position: absolute;
+          left: 0;
+        }
+        .field-items{
+          margin-left: 10px;
+        }
+      }
+    }
+    select, input{
+        width: 100%;
+    }
+    .form-type-date-popup{
+      width: 100%;
+      margin-top: 0;
+    }
+    #edit-line-item-fields, .field-name-field-commitment{
+      input{
+        float: left;
+        margin-right: 6px;
+        margin-top: 6px;
+        width: auto;
+      }
+      .form-type-radio{
+        clear: left;
+      }
+    }
+    .field-name-field-birth-date{
+      fieldset{
+        border:none;
+        margin-left: 0;
+        padding: 0;
+      }
+      .fieldset-legend{
+        font-weight: bold;
+      }
+      .date-padding{
+        padding: 0;
+        width: 100%;
+        .form-item{
+          width: 100%;
+        }
+      }
+      .form-type-date-popup{
+          margin: 0!important;
+      }
+      .date-no-float{
+        width: 100%;
+      }
+      .description{
+        display:  none;
+      }
+      input{
+        margin: 0;
+      }
+    }
+  }
+  .group-hours{
+    border-top: 1px solid #fff;
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+  .group-days{
+    border-top: 1px solid #fff;
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+  .field-name-commerce-price{
+    text-align: center;
+    font-size: 30px;
+    color: $blue;
+    margin-top: 30px;
+    border-bottom: 1px solid $blue;
+    padding-bottom: 20px;
+  }
+  .field-type-commerce-product-reference, .field-name-field-text-before-product{
+    background-color: #fff;
+    padding: 10px;
+  }
+}
+
+.field-name-field-location-node{
+  .field-name-field-map{
+    float: left;
+    margin: 0px 20px 20px 0;
+    .geolocation-help, .geolocation-map{
+      margin-top: 0;
+    }
+  }
+  .flexslider{
+    margin-bottom: 20px;
+  }
+}
+
+
 /*************  article and etc.  ************/
 
 .view.article-design{
