@@ -3156,7 +3156,7 @@ table {
 
 /*********  event page  ***********/
 /* line 1237, ../sass/components/_tovana.scss */
-.node-event .field-type-entityreference {
+.node-event .field {
   clear: left;
   overflow: hidden;
 }

@@ -461,6 +461,9 @@ $yellow: #cc9f44;
 /*********  event page  ***********/
 
 .node-event{
+  .field{
+    clear: right;
+  }
   .field-name-field-event-img{
     float: left;
   }
