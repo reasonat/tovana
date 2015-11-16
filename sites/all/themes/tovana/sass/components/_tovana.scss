@@ -1808,6 +1808,16 @@ table{
 .page-user table th{
   text-align: left;
 }
+
+.password-strength{
+  display: none;
+}
+
+.form-type-password-confirm{
+  .form-item{
+    max-width: 100%;
+  }
+}
 /********  checkput  **********/
 
 .page-checkout{
