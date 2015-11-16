@@ -149,6 +149,9 @@ body{
 
 table{
   width: 100%;
+    td, th{
+      padding: 5px;
+    }
 }
 
 .view .pager{
@@ -1636,6 +1639,9 @@ table{
   font-size: 1.3em;
   width: 25%;
   border-left: 1px dotted $default;
+  @include res(s-m){
+    display: none;
+  }
   #block-views-user-page-name-block{
     padding-left: 40px;
     margin-bottom: 20px;
@@ -1681,12 +1687,16 @@ table{
   padding: 0;
   @include res(s-m){
     width: 100%;
+    margin-bottom: 50px;
   }
   li{
     width: 100%;
     border: none!important;
     background-image: none;
     padding-left: 40px;
+    @include res(s-m){
+      padding: 0!important;
+    }
     a, a:hover{
       background-color: transparent;
       border: none!important;
@@ -1773,6 +1783,14 @@ table{
   }
   .views-field-product-attributes{
     .line-item-title{
+      display: none;
+    }
+  }
+}
+
+.view-register-events.view-display-id-page_1 > .view-content{
+  @include res(s){
+    .views-field-field-date-day-1{
       display: none;
     }
   }
