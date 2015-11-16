@@ -1828,6 +1828,12 @@ table{
       }
   }
 }
+
+.commerce-order-handler-area-order-total .commerce-price-formatted-components{
+  @include res(s-m){
+    width: 100%!important;
+  }
+}
 /********  all events page  **********/
 
 .views-exposed-form{
