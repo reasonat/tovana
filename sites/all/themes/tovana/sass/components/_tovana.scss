@@ -1241,7 +1241,7 @@ table{
     clear: left;
     overflow: hidden;
     @include res(s-m){
-      clear: both;
+      clear: both!important;
     }
   }
   .field-name-field-event-img{

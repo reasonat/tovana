@@ -3169,7 +3169,7 @@ table {
 @media (max-width: 767px) {
   /* line 1240, ../sass/components/_tovana.scss */
   .node-event .field {
-    clear: both;
+    clear: both !important;
   }
 }
 /* line 1247, ../sass/components/_tovana.scss */
