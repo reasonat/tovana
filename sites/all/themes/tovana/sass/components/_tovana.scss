@@ -1240,6 +1240,9 @@ table{
   .field{
     clear: left;
     overflow: hidden;
+    @include res(s-m){
+      clear: both;
+    }
   }
   .field-name-field-event-img{
     float: right;
@@ -1447,6 +1450,10 @@ table{
     margin: 0px 0px 20px 20px;
     @include res(s-m){
       margin: 0 0 20px 0;
+      width: 100%;
+      .geolocation-map{
+        width: 100%;
+      }
     }
     .geolocation-help, .geolocation-map{
       margin-top: 0;
