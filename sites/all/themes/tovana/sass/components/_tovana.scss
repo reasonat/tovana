@@ -1271,6 +1271,7 @@ table{
     li, li:hover{
       background-color: transparent!important;
       border-right: 1px dotted!important;
+      min-width: 0!important;
       a{
           background-color: transparent!important;
           strong{
@@ -1309,6 +1310,7 @@ table{
       padding: 0!important;
     }
   }
+
   .event-details{
     width: 25%;
     float: right;
