@@ -1445,6 +1445,9 @@ table{
   .field-name-field-map{
     float: right;
     margin: 0px 0px 20px 20px;
+    @include res(s-m){
+      margin: 0 0 20px 0;
+    }
     .geolocation-help, .geolocation-map{
       margin-top: 0;
     }
