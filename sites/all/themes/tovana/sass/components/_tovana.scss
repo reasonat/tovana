@@ -1303,7 +1303,7 @@ table{
     box-sizing: border-box;
     @include res(s-m){
       width: 100%;
-      padding: 0;
+      padding: 0!important;
     }
   }
   .event-details{
@@ -1316,7 +1316,7 @@ table{
     @include res(s-m){
       width: 100%;
       border:none!important;
-      padding: 0;
+      padding: 0!important;
     }
     .form-item {
       margin: 5px 0;

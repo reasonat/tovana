@@ -3253,7 +3253,7 @@ table {
   /* line 1299, ../sass/components/_tovana.scss */
   .node-event .field-group-htabs-wrapper {
     width: 100%;
-    padding: 0;
+    padding: 0 !important;
   }
 }
 /* line 1309, ../sass/components/_tovana.scss */
@@ -3270,7 +3270,7 @@ table {
   .node-event .event-details {
     width: 100%;
     border: none !important;
-    padding: 0;
+    padding: 0 !important;
   }
 }
 /* line 1321, ../sass/components/_tovana.scss */
