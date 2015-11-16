@@ -3431,7 +3431,7 @@ table {
   }
   /* line 1454, ../sass/components/_tovana.scss */
   .field-name-field-location-node .field-name-field-map .geolocation-map {
-    width: 100%;
+    width: 100% !important;
   }
 }
 /* line 1458, ../sass/components/_tovana.scss */
