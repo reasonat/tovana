@@ -1806,6 +1806,17 @@ table{
       text-align: center;
     }
   }
+  #edit-continue{
+    @include res(s-m){
+      width: 100%;
+    }
+  }
+  #edit-back{
+    @include res(s-m){
+      width: 100%;
+      display: block;
+    }
+  }
 }
 
 .page-cart .form-submit{
@@ -1818,6 +1829,7 @@ table{
   @include button;
   border: none;
 }
+
 
 .button-operator{
   margin: 0 10px;
