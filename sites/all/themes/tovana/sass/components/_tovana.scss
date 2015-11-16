@@ -1797,6 +1797,15 @@ table{
   .view-commerce-cart-summary .view-footer a{
     @include button;
   }
+  .form-item{
+    margin: 3px 0!important;
+  }
+  .button-operator{
+    @include res(s-m){
+      display: block;
+      text-align: center;
+    }
+  }
 }
 
 .page-cart .form-submit{
