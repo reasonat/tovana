@@ -1819,13 +1819,18 @@ table{
   }
 }
 
-.page-user-edit #edit-account{
-  input{
-    width: 300px;
-    max-width: 100%;
-    @include res(s-m){
-      width: 100%;
+.page-user-edit{
+  #edit-account{
+    input{
+      width: 300px;
+      max-width: 100%;
+      @include res(s-m){
+        width: 100%;
+      }
     }
+  }
+  #edit-comment-notify-settings{
+    display: none;
   }
 }
 /********  checkput  **********/
