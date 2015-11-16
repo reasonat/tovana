@@ -126,6 +126,9 @@ body{
 
 #main{
   padding-top: 35px;
+  @include res(s-m){
+    padding-top: 0;
+  }
 }
 
 #page-title{
