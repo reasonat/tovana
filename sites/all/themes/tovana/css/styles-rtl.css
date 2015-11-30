@@ -954,6 +954,16 @@ html.js .collapsed .fieldset-legend {
   margin: 0px 20px 20px 0px;
 }
 
+/*********  newsletter *********/
+/* line 556, ../sass/components/_tovana-rtl.scss */
+#block-bruria-magento-mailing-iframe .block-title {
+  float: right;
+}
+/* line 559, ../sass/components/_tovana-rtl.scss */
+#block-bruria-magento-mailing-iframe .before {
+  clear: right;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */

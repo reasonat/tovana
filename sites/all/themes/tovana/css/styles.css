@@ -4172,6 +4172,28 @@ article.comment {
   display: block;
 }
 
+/*********  newsletter *********/
+/* line 2072, ../sass/components/_tovana.scss */
+#block-bruria-magento-mailing-iframe {
+  margin-top: 20px;
+}
+/* line 2074, ../sass/components/_tovana.scss */
+#block-bruria-magento-mailing-iframe .block-title {
+  border-bottom: 1px dotted #3c3b3b;
+  color: #62b7d3;
+  float: left;
+  font-family: "Oron-Medium",sans-serif;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 18px;
+  padding: 0 20px;
+  text-align: center;
+}
+/* line 2085, ../sass/components/_tovana.scss */
+#block-bruria-magento-mailing-iframe .before {
+  clear: left;
+}
+
 /**
  * @file
  * Print styling
