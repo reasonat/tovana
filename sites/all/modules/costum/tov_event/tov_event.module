@@ -4,8 +4,49 @@ function tov_event_node_view_alter(&$build) {
 
   //hide the event arrival flag if approval period is not now:
   if($build['#entity_type'] == 'node' && $build['#bundle'] == 'event') {
+  
+	$product_id = empty($build['#node']->field_product['und'][0]['product_id']) ? $build['#node']->field_donate_product['und'][0]['product_id'] : $build['#node']->field_product['und'][0]['product_id']; //get product id
+	global $user;
+	$result = views_get_view_result('products_users',null,$user->uid,$product_id); //get varification that user bought product
+	
 	  if(!($build['#node']->field_date_approval_period['und'][0]['value'] < time() && time() < $build['#node']->field_date_approval_period['und'][0]['value2'])) {
 		  unset($build['flag_arrive_event_node_flag']);
+	  }else{
+		
+		if($user->uid == 0) { 
+			$build['flag_arrive_event_node_flag'] = array('#markup' => '<div class="flaginvite">'.t('If you are already registered for this event, Please log-in to approve arrival on this page or in your personal events page.').'</div>');
+		}else{
+		 //timing is right, user not anonymous, but we need to make sure user has bought product to approve:
+		 
+		 
+		 if(count($result) < 1) {  //if we dont have a product ordered by that user
+		    unset($build['flag_arrive_event_node_flag']); //hide approval flag
+		 }
+		 
+		}
 	  }
+	  
+	  //load waiting list if product out of stock
+	  $product = commerce_product_load($product_id);
+	  if($product->commerce_stock['und'][0]['value'] < 1 && count($result) < 1) { //if product is outofstock and user hasnt bought it yet
+	    $build['#group_children']['waiting_list'] = 'group_product';
+	    $build['#groups']['group_product']->children[] = 'waiting_list';
+		
+		$block = module_invoke('webform', 'block_view', 'client-block-4488');
+		$build['waiting_list'] = array('#markup' => render($block['content']),'#weight' => 99);
+	  }
+
+	  //dpm($build);
+  }
+}
+
+function tov_event_form_alter(&$form, $form_state, $form_id) {
+  //auto inject event nid to waiting list:
+  if($form_id == 'webform_client_form_4488') {
+    
+	$event = menu_get_object();
+	if($event->type == 'event') {
+	  $form['submitted']['event_nid']['#value'] = $form_state['webform']['component_tree']['children'][1]['value'] = $event->nid;
+	}
   }
 }

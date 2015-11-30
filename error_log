@@ -106,3 +106,11 @@ Stack trace:
 [25-Oct-2015 14:36:05 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 5986388 bytes) in /home/tovana/public_html/sites/all/modules/devel/devel.module on line 1470
 [25-Oct-2015 14:37:08 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 5949279 bytes) in /home/tovana/public_html/sites/all/modules/devel/devel.module on line 1470
 [04-Nov-2015 09:51:20 Asia/Jerusalem] PHP Fatal error:  Unsupported operand types in /home/tovana1/public_html/modules/block/block.module on line 519
+[22-Nov-2015 12:53:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 20
+[22-Nov-2015 12:53:26 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 20
+[22-Nov-2015 13:35:50 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/tovana1/public_html/sites/all/modules/devel/devel.module(1415) : eval()'d code on line 1
+[22-Nov-2015 13:37:17 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 18
+[22-Nov-2015 13:37:21 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 18
+[22-Nov-2015 13:37:55 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 18
+[22-Nov-2015 13:37:57 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 18
+[22-Nov-2015 13:38:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 19
