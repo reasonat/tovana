@@ -114,3 +114,8 @@ Stack trace:
 [22-Nov-2015 13:37:55 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 18
 [22-Nov-2015 13:37:57 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 18
 [22-Nov-2015 13:38:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/tovana1/public_html/sites/all/modules/costum/tov_event/tov_event.module on line 19
+[30-Nov-2015 15:24:57 Asia/Jerusalem] PHP Fatal error:  Call to a member function options_validate() on a non-object in /home/tovana1/public_html/sites/all/modules/views/includes/admin.inc on line 4395
+[06-Dec-2015 10:20:47 Asia/Jerusalem] PHP Fatal error:  Cannot redeclare bruria_block_view() (previously declared in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module:61) in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module on line 89
+[06-Dec-2015 10:21:21 Asia/Jerusalem] PHP Fatal error:  Cannot redeclare bruria_block_view() (previously declared in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module:61) in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module on line 89
+[06-Dec-2015 10:21:31 Asia/Jerusalem] PHP Fatal error:  Cannot redeclare bruria_block_view() (previously declared in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module:61) in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module on line 89
+[06-Dec-2015 10:21:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/tovana1/public_html/sites/all/modules/bruria/bruria.module on line 87

@@ -29,11 +29,13 @@ function tov_event_node_view_alter(&$build) {
 	  //load waiting list if product out of stock
 	  $product = commerce_product_load($product_id);
 	  if($product->commerce_stock['und'][0]['value'] < 1 && count($result) < 1) { //if product is outofstock and user hasnt bought it yet
-	    $build['#group_children']['waiting_list'] = 'group_product';
+	    /*$build['#group_children']['waiting_list'] = 'group_product';
 	    $build['#groups']['group_product']->children[] = 'waiting_list';
 		
 		$block = module_invoke('webform', 'block_view', 'client-block-4488');
-		$build['waiting_list'] = array('#markup' => render($block['content']),'#weight' => 99);
+		$build['waiting_list'] = array('#markup' => render($block['content']),'#weight' => 99);*/
+	  }else{
+	    unset($build['flag_flag_waiting_list']); //hide waiting list flag if not need apply
 	  }
 
 	  //dpm($build);
